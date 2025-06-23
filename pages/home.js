@@ -6,7 +6,7 @@ import WhyChooseUs from '@/components/WhyChooseUs'
 import OurTeam from '@/components/OurTeam'
 import Testimonials from '@/components/Testimonials'
 import Pricing from '@/components/Pricing'
-import Faq from '@/components/Faq'
+import Faq from '@/components/FAQ'
 import Footer from '@/components/Footer'
 
 function Home() {
