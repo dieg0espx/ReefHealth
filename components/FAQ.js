@@ -31,7 +31,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-16 px-4 bg-white border border-black">
+    <section className="py-16 px-4 bg-white">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left Side */}
         <div className="flex flex-col justify-center h-full">
