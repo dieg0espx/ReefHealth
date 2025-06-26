@@ -1,25 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 
-export default function Hero() {
+export default function Hero2() {
   return (
     <section
-      className="
-        relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
-        min-h-[85vh] flex flex-col  justify-end
-        bg-main-pink overflow-hidden rounded-b-3xl p-10 z-1
-      "
-    >
+      className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-[85vh] flex flex-col  justify-end overflow-hidden rounded-b-3xl p-10">
       {/* Background Image */}
       <div className="absolute inset-0 flex justify-center items-center w-full h-full z-0">
-        <div className="relative w-4/5 h-2/3 -mt-[150px]">
+        <div className="relative w-full h-full">
           <Image
-            src="/hero.png"
+            src="/sport-woman.jpg"
             alt="Hero Background"
             layout="fill"
             objectFit="cover"
             quality={100}
-            className="object-cover object-center rounded-b-3xl"
+            className="object-cover object-center opacity-100 rounded-b-3xl"
             priority
           />
         </div>

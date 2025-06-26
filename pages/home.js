@@ -20,7 +20,6 @@ function Home() {
       <Testimonials />
       <Pricing />
       <Faq />
-      <Footer />
     </div>
   )
 }

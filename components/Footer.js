@@ -37,7 +37,7 @@ export default function Footer() {
   return (
     <div>
       {/* Cover Image Section */}
-      <div className="relative w-full min-h-[600px] rounded-3xl overflow-hidden mb-[-60px] z-10 border border-white/40 flex flex-col justify-end pb-10">
+      <div className="relative max-w-[1500px] mx-auto min-h-[400px] md:min-h-[600px] rounded-3xl overflow-hidden mb-[-60px] z-10 border border-white/40 flex flex-col justify-end pb-6 md:pb-10">
         <Image
           src="/doctorOnPhone.jpg"
           alt="Doctor on Phone"
@@ -49,10 +49,10 @@ export default function Footer() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/30 z-10" />
         {/* Content */}
-        <div className="relative z-20 flex flex-col items-center justify-center h-full w-full px-4 text-center">
-          <span className="inline-block bg-white/20 text-white px-6 py-2 rounded-full font-semibold mb-6">Lorem Ipsum</span>
-          <h2 className="text-white text-5xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">Lorem ipsum dolor sit amet, consectetur<br />Lorem ipsum dolor sit amet, consectetur</h2>
-          <button className="mt-6 px-8 py-3 bg-white text-[#e03a6a] rounded-full font-semibold shadow hover:bg-gray-100 transition flex items-center gap-2">
+        <div className="relative z-20 flex flex-col items-center justify-center h-full w-full px-2 md:px-4 text-center py-10 md:py-0">
+          <span className="inline-block bg-white/20 text-white px-4 md:px-6 py-2 rounded-full font-semibold mb-4 md:mb-6 text-sm md:text-base">Lorem Ipsum</span>
+          <h2 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">Lorem ipsum dolor sit amet, consectetur<br className='hidden md:block'/>Lorem ipsum dolor sit amet, consectetur</h2>
+          <button className="mt-4 md:mt-6 px-6 md:px-8 py-2 md:py-3 bg-white text-[#e03a6a] rounded-full font-semibold shadow hover:bg-gray-100 transition flex items-center gap-2 text-sm md:text-base">
             Contact Now <span className="inline-block transform rotate-45">→</span>
           </button>
         </div>
