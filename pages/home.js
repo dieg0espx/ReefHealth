@@ -11,7 +11,7 @@ import Footer from '@/components/Footer'
 
 function Home() {
   return (
-    <div className='max-w-[1500px] mx-auto px-5'>
+    <div className='max-w-[1500px] mx-auto md:px-5'>
       <Hero />
       <About />
       <Services />
