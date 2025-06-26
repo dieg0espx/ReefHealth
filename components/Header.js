@@ -12,7 +12,7 @@ export default function Header() {
     <header className="w-full bg-main-pink flex items-center justify-between px-4 sm:px-6 py-4 fixed top-0 left-0 z-50">
       {/* Logo */}
       <div className="flex items-center">
-        <Image src="/logo-white.png" alt="reef health benefits logo" width={90} height={40} priority />
+        <Image src="/logo-white.png" alt="reef health benefits logo" width={90} height={40} priority onClick={() => router.push("/home")}/>
       </div>
       
       {/* Desktop Navigation */}
