@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function blog() {
   return (
-    <div className='max-w-[1500px] mx-auto'>
+    <div className='max-w-[1500px] mx-auto px-5'>
         <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 bg-white">
             <div className="mx-auto text-center">
                 <span className="inline-block bg-light-pink text-main-pink px-4 sm:px-6 py-2 rounded-full font-semibold mb-6 sm:mb-8 text-sm sm:text-base">Our Blog</span>

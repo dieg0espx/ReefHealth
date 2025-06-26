@@ -4,7 +4,7 @@ import React from 'react'
 
 function contact() {
   return (
-    <div className='max-w-[1500px] mx-auto'>
+    <div className='max-w-[1500px] mx-auto px-5'>
         <ContactForm/>
         <FAQ />
     </div>
