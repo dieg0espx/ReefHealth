@@ -59,7 +59,7 @@ function Home() {
         {/* Additional SEO tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://reefhealth.com/home" />
-        <meta name="theme-color" content="#e03a6a" />
+        <meta name="theme-color" content="#EE2966" />
         
         {/* Structured Data for Homepage */}
         <script

@@ -62,7 +62,7 @@ export default function Footer() {
           <div className="absolute bottom-32 left-12 w-2 h-2 bg-white/40 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
           
           {/* Gradient orbs */}
-          <div className="absolute top-1/4 right-8 w-16 h-16 bg-gradient-to-r from-[#e03a6a]/20 to-pink-300/20 rounded-full blur-xl"></div>
+          <div className="absolute top-1/4 right-8 w-16 h-16 bg-gradient-to-r from-main-pink/20 to-pink-300/20 rounded-full blur-xl"></div>
           <div className="absolute bottom-1/3 left-6 w-12 h-12 bg-gradient-to-r from-blue-300/20 to-purple-300/20 rounded-full blur-lg"></div>
         </div>
         
@@ -76,14 +76,14 @@ export default function Footer() {
           </h2>
           <button 
             onClick={scrollToPricing}
-            className="group flex items-center justify-center bg-white text-[#e03a6a] px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition-all duration-300 mx-auto lg:mx-0 text-sm sm:text-base cursor-pointer hover:scale-105"
+            className="group flex items-center justify-center bg-white text-main-pink px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition-all duration-300 mx-auto lg:mx-0 text-sm sm:text-base cursor-pointer hover:scale-105"
           >
             Get Started <i className="bi bi-arrow-up-right"></i>
           </button>
         </div>
       </div>
       {/* Footer */}
-      <footer className="bg-[#e03a6a] text-white pt-12 sm:pt-14 md:pt-16 pb-4 sm:pb-6 px-4 sm:px-6 mt-8 sm:mt-10 rounded-t-3xl">
+      <footer className="bg-main-pink text-white pt-12 sm:pt-14 md:pt-16 pb-4 sm:pb-6 px-4 sm:px-6 mt-8 sm:mt-10 rounded-t-3xl">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 sm:gap-10">
           {/* Left: Links */}
           <div className="flex-1 flex flex-col items-start gap-2 mb-6 lg:mb-0">
