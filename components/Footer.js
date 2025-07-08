@@ -4,31 +4,41 @@ import Image from 'next/image';
 const links = [
   { name: 'Home', href: '/home' },
   { name: 'Plans', href: '#pricing' },
-  { name: 'Signup', href: '#' },
+  { name: 'Signup', href: '#pricing' },
   { name: 'Terms & Conditions', href: '#' },
   { name: 'Privacy Policy', href: '#' },
   { name: 'Contact', href: '/contact' },
 ];
 
-const social = [
-  {
-    name: 'Instagram',
-    href: '#',
-    icon: <i className="bi bi-instagram text-2xl"></i>,
-  },
-  {
-    name: 'LinkedIn',
-    href: '#',
-    icon: <i className="bi bi-linkedin text-2xl"></i>,
-  },
-  {
-    name: 'YouTube',
-    href: '#',
-    icon: <i className="bi bi-youtube text-2xl"></i>,
-  },
-];
-
 export default function Footer() {
+  const scrollToPricing = () => {
+    const pricingSection = document.querySelector('#pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const handleLinkClick = (href) => {
+    if (href === '#pricing') {
+      scrollToPricing();
+    } else if (href.startsWith('#')) {
+      // Handle other anchor links
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    } else {
+      // Normal navigation
+      window.location.href = href;
+    }
+  };
+
   return (
     <div>
       {/* Cover Image Section */}
@@ -64,7 +74,10 @@ export default function Footer() {
             <br className='hidden md:block'/>
             Reef Health for better coverage
           </h2>
-          <button className="group flex items-center justify-center bg-white text-[#e03a6a] px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition-all duration-300 mx-auto lg:mx-0 text-sm sm:text-base">
+          <button 
+            onClick={scrollToPricing}
+            className="group flex items-center justify-center bg-white text-[#e03a6a] px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition-all duration-300 mx-auto lg:mx-0 text-sm sm:text-base cursor-pointer hover:scale-105"
+          >
             Get Started <i className="bi bi-arrow-up-right"></i>
           </button>
         </div>
@@ -75,20 +88,34 @@ export default function Footer() {
           {/* Left: Links */}
           <div className="flex-1 flex flex-col items-start gap-2 mb-6 lg:mb-0">
             {links.map((link, idx) => (
-              <a key={idx} href={link.href} className="text-white text-sm hover:underline transition">{link.name}</a>
+              <button 
+                key={idx} 
+                onClick={() => handleLinkClick(link.href)}
+                className="text-white text-sm hover:underline transition cursor-pointer text-left"
+              >
+                {link.name}
+              </button>
             ))}
           </div>
           {/* Center: Logo */}
           <div className="flex-1 flex flex-col items-center">
             <Image src="/logo-white.png" alt="Reef Logo" width={150} height={150} />
           </div>
-          {/* Right: Social */}
-          <div className="flex-1 flex flex-row lg:flex-col items-center lg:items-end justify-center lg:justify-end gap-4 lg:gap-3">
-            {social.map((item, idx) => (
-              <a key={idx} href={item.href} className="inline-block text-white hover:text-gray-200 transition" aria-label={item.name}>
-                {item.icon}
-              </a>
-            ))}
+          {/* Right: Contact Info */}
+          <div className="flex-1 flex flex-col items-center lg:items-end justify-center lg:justify-end gap-2">
+            <div className="text-white text-sm font-medium">Contact Us</div>
+            <a 
+              href="tel:833-353-7333" 
+              className="text-white hover:text-gray-200 transition cursor-pointer text-sm"
+            >
+              (833) 353-7333
+            </a>
+            <button 
+              onClick={() => window.location.href = '/contact'}
+              className="text-white hover:text-gray-200 transition cursor-pointer text-sm hover:underline"
+            >
+              Get in Touch
+            </button>
           </div>
         </div>
         <div className="text-center text-xs text-white/80 mt-6 sm:mt-8">

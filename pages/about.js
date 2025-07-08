@@ -28,21 +28,6 @@ function About() {
         <meta name="description" content="Learn how Reef Health is revolutionizing small business health insurance. We remove the middleman, use real-time tech for efficient care access, and provide transparent pricing with no markups. Discover our franchise opportunities." />
         <meta name="keywords" content="about reef health, health insurance revolution, transparent health insurance, franchise opportunities, health benefits company, direct care access" />
         
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://reefhealth.com/about" />
-        <meta property="og:title" content="About Reef Health Benefits - Fixing the Broken Health Insurance System" />
-        <meta property="og:description" content="Learn how Reef Health is revolutionizing small business health insurance with transparent pricing and direct care access." />
-        <meta property="og:image" content="https://reefhealth.com/hero.png" />
-        <meta property="og:site_name" content="Reef Health Benefits" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://reefhealth.com/about" />
-        <meta property="twitter:title" content="About Reef Health Benefits - Fixing the Broken Health Insurance System" />
-        <meta property="twitter:description" content="Learn how Reef Health is revolutionizing small business health insurance with transparent pricing and direct care access." />
-        <meta property="twitter:image" content="https://reefhealth.com/hero.png" />
-
         {/* Additional SEO tags */}
         <link rel="canonical" href="https://reefhealth.com/about" />
         

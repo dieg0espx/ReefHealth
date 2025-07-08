@@ -56,22 +56,6 @@ function Home() {
         <meta name="description" content="Hate health insurance? Then you'll love Reef Health. Affordable small business health insurance starting at $29/mo. Save up to 40% with transparent pricing, 24/7 telehealth access, and comprehensive wellness benefits. Trusted by 100,000+ members." />
         <meta name="keywords" content="small business health insurance, affordable health insurance, business health plans, telehealth, health benefits, transparent pricing, employee benefits, health coverage" />
         
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://reefhealth.com/home" />
-        <meta property="og:title" content="Reef Health Benefits - Affordable Small Business Health Insurance" />
-        <meta property="og:description" content="Save up to 40% on health insurance with transparent pricing and 24/7 telehealth access. Starting at $29/mo." />
-        <meta property="og:image" content="https://reefhealth.com/hero.png" />
-        <meta property="og:site_name" content="Reef Health Benefits" />
-        <meta property="og:locale" content="en_US" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://reefhealth.com/home" />
-        <meta property="twitter:title" content="Reef Health Benefits - Affordable Small Business Health Insurance" />
-        <meta property="twitter:description" content="Save up to 40% on health insurance with transparent pricing and 24/7 telehealth access. Starting at $29/mo." />
-        <meta property="twitter:image" content="https://reefhealth.com/hero.png" />
-
         {/* Additional SEO tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://reefhealth.com/home" />

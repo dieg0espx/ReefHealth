@@ -42,6 +42,20 @@ export default function FAQ() {
     setOpenIndex(openIndex === idx ? null : idx);
   };
 
+  const scrollToPricing = () => {
+    const pricingSection = document.querySelector('#pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const handleCallClick = () => {
+    window.location.href = 'tel:833-353-7333';
+  };
+
   return (
     <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 bg-white">
       <div className="mx-auto">
@@ -50,9 +64,19 @@ export default function FAQ() {
           <span className="inline-block bg-[#e03a6a] text-white px-4 sm:px-6 py-2 rounded-full font-semibold mb-6 sm:mb-8 text-sm sm:text-base">FAQ</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">Frequently Asked<br />Questions</h2>
           <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-10 max-w-xl mx-auto">Got questions about Reef Health? We've got answers. Find out how we're different from traditional health insurance.</p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <button className="bg-[#e03a6a] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-[#d12e5c] transition flex items-center justify-center gap-2 text-sm sm:text-base">Get Started <i className="bi bi-arrow-up-right"></i></button>
-            <button className="bg-white border border-[#e03a6a] text-[#e03a6a] px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition flex items-center justify-center gap-2 text-sm sm:text-base">Call (833)-353-7333 <i className="bi bi-arrow-up-right"></i></button>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <button 
+              onClick={scrollToPricing}
+              className="bg-[#e03a6a] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-[#d12e5c] transition flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer hover:scale-105 transform duration-200"
+            >
+              Get Started <i className="bi bi-arrow-up-right"></i>
+            </button>
+            <button 
+              onClick={handleCallClick}
+              className="bg-white border border-[#e03a6a] text-[#e03a6a] px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer hover:scale-105 transform duration-200"
+            >
+              Call (833)-353-7333 <i className="bi bi-arrow-up-right"></i>
+            </button>
           </div>
         </div>
         
@@ -63,27 +87,27 @@ export default function FAQ() {
             return (
               <div
                 key={idx}
-                className={`border rounded-xl ${isOpen ? 'border-[#e03a6a] bg-white' : 'border-gray-200 bg-gray-50'}`}
+                className={`border rounded-xl transition-all duration-200 ${isOpen ? 'border-[#e03a6a] bg-white shadow-lg' : 'border-gray-200 bg-gray-50 hover:border-gray-300'}`}
               >
                 <button
-                  className="flex items-center justify-between w-full px-6 py-4 text-left focus:outline-none"
+                  className="flex items-center justify-between w-full px-6 py-4 text-left focus:outline-none hover:bg-gray-50 transition-colors duration-200"
                   onClick={() => handleToggle(idx)}
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-4">
-                    <span className={`font-bold text-lg ${isOpen ? 'text-[#e03a6a]' : 'text-gray-600'}`}>
+                    <span className={`font-bold text-lg transition-colors duration-200 ${isOpen ? 'text-[#e03a6a]' : 'text-gray-600'}`}>
                       {`0${idx + 1}`}
                     </span>
-                    <span className={`font-semibold text-base ${isOpen ? 'text-[#e03a6a]' : 'text-gray-900'}`}>
+                    <span className={`font-semibold text-base transition-colors duration-200 ${isOpen ? 'text-[#e03a6a]' : 'text-gray-900'}`}>
                       {faq.question}
                     </span>
                   </div>
-                  <span className={`text-xl font-light ml-4 ${isOpen ? 'text-[#e03a6a]' : 'text-gray-600'}`}>
+                  <span className={`text-xl font-light ml-4 transition-all duration-200 ${isOpen ? 'text-[#e03a6a] transform rotate-180' : 'text-gray-600'}`}>
                     {isOpen ? '−' : '+'}
                   </span>
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-4">
+                  <div className="px-6 pb-4 animate-fadeIn">
                     <div className="pl-10 text-gray-700 text-base leading-relaxed">
                       {faq.answer}
                     </div>

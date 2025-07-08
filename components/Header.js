@@ -1,18 +1,24 @@
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleContactClick = () => {
+    router.push("/contact");
+  };
+
   return (
     <header className="w-full bg-main-pink flex items-center justify-between px-4 sm:px-6 py-4 fixed top-0 left-0 z-50">
       {/* Logo */}
-      <div className="flex items-center">
-        <Image src="/logo-white.png" alt="reef health benefits logo" width={90} height={40} priority onClick={() => router.push("/home")}/>
+      <div className="flex items-center cursor-pointer" onClick={() => router.push("/home")}>
+        <Image src="/logo-white.png" alt="reef health benefits logo" width={90} height={40} priority />
       </div>
       
       {/* Desktop Navigation */}
@@ -35,13 +41,13 @@ export default function Header() {
 
       {/* Desktop Contact Button */}
       <div className="hidden md:block">
-        <a
-          href="#"
-          className="text-white border border-white rounded-full px-6 py-2 flex items-center gap-2 font-medium text-sm transition hover:bg-white hover:text-main-pink"
+        <button
+          onClick={handleContactClick}
+          className="text-white border border-white rounded-full px-6 py-2 flex items-center gap-2 font-medium text-sm transition hover:bg-white hover:text-main-pink cursor-pointer"
         >
           Contact Us
           <i className="bi bi-arrow-up-right"></i>
-        </a>
+        </button>
       </div>
 
       {/* Mobile Menu Button */}
@@ -95,14 +101,16 @@ export default function Header() {
                 </a>
               </li>
               <li className="mt-8">
-                <a
-                  href="#"
-                  className="text-white border border-white rounded-full px-8 py-3 flex items-center gap-2 font-medium text-lg transition hover:bg-white hover:text-main-pink"
-                  onClick={() => setIsMenuOpen(false)}
+                <button
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    handleContactClick();
+                  }}
+                  className="text-white border border-white rounded-full px-8 py-3 flex items-center gap-2 font-medium text-lg transition hover:bg-white hover:text-main-pink cursor-pointer"
                 >
                   Contact Us
                   <i className="bi bi-arrow-up-right"></i>
-                </a>
+                </button>
               </li>
             </ul>
           </nav>

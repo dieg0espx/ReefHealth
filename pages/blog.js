@@ -50,21 +50,6 @@ function Blog() {
         <meta name="description" content="Stay informed with our latest articles on health insurance trends, small business benefits strategies, and how to get the most value from your health plan. Expert insights from Reef Health Benefits." />
         <meta name="keywords" content="health insurance blog, small business benefits, health insurance trends, employee benefits strategies, health plan tips, business insurance insights" />
         
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://reefhealth.com/blog" />
-        <meta property="og:title" content="Reef Health Benefits Blog - Health Insurance Insights" />
-        <meta property="og:description" content="Stay informed with our latest articles on health insurance trends and small business benefits strategies." />
-        <meta property="og:image" content="https://reefhealth.com/hero.png" />
-        <meta property="og:site_name" content="Reef Health Benefits" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://reefhealth.com/blog" />
-        <meta property="twitter:title" content="Reef Health Benefits Blog - Health Insurance Insights" />
-        <meta property="twitter:description" content="Stay informed with our latest articles on health insurance trends and small business benefits strategies." />
-        <meta property="twitter:image" content="https://reefhealth.com/hero.png" />
-
         {/* Additional SEO tags */}
         <link rel="canonical" href="https://reefhealth.com/blog" />
         

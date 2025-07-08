@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 const icon = (
   <i className="bi bi-clipboard-check text-3xl mb-4 text-[#e03a6a]"></i>
@@ -57,8 +58,29 @@ const packages = [
 ];
 
 export default function Pricing() {
+  const router = useRouter();
+
+  const handlePlanSelection = (planTitle, planPrice) => {
+    // You can customize this to integrate with your actual signup process
+    // For now, it will show an alert and can be replaced with real functionality
+    alert(`Great choice! You selected the ${planTitle} plan at ${planPrice}. 
+
+Next steps:
+1. Contact our team to complete enrollment
+2. Provide company information
+3. Start enjoying your benefits
+
+Would you like to contact us now to get started?`);
+    
+    // Optionally navigate to contact page for plan enrollment
+    const shouldContact = confirm("Navigate to contact page to complete enrollment?");
+    if (shouldContact) {
+      router.push("/contact?plan=" + encodeURIComponent(planTitle));
+    }
+  };
+
   return (
-    <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 bg-white">
+    <section id="pricing" className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 bg-white">
       <div className="mx-auto text-center">
         <span className="inline-block bg-[#e03a6a] text-white px-4 sm:px-6 py-2 rounded-full font-semibold mb-6 sm:mb-8 text-sm sm:text-base">Plan Options</span>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">Choose Your Plan</h2>
@@ -76,7 +98,10 @@ export default function Pricing() {
               <h3 className={`text-2xl sm:text-3xl font-bold mb-1 ${pkg.highlight ? 'text-white' : 'text-[#1a1a1a]'}`}>{pkg.title}</h3>
               <div className={`mb-4 sm:mb-6 text-sm sm:text-base ${pkg.highlight ? 'text-white/80' : 'text-[#1a1a1a]/70'}`}>{pkg.subtitle}</div>
               <div className={`text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 ${pkg.highlight ? 'text-white' : 'text-[#e03a6a]'}`}>{pkg.price}</div>
-              <button className={`w-full flex items-center justify-between px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold mb-6 sm:mb-8 border text-sm sm:text-base ${pkg.highlight ? 'bg-white text-[#e03a6a] border-white' : 'bg-white text-[#e03a6a] border-[#e03a6a]'}`}>
+              <button 
+                onClick={() => handlePlanSelection(pkg.title, pkg.price)}
+                className={`w-full flex items-center justify-between px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold mb-6 sm:mb-8 border text-sm sm:text-base cursor-pointer transition-all hover:scale-105 ${pkg.highlight ? 'bg-white text-[#e03a6a] border-white hover:bg-gray-100' : 'bg-white text-[#e03a6a] border-[#e03a6a] hover:bg-gray-50'}`}
+              >
                 Get Started <i className="bi bi-arrow-up-right"></i>
               </button>
               <ul className="w-full space-y-2 sm:space-y-3">

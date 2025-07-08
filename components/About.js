@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About() {
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-5 bg-white">
+    <section id="about" className="py-12 sm:py-16 md:py-20 px-5 bg-white">
       <div className=" mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#e03a6a] mb-6 sm:mb-8">Why Choose Reef</h2>
         <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-12 sm:mb-16 max-w-5xl mx-auto">
