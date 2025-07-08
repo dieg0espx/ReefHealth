@@ -16,7 +16,7 @@ export default function Hero() {
     <section
       className="
         relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
-        min-h-[85vh] flex flex-col justify-end
+        min-h-[70vh] sm:min-h-[70vh] md:min-h-[85vh] flex flex-col justify-end
         bg-main-pink overflow-hidden rounded-b-3xl p-4 sm:p-6 md:p-10 z-1
       "
     >
@@ -33,7 +33,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className="block md:hidden relative w-[100vw] flex items-center justify-center -mt-[30vh]">
+        <div className="block md:hidden relative w-[100vw] flex items-center justify-center -mt-[35vh]">
           <Image
             src="/hero.png"
             alt="Reef Health Benefits affordable small business health insurance hero image"
@@ -46,7 +46,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full mt-[80px] sm:mt-[100px] md:mt-[120px]">
+      <div className="relative z-20 flex flex-col items-center justify-center h-full mt-[60px] sm:mt-[80px] md:mt-[120px]">
 
         {/* Main Text */}
         <div className="w-full flex flex-col lg:flex-row items-center justify-between mx-auto px-4 sm:px-6 md:px-10">
