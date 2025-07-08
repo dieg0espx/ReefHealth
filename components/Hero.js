@@ -23,18 +23,24 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 flex justify-center items-center w-full h-full z-0">
         <div className="hidden md:block relative w-4/5 flex items-center justify-center -mt-[150px]">
-          <img
+          <Image
             src="/hero.png"
             alt="Reef Health Benefits affordable small business health insurance hero image"
             className="w-full h-full object-cover object-center rounded-b-3xl"
+            width={800}
+            height={600}
+            priority
           />
         </div>
 
         <div className="block md:hidden relative w-[100vw] flex items-center justify-center -mt-[30vh]">
-          <img
+          <Image
             src="/hero.png"
             alt="Reef Health Benefits affordable small business health insurance hero image"
             className="w-full h-full  object-center rounded-b-3xl"
+            width={400}
+            height={300}
+            priority
           />
         </div>
       </div>
@@ -47,7 +53,7 @@ export default function Hero() {
           <div className="flex flex-col items-start mb-0 lg:mb-0 text-center lg:text-left w-full lg:w-auto ">
             <span className="bg-white/10 border border-white/20 text-white px-3 sm:px-4 py-1 rounded-full mb-4 text-xs sm:text-sm mx-auto lg:mx-0"><i className="bi bi-people-fill"></i> Trusted by 100,000+ members</span>
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-tight mb-2">
-              We fixed health insurance.<br className="hidden sm:block" />You're welcome.
+              We fixed health insurance.<br className="hidden sm:block" />You&apos;re welcome.
             </h1>
           </div>
           <div className="flex flex-col items-center lg:items-end mt-6 lg:mt-10 w-full lg:w-auto">

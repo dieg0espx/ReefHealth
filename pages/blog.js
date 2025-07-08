@@ -20,7 +20,7 @@ function Blog() {
     "blogPost": [
       {
         "@type": "BlogPosting",
-        "headline": "Why Traditional Insurance Isn't Working",
+        "headline": "Why Traditional Insurance Isn&apos;t Working",
         "description": "Discover why traditional health insurance models are failing small businesses and what alternatives exist.",
         "image": "https://reefhealth.com/doctor1.jpg",
         "datePublished": "2024-01-01",
@@ -73,7 +73,7 @@ function Blog() {
               <Image src={"/doctor1.jpg"} className='w-full rounded-t-3xl' width={500} height={300} alt="Doctor consultation representing traditional insurance challenges"/>
               <div className='p-4 sm:p-5'>
                 <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2 sm:gap-0'>
-                  <h2 className='text-black font-semibold text-lg sm:text-xl'> Why Traditional Insurance Isn't Working </h2>
+                  <h2 className='text-black font-semibold text-lg sm:text-xl'> Why Traditional Insurance Isn&apos;t Working </h2>
                   <div className='flex gap-1 flex-wrap'>
                     <span className='bg-main-pink rounded-xl text-white px-3 sm:px-5 py-1 text-center text-sm sm:text-base'> 2024 </span>
                     <span className='bg-gray-700 rounded-xl text-white px-3 sm:px-5 py-1 text-center text-sm sm:text-base'> Business </span>
@@ -107,7 +107,7 @@ function Blog() {
                     <span className='bg-gray-700 rounded-xl text-white px-3 sm:px-5 py-1 text-center text-sm sm:text-base'> Education </span>
                   </div>
                 </div>
-                <p className='text-gray-600 text-sm sm:text-base'> Health insurance doesn't have to be complicated. Learn how to decode insurance jargon, compare plans effectively, and make informed decisions about your health coverage options.</p>
+                <p className='text-gray-600 text-sm sm:text-base'> Health insurance doesn&apos;t have to be complicated. Learn how to decode insurance jargon, compare plans effectively, and make informed decisions about your health coverage options.</p>
               </div>
             </article>
             

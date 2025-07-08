@@ -22,12 +22,12 @@ function ContactForm() {
       if (router.query.interest === 'franchise') {
         setFormData(prev => ({
           ...prev,
-          message: `Hi! I'm interested in franchise opportunities with Reef Health. Please provide more information about becoming a franchisee, including startup costs, territory availability, and support provided.`
+          message: `Hi! I&apos;m interested in franchise opportunities with Reef Health. Please provide more information about becoming a franchisee, including startup costs, territory availability, and support provided.`
         }));
       } else {
         setFormData(prev => ({
           ...prev,
-          message: `Hi! I'm interested in the ${router.query.plan} plan. Please provide more information about enrollment and next steps.`
+          message: `Hi! I&apos;m interested in the ${router.query.plan} plan. Please provide more information about enrollment and next steps.`
         }));
       }
     }
@@ -52,7 +52,7 @@ function ContactForm() {
 
     // For now, show a success message. You can integrate with your actual form handler here
     const planText = selectedPlan ? ` for the ${selectedPlan} plan` : '';
-    alert(`Thank you for your interest${planText}! We'll contact you within 24 hours to discuss your health benefit needs.`);
+    alert(`Thank you for your interest${planText}! We&apos;ll contact you within 24 hours to discuss your health benefit needs.`);
     
     // Reset form
     setFormData({
@@ -75,7 +75,7 @@ function ContactForm() {
               </div>
             )}
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 w-full md:w-[80%] lg:w-[70%] mx-auto leading-tight">Ready to Transform Your Health Benefits?</h2>
-            <p className="text-base md:text-lg text-gray-500 mb-8 md:mb-12 max-w-3xl mx-auto px-4">Get in touch with our team to learn more about our affordable health plans, franchise opportunities, or to schedule a consultation. We're here to help you save money and provide better health benefits.</p>
+            <p className="text-base md:text-lg text-gray-500 mb-8 md:mb-12 max-w-3xl mx-auto px-4">Get in touch with our team to learn more about our affordable health plans, franchise opportunities, or to schedule a consultation. We&apos;re here to help you save money and provide better health benefits.</p>
 
             <div className='flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-5'>
                 <div className="w-full lg:w-auto order-2 lg:order-1">

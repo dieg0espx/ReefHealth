@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
             </div>
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-[#e03a6a] rounded-full mt-3 flex-shrink-0"></div>
-              <p className="text-base sm:text-lg text-gray-700">We're the end-provider—not a reseller</p>
+              <p className="text-base sm:text-lg text-gray-700">We&apos;re the end-provider—not a reseller</p>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
