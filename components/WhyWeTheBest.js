@@ -9,7 +9,7 @@ export default function WhyWeTheBest() {
         <div className="rounded-3xl overflow-hidden shadow-lg h-full order-2 lg:order-1">
           <Image
             src="/doctorOnPhone.jpg"
-            alt="Why Choose Us"
+            alt="How It Works"
             width={700}
             height={700}
             className="object-cover w-full h-full"
@@ -19,11 +19,33 @@ export default function WhyWeTheBest() {
         {/* Right: Content */}
         <div className="flex flex-col justify-center h-full order-1 lg:order-2">
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">Lorem ipsum dolor sit amet consectetur</h2>
-          <p className="text-base sm:text-lg text-gray-700 mb-8 sm:mb-10 max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae turpis in neque facilisis aliquet. Quisque nec tincidunt purus, sed fermentum nisi. Fusce sagittis urna eu tortor dictum, in fermentum velit laoreet. Nulla facilisi. Integer eget eros sit amet sapien posuere efficitur. Etiam sodales metus vel eros posuere, at volutpat orci lacinia. Sed nec quam magna. Donec rhoncus ex eu laoreet sagittis. Etiam ultricies posuere lorem, sed aliquam magna.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">How It Works</h2>
+          <div className="space-y-6 mb-8 sm:mb-10">
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 bg-[#e03a6a] text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Book Your Call / Apply to Join</h3>
+                <p className="text-base text-gray-700">Start your journey with a simple call or application to join our network of satisfied members.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 bg-[#e03a6a] text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Build Your Plan</h3>
+                <p className="text-base text-gray-700">Customize your health benefits package to fit your business needs and budget perfectly.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-8 h-8 bg-[#e03a6a] text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Onboard + Save / Enjoy</h3>
+                <p className="text-base text-gray-700">Complete the quick onboarding process and start saving money while enjoying comprehensive health benefits.</p>
+              </div>
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <button className="bg-[#e03a6a] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-[#d12e5c] transition flex items-center justify-center gap-2 text-sm sm:text-base">Lorem Ipsum <span className="inline-block transform rotate-45">→</span></button>
-            <button className="bg-white border border-[#e03a6a] text-[#e03a6a] px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition flex items-center justify-center gap-2 text-sm sm:text-base">Lorem ip <span className="inline-block transform rotate-45">→</span></button>
+            <button className="bg-[#e03a6a] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-[#d12e5c] transition flex items-center justify-center gap-2 text-sm sm:text-base">Get Started <i className="bi bi-arrow-up-right"></i></button>
+            <button className="bg-white border border-[#e03a6a] text-[#e03a6a] px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition flex items-center justify-center gap-2 text-sm sm:text-base">Call (833)-353-7333 <i className="bi bi-arrow-up-right"></i></button>
           </div>
         </div>
       </div>

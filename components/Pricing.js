@@ -1,44 +1,56 @@
 import React from 'react';
 
 const icon = (
-  <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-[#e03a6a] mb-4"><circle cx="12" cy="12" r="10" strokeWidth="2" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6" /></svg>
+  <i className="bi bi-clipboard-check text-3xl mb-4 text-[#e03a6a]"></i>
 );
 
 const packages = [
   {
-    title: 'Lorem Ipsum',
-    subtitle: 'Lorem Ipsum',
-    price: '$199.00 USD',
+    title: 'Starter',
+    subtitle: 'Perfect for small teams',
+    price: '$29/mo',
     features: [
-      'Lorem Ipsum',
-      'Lorem Ipsum',
-      'Lorem Ipsum',
-      'Lorem Ipsum',
+      'Health + Fitness Classes at 20k facilities',
+      '4k virtual classes',
+      'Health and Wellness Discounts up to 40%',
+      '24/7/365 Telehealth Primary Care',
+      '24/7 Medical Concierge',
+      'No fee generic medications',
+      'Urgent Care',
+      'Hospital Coverage',
     ],
     highlight: false,
   },
   {
-    title: 'Lorem Ipsum',
-    subtitle: 'Lorem Ipsum',
-    price: '$299.00 USD',
+    title: 'Foundation',
+    subtitle: 'Most popular choice',
+    price: '$99/mo',
     features: [
-      'Lorem Ipsum',
-      'Lorem Ipsum',
-      'Lorem Ipsum',
-      'Lorem Ipsum',
+      'Health + Fitness Classes at 20k facilities',
+      '4k virtual classes',
+      'Health and Wellness Discounts up to 40%',
+      '24/7/365 Telehealth Primary Care',
+      '24/7 Medical Concierge',
+      'No fee generic medications',
+      'Urgent Care',
+      'Hospital Coverage',
     ],
     highlight: true,
-    label: 'Lorem Ipsum',
+    label: 'Most Popular',
   },
   {
-    title: 'Lorem Ipsum',
-    subtitle: 'Lorem Ipsum',
-    price: '$249.00 USD',
+    title: 'Premium',
+    subtitle: 'Enhanced coverage',
+    price: '$199/mo',
     features: [
-      'Lorem Ipsum',
-      'Lorem Ipsum',
-      'Lorem Ipsum',
-      'Lorem Ipsum',
+      'Health + Fitness Classes at 20k facilities',
+      '4k virtual classes',
+      'Health and Wellness Discounts up to 40%',
+      '24/7/365 Telehealth Primary Care',
+      '24/7 Medical Concierge',
+      'No fee generic medications',
+      'Urgent Care',
+      'Hospital Coverage',
     ],
     highlight: false,
   },
@@ -48,9 +60,9 @@ export default function Pricing() {
   return (
     <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 bg-white">
       <div className="mx-auto text-center">
-        <span className="inline-block bg-[#e03a6a] text-white px-4 sm:px-6 py-2 rounded-full font-semibold mb-6 sm:mb-8 text-sm sm:text-base">Lorem Ipsum</span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">Lorem Ipsum</h2>
-        <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-3xl mx-auto">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p>
+        <span className="inline-block bg-[#e03a6a] text-white px-4 sm:px-6 py-2 rounded-full font-semibold mb-6 sm:mb-8 text-sm sm:text-base">Plan Options</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">Choose Your Plan</h2>
+        <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-3xl mx-auto">Affordable small business health insurance with transparent pricing and no markups. All plans include comprehensive coverage.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-6 sm:mt-8">
           {packages.map((pkg, idx) => (
             <div
@@ -65,12 +77,12 @@ export default function Pricing() {
               <div className={`mb-4 sm:mb-6 text-sm sm:text-base ${pkg.highlight ? 'text-white/80' : 'text-[#1a1a1a]/70'}`}>{pkg.subtitle}</div>
               <div className={`text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 ${pkg.highlight ? 'text-white' : 'text-[#e03a6a]'}`}>{pkg.price}</div>
               <button className={`w-full flex items-center justify-between px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold mb-6 sm:mb-8 border text-sm sm:text-base ${pkg.highlight ? 'bg-white text-[#e03a6a] border-white' : 'bg-white text-[#e03a6a] border-[#e03a6a]'}`}>
-                Lorem Ipsum <span className="inline-block transform rotate-45">→</span>
+                Get Started <i className="bi bi-arrow-up-right"></i>
               </button>
               <ul className="w-full space-y-2 sm:space-y-3">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className={`flex items-center gap-2 text-sm sm:text-base ${pkg.highlight ? 'text-white font-semibold' : 'text-[#e03a6a]'}`}>
-                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="mr-2"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    <i className="bi bi-check mr-2 text-lg"></i>
                     {feature}
                   </li>
                 ))}

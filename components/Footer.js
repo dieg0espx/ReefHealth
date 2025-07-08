@@ -2,34 +2,29 @@ import React from 'react';
 import Image from 'next/image';
 
 const links = [
-  { name: 'Home', href: '#' },
-  { name: 'Plans', href: '#' },
-  { name: 'Signup Terms+Conditions', href: '#' },
+  { name: 'Home', href: '/home' },
+  { name: 'Plans', href: '#pricing' },
+  { name: 'Signup', href: '#' },
+  { name: 'Terms & Conditions', href: '#' },
   { name: 'Privacy Policy', href: '#' },
-  { name: 'Contact', href: '#' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 const social = [
   {
     name: 'Instagram',
     href: '#',
-    icon: (
-      <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="6" strokeWidth="2"/><circle cx="12" cy="12" r="5" strokeWidth="2"/><circle cx="17" cy="7" r="1.5" fill="currentColor"/></svg>
-    ),
+    icon: <i className="bi bi-instagram text-2xl"></i>,
   },
   {
     name: 'LinkedIn',
     href: '#',
-    icon: (
-      <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="6" strokeWidth="2"/><path d="M7 10v6M7 7v.01M11 10v6m0-6h2.5a2.5 2.5 0 012.5 2.5V16" strokeWidth="2"/></svg>
-    ),
+    icon: <i className="bi bi-linkedin text-2xl"></i>,
   },
   {
     name: 'YouTube',
     href: '#',
-    icon: (
-      <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="6" strokeWidth="2"/><path d="M10 9.5v5l4.5-2.5-4.5-2.5z" fill="currentColor"/></svg>
-    ),
+    icon: <i className="bi bi-youtube text-2xl"></i>,
   },
 ];
 
@@ -63,14 +58,14 @@ export default function Footer() {
         
         {/* Content */}
         <div className="relative z-20 flex flex-col items-center justify-center h-full w-full px-4 sm:px-6 md:px-8 lg:px-4 text-center py-8 sm:py-10 md:py-12 lg:py-0">
-          <span className="inline-block bg-white/20 backdrop-blur-sm sm:backdrop-blur-none text-white px-3 sm:px-4 md:px-6 py-2 rounded-full font-semibold mb-3 sm:mb-4 md:mb-6 text-xs sm:text-sm md:text-base border border-white/30 sm:border-transparent shadow-lg sm:shadow-none animate-fade-in sm:animate-none">Lorem Ipsum</span>
+          <span className="inline-block bg-white/20 backdrop-blur-sm sm:backdrop-blur-none text-white px-3 sm:px-4 md:px-6 py-2 rounded-full font-semibold mb-3 sm:mb-4 md:mb-6 text-xs sm:text-sm md:text-base border border-white/30 sm:border-transparent shadow-lg sm:shadow-none animate-fade-in sm:animate-none">Ready to Get Started?</span>
           <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 leading-tight drop-shadow-lg animate-slide-up sm:animate-none">
-            Lorem ipsum dolor sit amet, consectetur
+            Join 100,000+ members who chose
             <br className='hidden md:block'/>
-            Lorem ipsum dolor sit amet, consectetur
+            Reef Health for better coverage
           </h2>
-          <button className="mt-3 sm:mt-4 md:mt-6 px-5 sm:px-6 md:px-8 py-2 md:py-3 bg-white text-[#e03a6a] rounded-full font-semibold shadow-lg sm:shadow hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 text-sm md:text-base hover:scale-105 sm:hover:scale-100 active:scale-95 sm:active:scale-100 animate-fade-in-delayed sm:animate-none">
-            Contact Now <span className="inline-block transform rotate-45 transition-transform group-hover:rotate-90">→</span>
+          <button className="group flex items-center justify-center bg-white text-[#e03a6a] px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition-all duration-300 mx-auto lg:mx-0 text-sm sm:text-base">
+            Get Started <i className="bi bi-arrow-up-right"></i>
           </button>
         </div>
       </div>

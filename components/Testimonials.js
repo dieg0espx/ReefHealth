@@ -6,36 +6,44 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const testimonials = [
   {
-    rating: 4,
-    title: 'Lorem Ipsum',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipis',
-    name: 'Anita Sharma',
-    role: 'Lorem Ipsum',
+    rating: 5,
+    title: 'No Regrets Switching',
+    text: 'We switched from Blue Cross and have no regrets. The coverage is comprehensive and the cost savings are significant.',
+    name: 'Jason H.',
+    role: 'Business Owner',
     img: '/doctor1.jpg',
   },
   {
     rating: 5,
-    title: 'Lorem Ipsum',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipis',
-    name: 'Lena Thompson',
-    role: 'Lorem Ipsum',
+    title: 'Reduced Employee Turnover',
+    text: 'Reef helped reduce employee turnover significantly. Our team loves the benefits and it shows in their retention.',
+    name: 'Paul J.',
+    role: 'HR Director',
     img: '/doctor2.jpg',
   },
   {
-    rating: 3,
-    title: 'Lorem Ipsum',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipis',
-    name: 'Monica Delgado',
-    role: 'Lorem Ipsum',
+    rating: 5,
+    title: 'Huge Value & Convenience',
+    text: 'Huge value and incredible convenience. The platform is easy to use and the benefits are exactly what we needed.',
+    name: 'Nathan S.',
+    role: 'Small Business Owner',
     img: '/doctor3.jpg',
   },
   {
     rating: 5,
-    title: 'Lorem Ipsum',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipis',
-    name: 'Jessica Morgan',
-    role: '18 classes',
+    title: 'Easy Appointments',
+    text: 'Easy to schedule appointments and the 24/7 telehealth access has been a game-changer for our team.',
+    name: 'Hilary J.',
+    role: 'Operations Manager',
     img: '/doctor1.jpg',
+  },
+  {
+    rating: 5,
+    title: 'Saved Thousands',
+    text: 'Saved us thousands compared to our previous plan while providing better coverage and more benefits.',
+    name: 'Verne H.',
+    role: 'Franchise Owner',
+    img: '/doctor4.jpg',
   },
 ];
 
@@ -43,7 +51,7 @@ function Stars({ count }) {
   return (
     <div className="flex mb-2">
       {[...Array(5)].map((_, i) => (
-        <span key={i} className={i < count ? 'text-[#e03a6a]' : 'text-gray-300'}>★</span>
+        <i key={i} className={`bi ${i < count ? 'bi-star-fill text-[#e03a6a]' : 'bi-star text-gray-300'}`}></i>
       ))}
     </div>
   );
@@ -84,16 +92,18 @@ export default function Testimonials() {
   return (
     <section className="px-4 sm:px-6 bg-[#fbe6ed] rounded-3xl mx-2 md:mx-6 p-6 sm:p-8 md:p-10">
       <div className="mx-auto text-center">
-        <span className="inline-block bg-white text-[#e03a6a] px-4 sm:px-6 py-2 rounded-full font-semibold mb-6 sm:mb-8 text-sm sm:text-base">• Testimonials</span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">What Our Clients Say</h2>
-        <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-4xl mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span className="inline-block bg-[#e03a6a] text-white px-4 sm:px-6 py-2 rounded-full font-semibold mb-6 sm:mb-8 text-sm sm:text-base"><i className="bi bi-chat-quote"></i> Testimonials</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">What Our Members Say</h2>
+        <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-4xl mx-auto">Real feedback from business owners and employees who've experienced the Reef difference in their health coverage.</p>
         <Slider {...sliderSettings} className="pb-6 sm:pb-8">
           {testimonials.map((t, idx) => (
             <div key={idx} className="px-2 sm:px-3">
-              <div className="bg-white rounded-3xl p-6 sm:p-8 text-left flex flex-col justify-between h-full shadow">
-                <Stars count={t.rating} />
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{t.title}</h3>
-                <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">{t.text}</p>
+              <div className="bg-white rounded-3xl p-6 sm:p-8 text-left flex flex-col justify-between shadow h-[350px] sm:h-[380px]">
+                <div>
+                  <Stars count={t.rating} />
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{t.title}</h3>
+                  <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">{t.text}</p>
+                </div>
                 <div className="flex items-center gap-3 mt-auto">
                   <Image src={t.img} alt={t.name} width={40} height={40} className="rounded-full object-cover" />
                   <div>

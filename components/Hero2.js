@@ -10,7 +10,7 @@ export default function Hero2() {
         <div className="relative w-full h-full">
           <Image
             src="/sport-woman.jpg"
-            alt="Hero Background"
+            alt="About Reef Health"
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -29,18 +29,18 @@ export default function Hero2() {
         {/* Main Text */}
         <div className="w-full flex flex-col lg:flex-row items-center justify-between mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
           <div className="flex flex-col items-start mb-6 lg:mb-0 text-center lg:text-left w-full lg:w-auto">
-            <span className="bg-white/10 border border-white/20 text-white px-3 sm:px-4 py-1 rounded-full mb-4 text-xs sm:text-sm mx-auto lg:mx-0">• Lorem Ipsum</span>
+            <span className="bg-white/10 border border-white/20 text-white px-3 sm:px-4 py-1 rounded-full mb-4 text-xs sm:text-sm mx-auto lg:mx-0"><i className="bi bi-building"></i> About Reef Health</span>
             <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-2">
-              Lorem ipsum dolor sit amet,<br className="hidden sm:block" />consectetur adipiscing elit.
+              Fixing the broken<br className="hidden sm:block" />health insurance system
             </h1>
           </div>
           <div className="flex flex-col items-center lg:items-end mt-6 lg:mt-10 w-full lg:w-auto">
             <p className="text-white text-sm sm:text-base mb-4 lg:mb-2 text-center lg:text-right max-w-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae turpis in neque facilisis aliquet. Quisque
+              We remove the middleman, use real-time tech for efficient care access, and provide transparent pricing with no markups.
             </p>
             <button className="px-6 sm:px-8 py-2 sm:py-3 bg-white text-[#e03a6a] rounded-full font-semibold shadow hover:bg-gray-100 transition flex items-center gap-2 text-sm sm:text-base">
-              Contact Now
-              <span className="inline-block transform rotate-45">→</span>
+              Learn More
+              <i className="bi bi-arrow-up-right"></i>
             </button>
           </div>
         </div>
