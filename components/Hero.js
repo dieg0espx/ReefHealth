@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="hidden md:block relative w-4/5 h-1/2 md:-mt-[50px] lg:-mt-[100px]">
           <Image
             src="/hero.png"
-            alt="Hero Background"
+            alt="Reef Health Benefits affordable small business health insurance hero image"
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="block md:hidden inset-0 relative w-3/5 h-1/2 z-0 -mt-[300px]">
           <Image
             src="/hero.png"
-            alt="Hero Background"
+            alt="Reef Health Benefits affordable small business health insurance hero image"
             layout="fill"
             objectFit="cover"
             quality={100}
