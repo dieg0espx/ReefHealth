@@ -11,31 +11,22 @@ export default function Hero() {
       "
     >
       {/* Background Image */}
-      <div className="absolute inset-0 flex justify-center items-center w-full h-full z-0 border">
-        <div className="hidden md:block relative w-4/5 h-1/2 md:-mt-[50px] lg:-mt-[100px]">
-          <Image
+      <div className="absolute inset-0 flex justify-center items-center w-full h-full z-0">
+        <div className="hidden md:block relative w-4/5 flex items-center justify-center -mt-[150px]">
+          <img
             src="/hero.png"
             alt="Reef Health Benefits affordable small business health insurance hero image"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-            className="object-cover object-center rounded-b-3xl"
-            priority
+            className="w-full h-full object-cover object-center rounded-b-3xl"
           />
         </div>
 
-        <div className="block md:hidden inset-0 relative w-3/5 h-1/2 z-0 -mt-[300px]">
-          <Image
+        <div className="block md:hidden relative w-[100vw] flex items-center justify-center -mt-[30vh]">
+          <img
             src="/hero.png"
             alt="Reef Health Benefits affordable small business health insurance hero image"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-            className="object-cover object-center rounded-b-3xl"
-            priority
+            className="w-full h-full  object-center rounded-b-3xl"
           />
         </div>
-
       </div>
 
       {/* Content */}
