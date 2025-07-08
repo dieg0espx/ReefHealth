@@ -13,31 +13,8 @@ export default function Hero2() {
   };
 
   return (
-    <section className="relative w-full min-h-[85vh] sm:min-h-[90vh] overflow-hidden bg-gradient-to-br from-gray-50 via-white to-pink-50">
+    <section className="relative w-full min-h-[85vh] sm:min-h-[90vh] overflow-hidden ">
       
-      {/* Background Gradient Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#e03a6a]/5 via-transparent to-[#e03a6a]/10 z-0"></div>
-      
-      {/* Floating Geometric Elements */}
-      <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
-        {/* Large floating circles - adjusted for mobile */}
-        <div className="absolute -top-10 -right-10 sm:-top-20 sm:-right-20 w-24 h-24 sm:w-40 sm:h-40 bg-[#e03a6a]/10 rounded-full animate-float-slow"></div>
-        <div className="absolute top-1/4 -left-5 sm:-left-10 w-20 h-20 sm:w-32 sm:h-32 bg-gradient-to-r from-[#e03a6a]/5 to-pink-200/20 rounded-full animate-float-medium"></div>
-        
-        {/* Geometric shapes - smaller on mobile */}
-        <div className="absolute top-8 right-8 sm:top-16 sm:right-16 w-4 h-4 sm:w-8 sm:h-8 bg-[#e03a6a]/20 rotate-45 animate-spin-slow"></div>
-        <div className="absolute bottom-16 left-4 sm:bottom-32 sm:left-8 w-3 h-3 sm:w-6 sm:h-6 bg-[#e03a6a]/30 rotate-12 animate-pulse"></div>
-        
-        {/* Glowing orbs - adjusted positioning */}
-        <div className="absolute top-1/3 right-1/4 w-20 h-20 sm:w-32 sm:h-32 bg-gradient-radial from-[#e03a6a]/15 to-transparent rounded-full blur-xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-radial from-pink-300/20 to-transparent rounded-full blur-lg animate-float-reverse"></div>
-        
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `radial-gradient(circle, #e03a6a 1px, transparent 1px)`,
-          backgroundSize: '20px 20px sm:30px sm:30px'
-        }}></div>
-      </div>
 
       {/* Main Content - Two Column Layout */}
       <div className="relative z-20 min-h-[85vh] sm:min-h-[90vh] flex items-center py-8 sm:py-12">
