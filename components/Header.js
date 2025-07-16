@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className="w-full bg-main-pink flex items-center justify-between px-4 sm:px-6 py-4 fixed top-0 left-0 z-50">
       {/* Logo */}
-      <div className="flex items-center cursor-pointer" onClick={() => router.push("/home")}>
+      <div className="flex items-center cursor-pointer" onClick={() => router.push("/")}>
         <Image src="/logo-white.png" alt="reef health benefits logo" width={90} height={40} priority />
       </div>
       
@@ -25,7 +25,7 @@ export default function Header() {
       <nav className="hidden md:flex flex-1 justify-center">
         <ul className="flex gap-6 lg:gap-10">
           <li>
-              <a href={"/home"} className="text-white font-medium text-sm hover:underline cursor-pointer">Home</a>
+              <a href={"/"} className="text-white font-medium text-sm hover:underline cursor-pointer">Home</a>
           </li>
           <li>
               <a href={"/about"} className="text-white font-medium text-sm hover:underline cursor-pointer">About Us</a>
@@ -66,7 +66,7 @@ export default function Header() {
             <ul className="flex flex-col gap-8 text-center">
               <li>
                 <a 
-                  href={"/home"} 
+                  href={"/"} 
                   className="text-white font-medium text-lg hover:underline cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 >
