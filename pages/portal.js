@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import React from 'react'
 
 function Portal() {
@@ -175,16 +176,16 @@ function Portal() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Need Help?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              If you're having trouble accessing any of these portals or need assistance with your account, 
+              If you&apos;re having trouble accessing any of these portals or need assistance with your account, 
               our support team is here to help.
             </p>
-            <a
+            <Link
               href="/contact"
               className="inline-flex items-center bg-main-pink text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-600 transition-colors"
             >
               Contact Support
               <i className="bi bi-arrow-right ml-2"></i>
-            </a>
+            </Link>
           </div>
         </section>
       </main>
