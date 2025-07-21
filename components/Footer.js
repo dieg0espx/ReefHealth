@@ -116,6 +116,16 @@ export default function Footer() {
             >
               Get in Touch
             </button>
+            <div className="mt-4 pt-4 border-t border-white/20 w-full text-center lg:text-right">
+              <div className="text-white text-sm font-medium mb-2">Already a Member?</div>
+              <button 
+                onClick={() => window.location.href = '/portal'}
+                className="bg-white text-main-pink px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 mx-auto lg:mx-0 lg:ml-auto hover:scale-105"
+              >
+                Member Portal
+                <i className="bi bi-arrow-up-right"></i>
+              </button>
+            </div>
           </div>
         </div>
         <div className="text-center text-xs text-white/80 mt-6 sm:mt-8">
