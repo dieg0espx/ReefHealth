@@ -2,6 +2,7 @@ import ContactForm from '@/components/ContactForm'
 import FAQ from '@/components/FAQ'
 import Head from 'next/head'
 import React from 'react'
+import Testimonials from '@/components/Testimonials'
 
 function Contact() {
   const structuredData = {
@@ -41,6 +42,7 @@ function Contact() {
 
       <main className='max-w-[1500px] mx-auto md:px-5'>
         <ContactForm/>
+        <Testimonials />
         <FAQ />
       </main>
     </>

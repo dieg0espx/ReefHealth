@@ -90,7 +90,7 @@ const sliderSettings = {
 
 export default function Testimonials() {
   return (
-    <section className="bg-light-pink rounded-3xl px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
+    <section className="bg-gray-50 rounded-3xl px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 mt-10">What Our Members Say</h2>
         <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-4xl mx-auto">Real feedback from business owners and employees who&apos;ve experienced the Reef difference in their health coverage.</p>

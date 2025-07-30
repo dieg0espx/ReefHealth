@@ -41,9 +41,6 @@ const BlogsPage = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-20">
-          <div className="inline-block bg-gradient-to-r from-main-pink to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            💡 Health Insights & Tips
-          </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Health Benefits <span className="text-main-pink">Blog</span>
           </h1>

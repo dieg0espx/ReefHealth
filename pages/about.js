@@ -40,7 +40,6 @@ function About() {
 
       <main className='max-w-[1500px] mx-auto md:px-5'>
         <Hero2 />
-        <OurTeam />
         <WhyWeTheBest />
         <OurHistory />
         <Testimonials />

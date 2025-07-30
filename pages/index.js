@@ -8,6 +8,8 @@ import OurTeam from '@/components/OurTeam'
 import Testimonials from '@/components/Testimonials'
 import Pricing from '@/components/Pricing'
 import Faq from '@/components/FAQ'
+import WhyWeTheBest from '@/components/WhyWeTheBest'
+import MemberPortalCTA from '@/components/MemberPortalCTA'
 
 function Home() {
   const structuredData = {
@@ -73,9 +75,9 @@ function Home() {
         <About />
         <Services />
         <WhyChooseUs />
-        {/* <OurTeam /> */}
-       
         <Pricing />
+        <WhyWeTheBest />
+        <MemberPortalCTA />
         <Faq />
       </main>
     </>

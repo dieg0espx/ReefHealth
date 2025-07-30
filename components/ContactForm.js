@@ -68,7 +68,6 @@ function ContactForm() {
   return (
     <section className="py-8 md:py-12 lg:py-16 bg-white px-4 sm:px-6 lg:px-8">
         <div className="mx-auto text-center max-w-7xl">
-            <span className="inline-block bg-light-pink text-main-pink px-4 md:px-6 py-2 rounded-full font-semibold mb-6 md:mb-8 text-sm md:text-base">Contact Us</span>
             {selectedPlan && (
               <div className="bg-[#e03a6a] text-white px-4 py-2 rounded-full inline-block mb-4">
                 <span className="text-sm font-medium">Selected Plan: {selectedPlan}</span>
@@ -77,17 +76,8 @@ function ContactForm() {
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 w-full md:w-[80%] lg:w-[70%] mx-auto leading-tight">Ready to Transform Your Health Benefits?</h2>
             <p className="text-base md:text-lg text-gray-500 mb-8 md:mb-12 max-w-3xl mx-auto px-4">Get in touch with our team to learn more about our affordable health plans, franchise opportunities, or to schedule a consultation. We&apos;re here to help you save money and provide better health benefits.</p>
 
-            <div className='flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-5'>
-                <div className="w-full lg:w-auto order-2 lg:order-1">
-                    <Image 
-                        src={"/doctor-pink.png"} 
-                        width={570} 
-                        height={570}
-                        className="w-full max-w-md lg:max-w-none mx-auto"
-                        alt="Contact Reef Health"
-                    />
-                </div>
-                <form onSubmit={handleSubmit} className='bg-light-pink w-full lg:w-1/2 p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl space-y-4 md:space-y-5 order-1 lg:order-2 lg:mt-[50px]'>
+            <div className='flex justify-center'>
+                <form onSubmit={handleSubmit} className='bg-light-pink w-full max-w-5xl p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl space-y-4 md:space-y-5'>
                     <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6 w-full md:w-[80%] lg:w-[70%] mx-auto"> Get In Touch With Us </h3>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5'>
                         <div>
@@ -163,24 +153,6 @@ function ContactForm() {
                     </div>
                 </form>
             </div>
-        </div>
-
-        {/* Member Portal CTA Section */}
-        <div className="max-w-4xl mx-auto mt-16 bg-gradient-to-r from-main-pink to-pink-600 rounded-2xl p-8 text-white text-center">
-          <div className="mb-6">
-            <i className="bi bi-person-circle text-4xl text-white/80 mb-4 block"></i>
-            <h3 className="text-2xl md:text-3xl font-bold mb-3">Already a Member?</h3>
-            <p className="text-lg text-pink-100 mb-6">
-              Access your member dashboard, discounts, wellness tools, and more through our Member Portal.
-            </p>
-          </div>
-          <button 
-            onClick={() => window.location.href = '/portal'}
-            className="bg-white text-main-pink px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center gap-2 hover:scale-105"
-          >
-            Access Member Portal
-            <i className="bi bi-arrow-up-right"></i>
-          </button>
         </div>
     </section>
   )

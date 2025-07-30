@@ -18,35 +18,28 @@ export default function Hero2() {
 
       {/* Main Content - Two Column Layout */}
       <div className="relative z-20 min-h-[85vh] sm:min-h-[90vh] flex items-center py-8 sm:py-12">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="w-full  mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             
             {/* Left Column - Content */}
             <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
-              {/* Badge */}
-              <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                <span className="inline-flex items-center gap-2 bg-[#e03a6a]/10 border border-[#e03a6a]/20 text-[#e03a6a] px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm md:text-base font-medium shadow-lg backdrop-blur-sm hover:bg-[#e03a6a]/15 transition-all duration-300">
-                  <i className="bi bi-building text-sm sm:text-base"></i>
-                  <span>About Reef Health</span>
-                </span>
-              </div>
-
+             
               {/* Main Headline */}
               <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
                 <h1 className="text-gray-900 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.95] sm:leading-[0.9] tracking-tight">
-                  <span className="block mb-1 sm:mb-2">Fixing the</span>
-                  <span className="block bg-gradient-to-r from-[#e03a6a] via-pink-500 to-[#e03a6a] bg-clip-text text-transparent">
-                    broken
+                  <span className="block mb-1 sm:mb-2">Born from a</span>
+                  <span className="block text-main-pink">
+                    health insurance
                   </span>
-                  <span className="block">health insurance</span>
-                  <span className="block text-[#e03a6a]">system</span>
+                  <span className="block">company that</span>
+                  <span className="block text-[#e03a6a]">changed the game</span>
                 </h1>
               </div>
 
               {/* Description */}
               <div className="animate-fade-in-up" style={{animationDelay: '0.6s'}}>
                 <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed font-light max-w-full lg:max-w-lg">
-                  We remove the middleman, use real-time tech for efficient care access, and provide transparent pricing with no markups.
+                Powered by Redirect Health, we remove the middle man, use real-time tech for efficient care access, and provide transparent pricing with 0% deductible.
                 </p>
               </div>
 
@@ -58,7 +51,7 @@ export default function Hero2() {
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
                     Learn More
-                    <i className="bi bi-arrow-up-right transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+                    <i className="bi bi-arrow-right transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></i>
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-[#e03a6a] to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
@@ -94,14 +87,14 @@ export default function Hero2() {
             {/* Right Column - Visual Elements */}
             <div className="relative flex items-center justify-center order-1 lg:order-2 lg:justify-end animate-fade-in-up" style={{animationDelay: '0.6s'}}>
               {/* Main Image */}
-              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
+              <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl">
                 <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl">
                   <Image
                     src="/sport-woman.jpg"
                     alt="Reef Health - Transforming Healthcare"
-                    width={600}
-                    height={700}
-                    className="object-cover w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
+                    width={800}
+                    height={900}
+                    className="object-cover w-full aspect-square"
                     priority
                   />
                   
