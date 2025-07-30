@@ -63,7 +63,7 @@ export default function FAQ() {
         <div className="text-center mb-8 sm:mb-10 lg:mb-12">
           <span className="inline-block bg-[#e03a6a] text-white px-4 sm:px-6 py-2 rounded-full font-semibold mb-6 sm:mb-8 text-sm sm:text-base">FAQ</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">Frequently Asked<br />Questions</h2>
-          <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-10 max-w-xl mx-auto">Got questions about Reef Health? We\'ve got answers. Find out how we\'re different from traditional health insurance.</p>
+          <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-10 max-w-xl mx-auto">Got questions about Reef Health? We&rsquo;ve got answers. Find out how we&rsquo;re different from traditional health insurance.</p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <button 
               onClick={scrollToPricing}

@@ -96,7 +96,7 @@ export default function Hero() {
             <div className="flex items-center gap-6 sm:gap-8 md:gap-12">
               {/* Company Logos */}
               <div className="text-red-600 font-bold text-lg">Chick-fil-A</div>
-              <div className="text-red-600 font-bold text-lg">Jimmy John's</div>
+              <div className="text-red-600 font-bold text-lg">Jimmy John&rsquo;s</div>
               <div className="text-yellow-500 font-bold text-2xl">M</div>
               <div className="text-green-600 font-bold text-sm">College Hunks</div>
               <div className="text-blue-600 font-bold text-lg">MaidPro</div>
