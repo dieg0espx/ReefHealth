@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
         {/* Right: Content */}
         <div className="flex flex-col justify-center h-full order-1 lg:order-2">
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">What Makes Reef Different</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight"> How we made healthcare affordable. </h2>
           <div className="space-y-4 mb-8 sm:mb-10">
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-[#e03a6a] rounded-full mt-3 flex-shrink-0"></div>

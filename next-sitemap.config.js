@@ -22,7 +22,7 @@ module.exports = {
     let priority = config.priority;
     let changefreq = config.changefreq;
     
-    if (path === '/' || path === '/home') {
+    if (path === '/') {
       priority = 1.0;
       changefreq = 'weekly';
     } else if (path === '/about' || path === '/blog') {

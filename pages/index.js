@@ -67,13 +67,14 @@ function Home() {
         />
       </Head>
       
-      <main className='max-w-[1500px] mx-auto md:px-5'>
+      <main className='max-w-[1500px] mx-auto md:px-5 space-y-10'>
         <Hero />
+        <Testimonials />
         <About />
         <Services />
         <WhyChooseUs />
-        <OurTeam />
-        <Testimonials />
+        {/* <OurTeam /> */}
+       
         <Pricing />
         <Faq />
       </main>

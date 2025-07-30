@@ -90,10 +90,9 @@ const sliderSettings = {
 
 export default function Testimonials() {
   return (
-    <section className="px-4 sm:px-6 bg-[#fbe6ed] rounded-3xl mx-2 md:mx-6 p-6 sm:p-8 md:p-10">
+    <section className="bg-light-pink rounded-3xl px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="mx-auto text-center">
-        <span className="inline-block bg-[#e03a6a] text-white px-4 sm:px-6 py-2 rounded-full font-semibold mb-6 sm:mb-8 text-sm sm:text-base"><i className="bi bi-chat-quote"></i> Testimonials</span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">What Our Members Say</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 mt-10">What Our Members Say</h2>
         <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-4xl mx-auto">Real feedback from business owners and employees who&apos;ve experienced the Reef difference in their health coverage.</p>
         <Slider {...sliderSettings} className="pb-6 sm:pb-8">
           {testimonials.map((t, idx) => (

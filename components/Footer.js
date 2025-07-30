@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const links = [
-  { name: 'Home', href: '/home' },
+  { name: 'Home', href: '/' },
   { name: 'Plans', href: '#pricing' },
   { name: 'Signup', href: '#pricing' },
   { name: 'Terms & Conditions', href: '#' },
@@ -42,7 +42,7 @@ export default function Footer() {
   return (
     <div>
       {/* Cover Image Section */}
-      <div className="relative max-w-[1500px] mx-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] rounded-3xl overflow-hidden mb-[40px]  z-10 border border-white/40 flex flex-col justify-end pb-4 sm:pb-6 md:pb-8 lg:pb-10">
+      <div className="relative max-w-[1500px] mx-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] rounded-3xl overflow-hidden mb-[40px] z-10 border border-white/40 flex flex-col justify-center">
         <Image
           src="/doctorOnPhone.jpg"
           alt="Doctor on Phone"
@@ -67,9 +67,8 @@ export default function Footer() {
         </div>
         
         {/* Content */}
-        <div className="relative z-20 flex flex-col items-center justify-center h-full w-full px-4 sm:px-6 md:px-8 lg:px-4 text-center py-8 sm:py-10 md:py-12 lg:py-0">
-          <span className="inline-block bg-white/20 backdrop-blur-sm sm:backdrop-blur-none text-white px-3 sm:px-4 md:px-6 py-2 rounded-full font-semibold mb-3 sm:mb-4 md:mb-6 text-xs sm:text-sm md:text-base border border-white/30 sm:border-transparent shadow-lg sm:shadow-none animate-fade-in sm:animate-none">Ready to Get Started?</span>
-          <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 leading-tight drop-shadow-lg animate-slide-up sm:animate-none">
+        <div className="relative z-20 flex flex-col items-center justify-center h-full w-full px-4 sm:px-6 md:px-8 lg:px-4 text-center">
+          <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-6 sm:mb-8 leading-tight drop-shadow-lg animate-slide-up sm:animate-none">
             Join 100,000+ members who chose
             <br className='hidden md:block'/>
             Reef Health for better coverage
