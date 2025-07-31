@@ -21,17 +21,17 @@ export default function Hero() {
             {/* Left Side - Image with Benefit Callouts */}
             <div className="relative">
               <div className="relative">
-                <Image
-                  src="/doctor4.jpg"
+                <img
+                  src="/female-doctor.jpg"
                   alt="Healthcare professional in medical scrubs"
                   width={600}
                   height={600}
-                  className="w-full aspect-square rounded-2xl object-cover"
+                  className="w-full aspect-square rounded-2xl object-cover object-center sm:object-center object-left"
                   priority
                 />
                 
                 {/* Benefit Callouts Overlay */}
-                <div className="absolute -left-10 top-[30%] space-y-3">
+                <div className="absolute -left-3 sm:-left-10 top-[30%] space-y-3">
                   <div className="bg-blue-500 text-white pl-5 pr-10 py-4 rounded-full flex items-center gap-2 text-sm font-medium shadow-lg">
                     <i className="bi bi-plus-circle"></i>
                     24/7 Healthcare
@@ -86,7 +86,7 @@ export default function Hero() {
       </section>
 
       {/* Trusted by Section */}
-      <section className="bg-gray-100 py-8 px-4 sm:px-6 md:px-10">
+      <section className="bg-gray-100 py-8 px-4 sm:px-6 md:px-10 hidden">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-sm text-gray-700 font-medium">
