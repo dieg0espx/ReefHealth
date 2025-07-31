@@ -13,9 +13,11 @@ The system is configured to use Gmail for sending campaigns.
    - Go to Google Account settings
    - Security → 2-Step Verification → App passwords
    - Generate a password for "Mail"
-3. The credentials are already configured in the API file:
-   - Email: `diego@comcreate.org`
-   - App Password: `ttagzzixjpwfyxxp`
+3. Create a `.env.local` file in your project root with:
+   ```
+   EMAIL_USER=info@honestaffordablehealthcare.com
+   EMAIL_PASS=bfdnvahlvxozgcug
+   ```
 
 ## Usage
 
@@ -34,8 +36,8 @@ The system is configured to use Gmail for sending campaigns.
 
 ## Security Notes
 
-- The Gmail credentials are hardcoded in the API file for simplicity
-- Consider moving credentials to environment variables for production
+- Email credentials are stored in environment variables (`.env.local`)
+- Never commit `.env.local` to version control
 - Monitor your Gmail sending limits (500 emails/day for regular accounts)
 - Consider rate limiting for production use
 

@@ -46,8 +46,8 @@ export default async function handler(req, res) {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'diego@comcreate.org',
-        pass: "ttagzzixjpwfyxxp"
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS 
       }
     });
 
@@ -58,7 +58,7 @@ export default async function handler(req, res) {
     for (const email of validEmails) {
       try {
         const mailOptions = {
-          from: 'diego@comcreate.org',
+          from: process.env.EMAIL_USER,
           to: email,
           subject: subject,
           html: htmlContent,
