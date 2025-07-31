@@ -22,11 +22,11 @@ export default function Hero() {
             <div className="relative">
               <div className="relative">
                 <Image
-                  src="/doctor-pink.png"
+                  src="/doctor4.jpg"
                   alt="Healthcare professional in medical scrubs"
                   width={600}
-                  height={700}
-                  className="w-full h-auto rounded-2xl"
+                  height={600}
+                  className="w-full aspect-square rounded-2xl object-cover"
                   priority
                 />
                 
