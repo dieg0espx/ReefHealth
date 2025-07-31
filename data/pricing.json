@@ -1,0 +1,81 @@
+{
+    "18-44": {
+      "Primary Member Only": {
+        "Starter": 29,
+        "Foundation": 99,
+        "iPremium": 199,
+        "iPremium PLUS": 479
+      },
+      "Primary Member + Spouse": {
+        "Starter": 29,
+        "Foundation": 189,
+        "iPremium": 349,
+        "iPremium PLUS": 919
+      },
+      "Primary Member + Child(ren)": {
+        "Starter": 29,
+        "Foundation": 189,
+        "iPremium": 349,
+        "iPremium PLUS": 919
+      },
+      "Primary Member + Family": {
+        "Starter": 29,
+        "Foundation": 269,
+        "iPremium": 499,
+        "iPremium PLUS": 1299
+      }
+    },
+    "45-59": {
+      "Primary Member Only": {
+        "Starter": 29,
+        "Foundation": 99,
+        "iPremium": 199,
+        "iPremium PLUS": 479
+      },
+      "Primary Member + Spouse": {
+        "Starter": 29,
+        "Foundation": 189,
+        "iPremium": 349,
+        "iPremium PLUS": 919
+      },
+      "Primary Member + Child(ren)": {
+        "Starter": 29,
+        "Foundation": 189,
+        "iPremium": 349,
+        "iPremium PLUS": 919
+      },
+      "Primary Member + Family": {
+        "Starter": 29,
+        "Foundation": 269,
+        "iPremium": 499,
+        "iPremium PLUS": 1299
+      }
+    },
+    "60-64": {
+      "Primary Member Only": {
+        "Starter": 29,
+        "Foundation": 99,
+        "iPremium": 199,
+        "iPremium PLUS": 579
+      },
+      "Primary Member + Spouse": {
+        "Starter": 29,
+        "Foundation": 189,
+        "iPremium": 349,
+        "iPremium PLUS": 1029
+      },
+      "Primary Member + Child(ren)": {
+        "Starter": 29,
+        "Foundation": 189,
+        "iPremium": 349,
+        "iPremium PLUS": 1029
+      },
+      "Primary Member + Family": {
+        "Starter": 29,
+        "Foundation": 269,
+        "iPremium": 499,
+        "iPremium PLUS": 1399
+      }
+    }
+  }
+  

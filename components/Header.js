@@ -36,6 +36,9 @@ export default function Header() {
           <li>
               <a href={"/contact"} className="text-white font-medium text-sm hover:underline cursor-pointer">Contact Us</a>
           </li>
+          <li>
+              <a href={"/campaigns"} className="text-white font-medium text-sm hover:underline cursor-pointer">Campaigns</a>
+          </li>
         </ul>
       </nav>
 
@@ -98,6 +101,15 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact Us
+                </a>
+              </li>
+              <li>
+                <a 
+                  href={"/campaigns"} 
+                  className="text-white font-medium text-lg hover:underline cursor-pointer"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Campaigns
                 </a>
               </li>
               <li className="mt-8">
