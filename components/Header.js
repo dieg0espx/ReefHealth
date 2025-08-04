@@ -1,13 +1,10 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { useAuth } from "../contexts/AuthContext";
-import { signOut } from "../lib/auth";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-  const { user } = useAuth();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -15,11 +12,6 @@ export default function Header() {
 
   const handleContactClick = () => {
     router.push("/contact");
-  };
-
-  const handleSignOut = async () => {
-    await signOut();
-    router.push("/");
   };
 
   return (
@@ -50,38 +42,13 @@ export default function Header() {
 
       {/* Desktop Contact Button */}
       <div className="hidden md:block">
-        {user ? (
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => router.push("/dashboard")}
-              className="text-white font-medium text-sm hover:underline cursor-pointer"
-            >
-              Dashboard
-            </button>
-            <button
-              onClick={handleSignOut}
-              className="text-white border border-white rounded-full px-6 py-2 flex items-center gap-2 font-medium text-sm transition hover:bg-white hover:text-main-pink cursor-pointer"
-            >
-              Sign Out
-            </button>
-          </div>
-        ) : (
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => router.push("/login")}
-              className="text-white font-medium text-sm hover:underline cursor-pointer"
-            >
-              Sign In
-            </button>
-            <button
-              onClick={handleContactClick}
-              className="text-white border border-white rounded-full px-6 py-2 flex items-center gap-2 font-medium text-sm transition hover:bg-white hover:text-main-pink cursor-pointer"
-            >
-              Contact Us
-              <i className="bi bi-arrow-up-right"></i>
-            </button>
-          </div>
-        )}
+        <button
+          onClick={handleContactClick}
+          className="text-white border border-white rounded-full px-6 py-2 flex items-center gap-2 font-medium text-sm transition hover:bg-white hover:text-main-pink cursor-pointer"
+        >
+          Contact Us
+          <i className="bi bi-arrow-up-right"></i>
+        </button>
       </div>
 
       {/* Mobile Menu Button */}
@@ -134,55 +101,6 @@ export default function Header() {
                   Contact Us
                 </a>
               </li>
-              
-              {user ? (
-                <>
-                  <li>
-                    <a 
-                      href={"/dashboard"} 
-                      className="text-white font-medium text-lg hover:underline cursor-pointer"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Dashboard
-                    </a>
-                  </li>
-                  <li className="mt-8">
-                    <button
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        handleSignOut();
-                      }}
-                      className="text-white border border-white rounded-full px-8 py-3 flex items-center gap-2 font-medium text-lg transition hover:bg-white hover:text-main-pink cursor-pointer"
-                    >
-                      Sign Out
-                    </button>
-                  </li>
-                </>
-              ) : (
-                <>
-                  <li>
-                    <a 
-                      href={"/login"} 
-                      className="text-white font-medium text-lg hover:underline cursor-pointer"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Sign In
-                    </a>
-                  </li>
-                  <li className="mt-8">
-                    <button
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        handleContactClick();
-                      }}
-                      className="text-white border border-white rounded-full px-8 py-3 flex items-center gap-2 font-medium text-lg transition hover:bg-white hover:text-main-pink cursor-pointer"
-                    >
-                      Contact Us
-                      <i className="bi bi-arrow-up-right"></i>
-                    </button>
-                  </li>
-                </>
-              )}
             </ul>
           </nav>
         </div>
