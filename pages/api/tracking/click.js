@@ -4,10 +4,10 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { campaign_id, subscriber_id, user_id, url } = req.query
+    const { campaign_id, user_id, url } = req.query
 
-    if (!campaign_id || !subscriber_id || !user_id || !url) {
-      console.error('Missing required parameters:', { campaign_id, subscriber_id, user_id, url })
+    if (!campaign_id || !user_id || !url) {
+      console.error('Missing required parameters:', { campaign_id, user_id, url })
       return res.status(400).json({ error: 'Missing required parameters' })
     }
 
@@ -22,12 +22,11 @@ export default async function handler(req, res) {
       process.env.SUPABASE_SERVICE_ROLE_KEY
     )
 
-    // Record the click event
+    // Record the click event (simplified - just campaign and user)
     const { error: clickError } = await supabase
       .from('email_clicks')
       .insert({
         campaign_id,
-        subscriber_id,
         user_id,
         clicked_url: decodedUrl,
         clicked_at: new Date().toISOString(),
@@ -42,7 +41,7 @@ export default async function handler(req, res) {
     // Update email_stats table
     const { data: existingStats } = await supabase
       .from('email_stats')
-      .select('click_count')
+      .select('click_count, sent_count')
       .eq('campaign_id', campaign_id)
       .eq('user_id', user_id)
       .single()
@@ -56,6 +55,18 @@ export default async function handler(req, res) {
         })
         .eq('campaign_id', campaign_id)
         .eq('user_id', user_id)
+    } else {
+      // Create new stats record if it doesn't exist
+      await supabase
+        .from('email_stats')
+        .insert({
+          campaign_id,
+          user_id,
+          click_count: 1,
+          sent_count: 1,
+          click_rate: 100.00,
+          sent_date: new Date().toISOString()
+        })
     }
 
     // Redirect to the original URL

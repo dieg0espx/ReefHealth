@@ -7,14 +7,21 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { campaignId, subscriberId, userId, emailHtml, recipientEmail, recipientName } = req.body
+    const { campaignId, userId, emailHtml, recipientEmail, recipientName } = req.body
 
-    if (!campaignId || !subscriberId || !userId || !emailHtml || !recipientEmail) {
+    if (!campaignId || !userId || !emailHtml || !recipientEmail) {
       return res.status(400).json({ error: 'Missing required parameters' })
     }
 
-    // Add tracking to the email HTML
-    const trackedHtml = addTrackingToEmail(emailHtml, campaignId, subscriberId, userId)
+    // Add tracking to the email HTML (simplified - no subscriber ID)
+    const trackedHtml = addTrackingToEmail(emailHtml, campaignId, userId)
+    
+    // Debug: Log email details
+    console.log('=== EMAIL SENDING DEBUG ===')
+    console.log('Original HTML length:', emailHtml.length)
+    console.log('Tracked HTML length:', trackedHtml.length)
+    console.log('Tracking added:', trackedHtml !== emailHtml)
+    console.log('========================')
 
     // Create email subject based on campaign
     const subject = `Test Email - ${campaignId} Campaign`
@@ -53,7 +60,6 @@ export default async function handler(req, res) {
       html: trackedHtml,
       headers: {
         'X-Campaign-ID': campaignId,
-        'X-Subscriber-ID': subscriberId,
         'X-User-ID': userId
       }
     }
@@ -66,7 +72,6 @@ export default async function handler(req, res) {
         to: recipientEmail,
         subject,
         campaignId,
-        subscriberId,
         hasTracking: trackedHtml !== emailHtml
       })
 
@@ -84,7 +89,6 @@ export default async function handler(req, res) {
           to: recipientEmail,
           subject,
           campaignId,
-          subscriberId,
           hasTracking: trackedHtml !== emailHtml,
           messageId: info.messageId,
           previewUrl

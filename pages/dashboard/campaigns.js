@@ -108,11 +108,8 @@ export default function Campaigns() {
 
     setSendingTest(true)
     try {
-      // Generate a test subscriber ID
-      const testSubscriberId = `test-${Date.now()}`
-      
-      // Add tracking to the campaign HTML
-      const trackedHtml = addTrackingToEmail(campaignHtml, selectedCampaign.id, testSubscriberId, user.id)
+      // Add tracking to the campaign HTML (simplified - no subscriber ID)
+      const trackedHtml = addTrackingToEmail(campaignHtml, selectedCampaign.id, user.id)
 
       const response = await fetch('/api/send-campaign', {
         method: 'POST',
@@ -121,7 +118,6 @@ export default function Campaigns() {
         },
         body: JSON.stringify({
           campaignId: selectedCampaign.id,
-          subscriberId: testSubscriberId,
           userId: user.id,
           emailHtml: trackedHtml,
           recipientEmail: testEmail,

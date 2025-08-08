@@ -4,10 +4,10 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { campaign_id, subscriber_id, user_id } = req.query
+    const { campaign_id, user_id } = req.query
 
-    if (!campaign_id || !subscriber_id || !user_id) {
-      console.error('Missing required parameters:', { campaign_id, subscriber_id, user_id })
+    if (!campaign_id || !user_id) {
+      console.error('Missing required parameters:', { campaign_id, user_id })
       return res.status(400).json({ error: 'Missing required parameters' })
     }
 
@@ -19,12 +19,11 @@ export default async function handler(req, res) {
       process.env.SUPABASE_SERVICE_ROLE_KEY
     )
 
-    // Record the open event
+    // Record the open event (simplified - just campaign and user)
     const { error: openError } = await supabase
       .from('email_opens')
       .insert({
         campaign_id,
-        subscriber_id,
         user_id,
         opened_at: new Date().toISOString(),
         ip_address: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
@@ -38,7 +37,7 @@ export default async function handler(req, res) {
     // Update email_stats table
     const { data: existingStats } = await supabase
       .from('email_stats')
-      .select('open_count')
+      .select('open_count, sent_count')
       .eq('campaign_id', campaign_id)
       .eq('user_id', user_id)
       .single()
@@ -52,6 +51,18 @@ export default async function handler(req, res) {
         })
         .eq('campaign_id', campaign_id)
         .eq('user_id', user_id)
+    } else {
+      // Create new stats record if it doesn't exist
+      await supabase
+        .from('email_stats')
+        .insert({
+          campaign_id,
+          user_id,
+          open_count: 1,
+          sent_count: 1,
+          open_rate: 100.00,
+          sent_date: new Date().toISOString()
+        })
     }
 
     // Return a 1x1 transparent GIF
