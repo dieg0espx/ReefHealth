@@ -76,7 +76,7 @@ export default function Campaigns() {
   return (
     <ProtectedRoute>
       <DashboardLayout>
-        <div className="h-full flex w-full border border-red-500">
+        <div className="h-full flex w-full">
           {/* Campaign List - Left Side */}
           <div className="w-80 bg-white border-r border-gray-200 flex flex-col">
             {/* Header */}

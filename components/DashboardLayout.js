@@ -21,7 +21,7 @@ export default function DashboardLayout({ children }) {
   ]
 
   return (
-    <div className="h-screen flex overflow-hidden bg-gray-100">
+    <div className="h-[calc(100vh-64px)] flex overflow-hidden bg-gray-100">
       {/* Mobile overlay */}
       {sidebarOpen && (
         <div
@@ -31,7 +31,7 @@ export default function DashboardLayout({ children }) {
       )}
 
       {/* Sidebar */}
-      <div className={`${
+      <div className={`border-r border-gray-200 ${
         sidebarOpen ? 'fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg' : 'hidden'
       } lg:flex lg:w-64 lg:flex-col lg:bg-white lg:shadow-lg transition-transform duration-300 ease-in-out`}>
         {/* Sidebar header */}
@@ -99,21 +99,6 @@ export default function DashboardLayout({ children }) {
 
       {/* Main content area */}
       <div className="flex-1 flex flex-col">
-        {/* Top bar */}
-        <div className="flex-shrink-0 bg-white shadow-sm border-b border-gray-200">
-          <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
-            <button
-              onClick={() => setSidebarOpen(true)}
-              className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-            <div className="flex-1"></div>
-          </div>
-        </div>
-
         {/* Page content */}
         <main className="flex-1 overflow-y-auto bg-gray-100">
           <div className="">
