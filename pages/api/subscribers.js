@@ -16,7 +16,16 @@ export default async function handler(req, res) {
     }
   } else if (req.method === 'POST') {
     try {
-      const { email, first_name, last_name, tags } = req.body
+      const { 
+        email, 
+        first_name, 
+        last_name, 
+        address,
+        phone_number,
+        birthday,
+        company,
+        tags 
+      } = req.body
 
       const { data, error } = await supabase
         .from('subscribers')
@@ -25,8 +34,12 @@ export default async function handler(req, res) {
             email,
             first_name,
             last_name,
+            address,
+            phone_number,
+            birthday,
+            company,
             tags: tags || [],
-            status: 'Subscribed'
+            status: 'active'
           }
         ])
         .select()

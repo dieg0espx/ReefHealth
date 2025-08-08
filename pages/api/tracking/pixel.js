@@ -20,7 +20,13 @@ export default async function handler(req, res) {
     )
 
     // Record the open event (simplified - just campaign and user)
-    const { error: openError } = await supabase
+    console.log('=== TRACKING PIXEL HIT ===')
+    console.log('Campaign ID:', campaign_id)
+    console.log('User ID:', user_id)
+    console.log('IP Address:', req.headers['x-forwarded-for'] || req.connection.remoteAddress)
+    console.log('User Agent:', req.headers['user-agent'])
+    
+    const { data: insertData, error: openError } = await supabase
       .from('email_opens')
       .insert({
         campaign_id,
@@ -29,10 +35,15 @@ export default async function handler(req, res) {
         ip_address: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
         user_agent: req.headers['user-agent']
       })
+      .select()
 
     if (openError) {
       console.error('Error recording email open:', openError)
+      console.error('Error details:', openError.message, openError.details, openError.hint)
+    } else {
+      console.log('Successfully recorded email open:', insertData)
     }
+    console.log('========================')
 
     // Update email_stats table
     const { data: existingStats } = await supabase

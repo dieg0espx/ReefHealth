@@ -7,57 +7,95 @@ async function setupSampleData() {
   try {
     console.log('Setting up sample data...')
 
-    // Get current user
-    const { data: { user }, error: userError } = await supabase.auth.getUser()
-    if (userError || !user) {
-      console.error('No authenticated user found. Please log in first.')
-      return
-    }
-
-    const userId = user.id
-    console.log('Using user ID:', userId)
-
-    // Insert sample subscribers
+    // Insert sample subscribers (no user_id needed)
     const sampleSubscribers = [
       {
         email: 'john.doe@example.com',
         first_name: 'John',
         last_name: 'Doe',
-        status: 'Subscribed',
+        status: 'active',
         tags: ['Newsletter', 'Product Updates'],
-        user_id: userId
+        address: '123 Main St, City, State 12345',
+        phone_number: '+1-555-0123',
+        birthday: '1990-05-15',
+        company: 'Tech Corp'
       },
       {
         email: 'jane.smith@example.com',
         first_name: 'Jane',
         last_name: 'Smith',
-        status: 'Subscribed',
+        status: 'active',
         tags: ['Newsletter'],
-        user_id: userId
+        address: '456 Oak Ave, City, State 12345',
+        phone_number: '+1-555-0124',
+        birthday: '1985-08-22',
+        company: 'Design Studio'
       },
       {
         email: 'mike.johnson@example.com',
         first_name: 'Mike',
         last_name: 'Johnson',
-        status: 'Unsubscribed',
+        status: 'inactive',
         tags: ['Product Updates'],
-        user_id: userId
+        address: '789 Pine Rd, City, State 12345',
+        phone_number: '+1-555-0125',
+        birthday: '1992-03-10',
+        company: 'Marketing Inc'
       },
       {
         email: 'sarah.wilson@example.com',
         first_name: 'Sarah',
         last_name: 'Wilson',
-        status: 'Subscribed',
+        status: 'active',
         tags: ['Newsletter', 'Promotions'],
-        user_id: userId
+        address: '321 Elm St, City, State 12345',
+        phone_number: '+1-555-0126',
+        birthday: '1988-11-05',
+        company: 'Consulting Group'
       },
       {
         email: 'alex.brown@example.com',
         first_name: 'Alex',
         last_name: 'Brown',
-        status: 'Subscribed',
+        status: 'active',
         tags: ['Product Updates', 'Promotions'],
-        user_id: userId
+        address: '654 Maple Dr, City, State 12345',
+        phone_number: '+1-555-0127',
+        birthday: '1995-07-18',
+        company: 'Startup Co'
+      },
+      {
+        email: 'emily.davis@example.com',
+        first_name: 'Emily',
+        last_name: 'Davis',
+        status: 'active',
+        tags: ['Newsletter'],
+        address: '987 Cedar Ln, City, State 12345',
+        phone_number: '+1-555-0128',
+        birthday: '1991-12-03',
+        company: 'Creative Agency'
+      },
+      {
+        email: 'david.miller@example.com',
+        first_name: 'David',
+        last_name: 'Miller',
+        status: 'active',
+        tags: ['Product Updates'],
+        address: '147 Birch Way, City, State 12345',
+        phone_number: '+1-555-0129',
+        birthday: '1987-04-25',
+        company: 'Software Solutions'
+      },
+      {
+        email: 'lisa.garcia@example.com',
+        first_name: 'Lisa',
+        last_name: 'Garcia',
+        status: 'inactive',
+        tags: ['Promotions'],
+        address: '258 Spruce Ct, City, State 12345',
+        phone_number: '+1-555-0130',
+        birthday: '1993-09-14',
+        company: 'Retail Store'
       }
     ]
 
@@ -72,7 +110,7 @@ async function setupSampleData() {
       console.log('Inserted', subscribers.length, 'subscribers')
     }
 
-    // Insert sample email stats
+    // Insert sample email stats (no user_id needed)
     const sampleEmailStats = [
       {
         campaign_name: 'Welcome Series',
@@ -83,7 +121,7 @@ async function setupSampleData() {
         bounce_count: 12,
         open_rate: 24.5,
         click_rate: 3.2,
-        user_id: userId
+        sent_date: new Date().toISOString()
       },
       {
         campaign_name: 'Product Launch',
@@ -94,7 +132,7 @@ async function setupSampleData() {
         bounce_count: 8,
         open_rate: 26.1,
         click_rate: 4.1,
-        user_id: userId
+        sent_date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
       },
       {
         campaign_name: 'Holiday Promotion',
@@ -105,7 +143,7 @@ async function setupSampleData() {
         bounce_count: 15,
         open_rate: 20.0,
         click_rate: 3.0,
-        user_id: userId
+        sent_date: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString()
       },
       {
         campaign_name: 'Weekly Newsletter',
@@ -116,7 +154,7 @@ async function setupSampleData() {
         bounce_count: 10,
         open_rate: 22.0,
         click_rate: 2.7,
-        user_id: userId
+        sent_date: new Date(Date.now() - 21 * 24 * 60 * 60 * 1000).toISOString()
       },
       {
         campaign_name: 'Feature Update',
@@ -127,7 +165,7 @@ async function setupSampleData() {
         bounce_count: 6,
         open_rate: 25.0,
         click_rate: 5.0,
-        user_id: userId
+        sent_date: new Date(Date.now() - 28 * 24 * 60 * 60 * 1000).toISOString()
       }
     ]
 
@@ -142,35 +180,31 @@ async function setupSampleData() {
       console.log('Inserted', emailStats.length, 'email stats')
     }
 
-    // Insert sample segments
+    // Insert sample segments (no user_id needed)
     const sampleSegments = [
       {
         name: 'Newsletter Subscribers',
         description: 'Subscribers to our weekly newsletter',
         subscriber_count: 2847,
-        criteria: { tags: ['Newsletter'] },
-        user_id: userId
+        criteria: { tags: ['Newsletter'] }
       },
       {
         name: 'Product Updates',
         description: 'Interested in product updates and features',
         subscriber_count: 1245,
-        criteria: { tags: ['Product Updates'] },
-        user_id: userId
+        criteria: { tags: ['Product Updates'] }
       },
       {
         name: 'Promotions',
         description: 'Subscribers who engage with promotional content',
         subscriber_count: 892,
-        criteria: { tags: ['Promotions'] },
-        user_id: userId
+        criteria: { tags: ['Promotions'] }
       },
       {
         name: 'Inactive',
         description: 'Subscribers with no activity in 30+ days',
         subscriber_count: 156,
-        criteria: { last_activity: '30+ days' },
-        user_id: userId
+        criteria: { last_activity: '30+ days' }
       }
     ]
 
