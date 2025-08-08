@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { supabase } from '../lib/supabase'
 
 export default function TestConnection() {
@@ -88,9 +89,9 @@ export default function TestConnection() {
         </div>
 
         <div className="text-center space-y-2">
-          <a href="/login" className="text-blue-600 hover:text-blue-500 block">
+          <Link href="/login" className="text-blue-600 hover:text-blue-500 block">
             Go to Login
-          </a>
+          </Link>
           <a href="https://supabase.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 block text-sm">
             Check Supabase Dashboard
           </a>

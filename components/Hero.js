@@ -21,7 +21,7 @@ export default function Hero() {
             {/* Left Side - Image with Benefit Callouts */}
             <div className="relative">
               <div className="relative">
-                <img
+                <Image
                   src="/female-doctor.jpg"
                   alt="Healthcare professional in medical scrubs"
                   width={600}
