@@ -27,6 +27,8 @@ export default function Audience() {
   const [uploadProgress, setUploadProgress] = useState(0)
   const [dragOver, setDragOver] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [sortField, setSortField] = useState('')
+  const [sortDirection, setSortDirection] = useState('asc')
   const [newSubscriber, setNewSubscriber] = useState({
     email: '',
     firstName: '',
@@ -365,6 +367,62 @@ export default function Audience() {
     return activeStatuses.includes(status) ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
   }
 
+  const handleSort = (field) => {
+    if (sortField === field) {
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc')
+    } else {
+      setSortField(field)
+      setSortDirection('asc')
+    }
+  }
+
+  const getSortedSubscribers = () => {
+    if (!sortField) return subscribers
+
+    return [...subscribers].sort((a, b) => {
+      let aValue = a[sortField] || ''
+      let bValue = b[sortField] || ''
+      
+      // Handle name sorting
+      if (sortField === 'name') {
+        aValue = `${a.firstName || ''} ${a.lastName || ''}`.trim()
+        bValue = `${b.firstName || ''} ${b.lastName || ''}`.trim()
+      }
+      
+      // Convert to lowercase for string comparison
+      if (typeof aValue === 'string') aValue = aValue.toLowerCase()
+      if (typeof bValue === 'string') bValue = bValue.toLowerCase()
+      
+      if (aValue < bValue) return sortDirection === 'asc' ? -1 : 1
+      if (aValue > bValue) return sortDirection === 'asc' ? 1 : -1
+      return 0
+    })
+  }
+
+  const getSortIcon = (field) => {
+    if (sortField !== field) {
+      return (
+        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+        </svg>
+      )
+    }
+    
+    if (sortDirection === 'asc') {
+      return (
+        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+        </svg>
+      )
+    } else {
+      return (
+        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      )
+    }
+  }
+
   const handleDebugAllSubscribers = async () => {
     try {
       console.log('🔍 Debug: Fetching all subscribers...')
@@ -495,65 +553,110 @@ export default function Audience() {
           <div className="bg-white shadow rounded-lg">
             <div className="p-6">
               <div className="overflow-hidden">
-                {subscribers.length > 0 ? (
-                  <table className="min-w-full divide-y divide-gray-200">
-                    <thead className="bg-gray-50">
-                      <tr>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Subscriber
-                        </th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Status
-                        </th>
-                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Actions
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
-                      {subscribers.map((subscriber) => (
-                        <tr key={subscriber.id} className="hover:bg-gray-50">
-                          <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex items-center">
-                              <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
-                                <span className="text-white text-sm font-medium">
-                                  {(subscriber.firstName || '').charAt(0)}{(subscriber.lastName || '').charAt(0)}
+                                  {subscribers.length > 0 ? (
+                    <table className="min-w-full divide-y divide-gray-200">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th 
+                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 w-[30%]"
+                            onClick={() => handleSort('name')}
+                          >
+                            <div className="flex items-center space-x-1">
+                              <span>Subscriber</span>
+                              {getSortIcon('name')}
+                            </div>
+                          </th>
+                          <th 
+                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 w-[40%]"
+                            onClick={() => handleSort('company')}
+                          >
+                            <div className="flex items-center space-x-1">
+                              <span>Company</span>
+                              {getSortIcon('company')}
+                            </div>
+                          </th>
+                          <th 
+                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 w-[15%]"
+                            onClick={() => handleSort('status')}
+                          >
+                            <div className="flex items-center space-x-1">
+                              <span>Status</span>
+                              {getSortIcon('status')}
+                            </div>
+                          </th>
+                          <th className="py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider w-[7.5%]">
+                            Edit
+                          </th>
+                          <th className="py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider w-[7.5%]">
+                            Delete
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg-white divide-y divide-gray-200">
+                        {getSortedSubscribers().map((subscriber) => (
+                          <tr key={subscriber.id} className="hover:bg-gray-50">
+                            <td className="px-6 py-4 whitespace-nowrap w-[30%]">
+                              <div className="flex items-center">
+                                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                  <span className="text-white text-xs font-medium">
+                                    {(subscriber.firstName || '').charAt(0)}{(subscriber.lastName || '').charAt(0)}
+                                  </span>
+                                </div>
+                                <div className="ml-3 min-w-0 flex-1">
+                                  <div className="text-sm font-medium text-gray-900 truncate">
+                                    {subscriber.firstName || ''} {subscriber.lastName || ''}
+                                  </div>
+                                  <div className="text-sm text-gray-500 truncate">{subscriber.email}</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap w-[40%]">
+                              <div className="text-sm text-gray-900">
+                                <span 
+                                  className="block truncate" 
+                                  title={subscriber.company || '-'}
+                                >
+                                  {subscriber.company ? 
+                                    (subscriber.company.length > 50 ? 
+                                      subscriber.company.substring(0, 50) + '...' : 
+                                      subscriber.company
+                                    ) : 
+                                    '-'
+                                  }
                                 </span>
                               </div>
-                              <div className="ml-4">
-                                <div className="text-sm font-medium text-gray-900">
-                                  {subscriber.firstName || ''} {subscriber.lastName || ''}
-                                </div>
-                                <div className="text-sm text-gray-500">{subscriber.email}</div>
-                                {subscriber.company && (
-                                  <div className="text-sm text-gray-400">{subscriber.company}</div>
-                                )}
-                              </div>
-                            </div>
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap">
-                            <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(subscriber.status)}`}>
-                              {subscriber.status}
-                            </span>
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                            <button 
-                              onClick={() => handleEditSubscriber(subscriber)}
-                              className="text-blue-600 hover:text-blue-900 mr-3"
-                            >
-                              Edit
-                            </button>
-                            <button 
-                              onClick={() => handleDeleteSubscriber(subscriber.id)}
-                              className="text-red-600 hover:text-red-900"
-                            >
-                              Remove
-                            </button>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                            </td>
+                            <td className="px-4 py-4 whitespace-nowrap w-[15%]">
+                              <span className={`inline-flex px-1 py-0.5 text-xs font-semibold rounded-full ${getStatusColor(subscriber.status)}`}>
+                                {subscriber.status}
+                              </span>
+                            </td>
+                            <td className="py-4 whitespace-nowrap w-[7.5%] text-center">
+                              <button 
+                                onClick={() => handleEditSubscriber(subscriber)}
+                                className="text-blue-600 hover:text-blue-900 p-1 rounded hover:bg-blue-50"
+                                title="Edit subscriber"
+                              >
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                </svg>
+                              </button>
+                            </td>
+                            <td className="py-4 whitespace-nowrap w-[7.5%] text-center">
+                              <button 
+                                onClick={() => handleDeleteSubscriber(subscriber.id)}
+                                className="text-red-600 hover:text-red-900 p-1 rounded hover:bg-red-50"
+                                title="Delete subscriber"
+                              >
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                </svg>
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                 ) : (
                   <div className="text-center py-8">
                     <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
