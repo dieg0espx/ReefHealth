@@ -1,90 +1,112 @@
-import nodemailer from 'nodemailer';
-import fs from 'fs';
-import path from 'path';
-
-// Email validation function
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
+import { addTrackingToEmail } from '../../lib/tracking'
+import nodemailer from 'nodemailer'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
-    const { campaignId, emails, subject } = req.body;
+    const { campaignId, subscriberId, userId, emailHtml, recipientEmail, recipientName } = req.body
 
-    // Validate required fields
-    if (!campaignId || !emails || !subject) {
-      return res.status(400).json({ error: 'Missing required fields' });
+    if (!campaignId || !subscriberId || !userId || !emailHtml || !recipientEmail) {
+      return res.status(400).json({ error: 'Missing required parameters' })
     }
 
-    // Validate emails
-    if (!Array.isArray(emails) || emails.length === 0) {
-      return res.status(400).json({ error: 'Invalid email list' });
-    }
+    // Add tracking to the email HTML
+    const trackedHtml = addTrackingToEmail(emailHtml, campaignId, subscriberId, userId)
 
-    // Filter valid emails
-    const validEmails = emails.filter(email => isValidEmail(email));
+    // Create email subject based on campaign
+    const subject = `Test Email - ${campaignId} Campaign`
+
+    // Create a test account for development
+    let transporter
     
-    if (validEmails.length === 0) {
-      return res.status(400).json({ error: 'No valid email addresses provided' });
+    if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+      // Use Gmail if credentials are provided
+      transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS
+        }
+      })
+    } else {
+      // For development, create a test account
+      const testAccount = await nodemailer.createTestAccount()
+      
+      transporter = nodemailer.createTransport({
+        host: 'smtp.ethereal.email',
+        port: 587,
+        secure: false,
+        auth: {
+          user: testAccount.user,
+          pass: testAccount.pass
+        }
+      })
     }
 
-    // Read the campaign template
-    const templatePath = path.join(process.cwd(), 'emails', `${campaignId}.html`);
-    
-    if (!fs.existsSync(templatePath)) {
-      return res.status(404).json({ error: 'Campaign template not found' });
-    }
-
-    const htmlContent = fs.readFileSync(templatePath, 'utf8');
-
-    // Gmail transporter configuration
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS 
-      }
-    });
-
-    let sentCount = 0;
-    const errors = [];
-
-    // Send emails to each recipient
-    for (const email of validEmails) {
-      try {
-        const mailOptions = {
-          from: process.env.EMAIL_USER,
-          to: email,
-          subject: subject,
-          html: htmlContent,
-        };
-
-        await transporter.sendMail(mailOptions);
-        sentCount++;
-        
-        // Add a small delay to avoid rate limiting
-        await new Promise(resolve => setTimeout(resolve, 100));
-        
-      } catch (error) {
-        console.error(`Error sending to ${email}:`, error);
-        errors.push({ email, error: error.message });
+    const mailOptions = {
+      from: process.env.EMAIL_USER || 'test@ethereal.email',
+      to: recipientEmail,
+      subject: subject,
+      html: trackedHtml,
+      headers: {
+        'X-Campaign-ID': campaignId,
+        'X-Subscriber-ID': subscriberId,
+        'X-User-ID': userId
       }
     }
 
-    return res.status(200).json({
-      success: true,
-      sentCount,
-      totalEmails: validEmails.length,
-      errors: errors.length > 0 ? errors : undefined
-    });
+    try {
+      const info = await transporter.sendMail(mailOptions)
+      
+      console.log('Email sent successfully:', {
+        messageId: info.messageId,
+        to: recipientEmail,
+        subject,
+        campaignId,
+        subscriberId,
+        hasTracking: trackedHtml !== emailHtml
+      })
+
+      // If using ethereal email, provide the preview URL
+      let previewUrl = null
+      if (info.messageId && !process.env.EMAIL_USER) {
+        previewUrl = `https://ethereal.email/message/${info.messageId}`
+      }
+
+      res.status(200).json({ 
+        success: true, 
+        message: 'Email sent successfully',
+        trackingEnabled: true,
+        details: {
+          to: recipientEmail,
+          subject,
+          campaignId,
+          subscriberId,
+          hasTracking: trackedHtml !== emailHtml,
+          messageId: info.messageId,
+          previewUrl
+        }
+      })
+    } catch (emailError) {
+      console.error('Email sending error:', emailError)
+      
+      // If Gmail fails, try with a different approach
+      if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+        res.status(500).json({ 
+          error: 'Email service not configured. Please set EMAIL_USER and EMAIL_PASS environment variables for Gmail, or use a different email service.' 
+        })
+      } else {
+        res.status(500).json({ 
+          error: `Failed to send email: ${emailError.message}` 
+        })
+      }
+    }
 
   } catch (error) {
-    console.error('Campaign sending error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    console.error('Error sending campaign:', error)
+    res.status(500).json({ error: 'Failed to send campaign' })
   }
 } 
