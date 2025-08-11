@@ -67,7 +67,7 @@ export default function Audience() {
     }
 
     fetchAudienceData()
-  }, [user?.id])
+  }, [user])
 
   const handleAddSubscriber = async () => {
     if (!user?.id) return
@@ -874,7 +874,7 @@ export default function Audience() {
                       <h4 className="text-sm font-medium text-blue-800 mb-2">CSV Upload Instructions:</h4>
                       <ul className="text-sm text-blue-700 space-y-1">
                         <li>• Upload your CSV file with any column names</li>
-                        <li>• You'll be able to map columns to database fields</li>
+                        <li>• You&apos;ll be able to map columns to database fields</li>
                         <li>• Email Address is required, other fields are optional</li>
                         <li>• Maximum file size: 10MB</li>
                       </ul>

@@ -96,7 +96,7 @@ export default function Campaigns() {
     if (campaigns.length > 0 && !selectedCampaign) {
       handleCampaignSelect(campaigns[0])
     }
-  }, [])
+  }, [campaigns, selectedCampaign, handleCampaignSelect])
 
   const formatPercentage = (value, total) => {
     if (!total || total === 0) return '0%'
@@ -153,11 +153,11 @@ export default function Campaigns() {
   return (
     <ProtectedRoute>
       <DashboardLayout>
-        <div className="h-full flex w-full">
+        <div className="h-screen flex w-full">
           {/* Campaign List - Left Side */}
-          <div className="w-80 bg-white border-r border-gray-200 flex flex-col">
+          <div className="w-80 bg-white border-r border-gray-200 flex flex-col h-screen">
             {/* Header */}
-            <div className="p-6 border-b border-gray-200">
+            <div className="p-6 border-b border-gray-200 flex-shrink-0">
               <h2 className="text-lg font-semibold text-gray-900">Campaigns</h2>
               <p className="text-sm text-gray-500 mt-1">Select a campaign to preview and track</p>
             </div>
@@ -202,9 +202,9 @@ export default function Campaigns() {
           </div>
 
           {/* Campaign Preview - Right Side */}
-          <div className="flex-1 flex flex-col">
+          <div className="flex-1 flex flex-col h-screen">
             {/* Preview Header */}
-            <div className="bg-white border-b border-gray-200 p-6">
+            <div className="bg-white border-b border-gray-200 p-6 flex-shrink-0">
               <div className="flex items-center justify-between">
                 <div>
                   <h1 className="text-xl font-semibold text-gray-900">
@@ -260,7 +260,7 @@ export default function Campaigns() {
             </div>
 
             {/* Content Area */}
-            <div className="flex-1 bg-gray-50 overflow-hidden">
+            <div className="flex-1 bg-gray-50 overflow-y-auto">
               {activeTab === 'preview' ? (
                 // Campaign HTML Preview
                 loading ? (
@@ -271,9 +271,9 @@ export default function Campaigns() {
                     </div>
                   </div>
                 ) : campaignHtml ? (
-                  <div className="h-full w-full">
+                  <div className="h-full w-full overflow-y-auto">
                     <div 
-                      className="campaign-preview h-full w-full"
+                      className="campaign-preview min-h-full w-full"
                       dangerouslySetInnerHTML={{ __html: campaignHtml }}
                     />
                   </div>
@@ -290,7 +290,7 @@ export default function Campaigns() {
                 )
               ) : (
                 // Tracking Statistics
-                <div className="p-6">
+                <div className="p-6 h-full overflow-y-auto">
                   {trackingStats ? (
                     <div className="space-y-6">
                       {/* Summary Stats */}

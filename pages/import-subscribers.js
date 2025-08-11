@@ -15,7 +15,7 @@ export default function ImportSubscribers() {
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Upload your CSV file to import subscribers into your database. 
-              All imported subscribers will have an "active" status.
+              All imported subscribers will have an &quot;active&quot; status.
             </p>
           </div>
           
