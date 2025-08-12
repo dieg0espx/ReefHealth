@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import ProtectedRoute from '../../components/ProtectedRoute'
 import DashboardLayout from '../../components/DashboardLayout'
 import { useAuth } from '../../contexts/AuthContext'
-import { getCampaignTrackingStats, addTrackingToEmail } from '../../lib/tracking'
+import { getCampaignTrackingStats, addTrackingToEmail, addSimpleTrackingToEmail } from '../../lib/tracking'
+import { getAllSubscribers } from '../../lib/dashboard'
 
 export default function Campaigns() {
   const { user } = useAuth()
@@ -14,6 +15,13 @@ export default function Campaigns() {
   const [activeTab, setActiveTab] = useState('preview')
   const [testEmail, setTestEmail] = useState('')
   const [showTestModal, setShowTestModal] = useState(false)
+  const [showSendModal, setShowSendModal] = useState(false)
+  const [sendingCampaign, setSendingCampaign] = useState(false)
+  const [sendProgress, setSendProgress] = useState({ sent: 0, total: 0, errors: 0 })
+  const [sendResults, setSendResults] = useState(null)
+  const [subscribers, setSubscribers] = useState([])
+  const [selectedRecipients, setSelectedRecipients] = useState([])
+  const [selectAll, setSelectAll] = useState(true)
 
   // Campaign list with metadata
   const campaigns = [
@@ -108,9 +116,6 @@ export default function Campaigns() {
 
     setSendingTest(true)
     try {
-      // Add tracking to the campaign HTML (simplified - no subscriber ID)
-      const trackedHtml = addTrackingToEmail(campaignHtml, selectedCampaign.id, user.id)
-
       const response = await fetch('/api/send-campaign', {
         method: 'POST',
         headers: {
@@ -119,18 +124,24 @@ export default function Campaigns() {
         body: JSON.stringify({
           campaignId: selectedCampaign.id,
           userId: user.id,
-          emailHtml: trackedHtml,
-          recipientEmail: testEmail,
-          recipientName: 'Test Recipient'
+          emails: [testEmail],
+          subject: `Test Email - ${selectedCampaign.name}`
         })
       })
 
       if (response.ok) {
         const result = await response.json()
-        let message = `Test email sent successfully!\n\nTo: ${result.details?.to}\nCampaign: ${result.details?.campaignId}\nTracking: ${result.details?.hasTracking ? 'Enabled' : 'Disabled'}`
+        let message = `Test email sent successfully!\n\nTo: ${testEmail}\nCampaign: ${selectedCampaign.id}\nTracking: Enabled\nSent: ${result.sentCount} email(s)`
         
-        if (result.details?.previewUrl) {
-          message += `\n\nPreview URL: ${result.details.previewUrl}\n\nThis is a test email service. Click the preview URL to see the email.`
+        // Check if any emails failed
+        if (result.errorCount > 0) {
+          message += `\nFailed: ${result.errorCount} email(s)`
+        }
+        
+        // Check for preview URLs in results
+        const previewUrl = result.results?.[0]?.previewUrl
+        if (previewUrl) {
+          message += `\n\nPreview URL: ${previewUrl}\n\nThis is a test email service. Click the preview URL to see the email.`
         } else {
           message += `\n\nCheck your inbox and the tracking tab to see results.`
         }
@@ -150,12 +161,110 @@ export default function Campaigns() {
     }
   }
 
+  const loadSubscribers = async () => {
+    try {
+      const allSubscribers = await getAllSubscribers()
+      const activeSubscribers = allSubscribers.filter(sub => 
+        sub.status === 'Subscribed' || sub.status === 'active' || sub.status === 'Active'
+      )
+      setSubscribers(activeSubscribers)
+      
+      // Select all by default
+      setSelectedRecipients(activeSubscribers.map(sub => sub.email))
+      setSelectAll(true)
+    } catch (error) {
+      console.error('Error loading subscribers:', error)
+      alert('Failed to load subscribers. Please try again.')
+    }
+  }
+
+  const handleSendModalOpen = () => {
+    setShowSendModal(true)
+    loadSubscribers()
+  }
+
+  const handleSelectAll = (checked) => {
+    setSelectAll(checked)
+    if (checked) {
+      setSelectedRecipients(subscribers.map(sub => sub.email))
+    } else {
+      setSelectedRecipients([])
+    }
+  }
+
+  const handleRecipientToggle = (email) => {
+    setSelectedRecipients(prev => {
+      const newSelection = prev.includes(email) 
+        ? prev.filter(e => e !== email)
+        : [...prev, email]
+      
+      // Update select all state
+      setSelectAll(newSelection.length === subscribers.length)
+      return newSelection
+    })
+  }
+
+  const handleSendCampaign = async () => {
+    if (!selectedCampaign || !user?.id || selectedRecipients.length === 0) return
+
+    setSendingCampaign(true)
+    setSendProgress({ sent: 0, total: 0, errors: 0 })
+    setSendResults(null)
+
+    try {
+      if (selectedRecipients.length === 0) {
+        alert('Please select at least one recipient.')
+        setSendingCampaign(false)
+        return
+      }
+
+      setSendProgress({ sent: 0, total: selectedRecipients.length, errors: 0 })
+
+      // Send campaign to selected recipients
+      const response = await fetch('/api/send-campaign', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          campaignId: selectedCampaign.id,
+          userId: user.id,
+          emails: selectedRecipients,
+          subject: selectedCampaign.name
+        })
+      })
+
+      if (response.ok) {
+        const result = await response.json()
+        setSendResults(result)
+        setSendProgress({ 
+          sent: result.sentCount, 
+          total: result.totalCount, 
+          errors: result.errorCount 
+        })
+        
+        let message = `Campaign sent successfully!\n\nCampaign: ${selectedCampaign.name}\nTotal Recipients: ${result.totalCount}\nSuccessfully Sent: ${result.sentCount}\nFailed: ${result.errorCount}\n\nTracking is enabled for all emails.`
+        
+        alert(message)
+        setShowSendModal(false)
+      } else {
+        const error = await response.json()
+        alert(`Failed to send campaign: ${error.error}`)
+      }
+    } catch (error) {
+      console.error('Error sending campaign:', error)
+      alert('Failed to send campaign. Please try again.')
+    } finally {
+      setSendingCampaign(false)
+    }
+  }
+
   return (
     <ProtectedRoute>
       <DashboardLayout>
-        <div className="h-screen flex w-full">
+        <div className="flex w-full overflow-hidden">
           {/* Campaign List - Left Side */}
-          <div className="w-80 bg-white border-r border-gray-200 flex flex-col h-screen">
+          <div className="w-80 bg-white border-r border-gray-200 flex flex-col max-h-[calc(100vh-65px)]">
             {/* Header */}
             <div className="p-6 border-b border-gray-200 flex-shrink-0">
               <h2 className="text-lg font-semibold text-gray-900">Campaigns</h2>
@@ -202,7 +311,7 @@ export default function Campaigns() {
           </div>
 
           {/* Campaign Preview - Right Side */}
-          <div className="flex-1 flex flex-col h-screen">
+          <div className="flex-1 flex flex-col overflow-hidden max-h-[calc(100vh-65px)]">
             {/* Preview Header */}
             <div className="bg-white border-b border-gray-200 p-6 flex-shrink-0">
               <div className="flex items-center justify-between">
@@ -226,6 +335,13 @@ export default function Campaigns() {
                     className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Send Test
+                  </button>
+                  <button 
+                    onClick={handleSendModalOpen}
+                    disabled={!selectedCampaign}
+                    className="px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    Send Campaign
                   </button>
                 </div>
               </div>
@@ -260,7 +376,7 @@ export default function Campaigns() {
             </div>
 
             {/* Content Area */}
-            <div className="flex-1 bg-gray-50 overflow-y-auto">
+            <div className="flex-1 bg-gray-50 overflow-hidden p-5">
               {activeTab === 'preview' ? (
                 // Campaign HTML Preview
                 loading ? (
@@ -273,7 +389,7 @@ export default function Campaigns() {
                 ) : campaignHtml ? (
                   <div className="h-full w-full overflow-y-auto">
                     <div 
-                      className="campaign-preview min-h-full w-full"
+                      className="campaign-preview w-full"
                       dangerouslySetInnerHTML={{ __html: campaignHtml }}
                     />
                   </div>
@@ -525,6 +641,147 @@ export default function Campaigns() {
                         </>
                       ) : (
                         'Send Test Email'
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Send Campaign Modal */}
+          {showSendModal && (
+            <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+              <div className="relative top-20 mx-auto p-5 border w-[600px] max-h-[80vh] shadow-lg rounded-md bg-white">
+                <div className="mt-3">
+                  <h3 className="text-lg font-medium text-gray-900 mb-4">Send Campaign to Recipients</h3>
+                  
+                  <div className="space-y-4 max-h-[60vh] overflow-y-auto">
+                    <div className="bg-green-50 border border-green-200 rounded-md p-4">
+                      <h4 className="text-sm font-medium text-green-800 mb-2">Campaign Details:</h4>
+                      <ul className="text-sm text-green-700 space-y-1">
+                        <li>• Campaign: {selectedCampaign?.name}</li>
+                        <li>• Tracking will be enabled for all emails</li>
+                        <li>• Opens and clicks will be recorded</li>
+                        <li>• This action cannot be undone</li>
+                      </ul>
+                    </div>
+
+                    {/* Recipient Selection */}
+                    <div className="bg-white border border-gray-200 rounded-md p-4">
+                      <div className="flex items-center justify-between mb-4">
+                        <h4 className="text-sm font-medium text-gray-800">Select Recipients</h4>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm text-gray-600">
+                            {selectedRecipients.length} of {subscribers.length} selected
+                          </span>
+                          <label className="flex items-center">
+                            <input
+                              type="checkbox"
+                              checked={selectAll}
+                              onChange={(e) => handleSelectAll(e.target.checked)}
+                              className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                            />
+                            <span className="ml-2 text-sm text-gray-700">Select All</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      {subscribers.length > 0 ? (
+                        <div className="space-y-2 max-h-48 overflow-y-auto">
+                          {subscribers.map((subscriber) => (
+                            <label key={subscriber.email} className="flex items-center p-2 hover:bg-gray-50 rounded cursor-pointer">
+                              <input
+                                type="checkbox"
+                                checked={selectedRecipients.includes(subscriber.email)}
+                                onChange={() => handleRecipientToggle(subscriber.email)}
+                                className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                              />
+                              <div className="ml-3 flex-1">
+                                <div className="text-sm font-medium text-gray-900">
+                                  {subscriber.firstName} {subscriber.lastName}
+                                </div>
+                                <div className="text-sm text-gray-500">{subscriber.email}</div>
+                                {subscriber.company && (
+                                  <div className="text-xs text-gray-400">{subscriber.company}</div>
+                                )}
+                              </div>
+                            </label>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="text-center py-4">
+                          <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600 mx-auto"></div>
+                          <p className="text-sm text-gray-500 mt-2">Loading subscribers...</p>
+                        </div>
+                      )}
+                    </div>
+
+                    {sendingCampaign && (
+                      <div className="bg-blue-50 border border-blue-200 rounded-md p-4">
+                        <h4 className="text-sm font-medium text-blue-800 mb-2">Sending Progress:</h4>
+                        <div className="space-y-2">
+                          <div className="flex justify-between text-sm">
+                            <span>Progress:</span>
+                            <span>{sendProgress.sent} / {sendProgress.total}</span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-2">
+                            <div 
+                              className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                              style={{ width: `${sendProgress.total > 0 ? (sendProgress.sent / sendProgress.total) * 100 : 0}%` }}
+                            ></div>
+                          </div>
+                          {sendProgress.errors > 0 && (
+                            <div className="text-sm text-red-600">
+                              Errors: {sendProgress.errors}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {sendResults && (
+                      <div className="bg-gray-50 border border-gray-200 rounded-md p-4">
+                        <h4 className="text-sm font-medium text-gray-800 mb-2">Results:</h4>
+                        <div className="text-sm text-gray-700 space-y-1">
+                          <div>Total Recipients: {sendResults.totalCount}</div>
+                          <div className="text-green-600">Successfully Sent: {sendResults.sentCount}</div>
+                          {sendResults.errorCount > 0 && (
+                            <div className="text-red-600">Failed: {sendResults.errorCount}</div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div className="mt-6 flex justify-end space-x-3">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setShowSendModal(false)
+                        setSendResults(null)
+                        setSelectedRecipients([])
+                      }}
+                      disabled={sendingCampaign}
+                      className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleSendCampaign}
+                      disabled={sendingCampaign || selectedRecipients.length === 0}
+                      className="px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {sendingCampaign ? (
+                        <>
+                          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Sending Campaign...
+                        </>
+                      ) : (
+                        `Send Campaign (${selectedRecipients.length})`
                       )}
                     </button>
                   </div>

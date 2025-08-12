@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useAuth } from '../contexts/AuthContext';
 
 const campaigns = [
   {
@@ -31,6 +32,7 @@ const campaigns = [
 ];
 
 export default function Campaigns() {
+  const { user } = useAuth();
   const [selectedCampaign, setSelectedCampaign] = useState('');
   const [emailList, setEmailList] = useState('');
   const [subject, setSubject] = useState('');
@@ -67,7 +69,8 @@ export default function Campaigns() {
         body: JSON.stringify({
           campaignId: selectedCampaign,
           emails: emails,
-          subject: subject
+          subject: subject,
+          userId: user?.id || 'anonymous'
         }),
       });
 

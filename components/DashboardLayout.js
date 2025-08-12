@@ -21,7 +21,7 @@ export default function DashboardLayout({ children }) {
   ]
 
   return (
-    <div className="h-[calc(100vh-64px)] flex overflow-hidden bg-gray-100">
+    <div className="h-[calc(100vh-65px)] flex overflow-hidden bg-gray-100">
       {/* Mobile overlay */}
       {sidebarOpen && (
         <div
@@ -98,7 +98,7 @@ export default function DashboardLayout({ children }) {
       </div>
 
       {/* Main content area */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col overflow-hidden">
         {/* Page content */}
         <main className="flex-1 overflow-y-auto bg-gray-100">
           <div className="">
