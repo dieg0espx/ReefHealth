@@ -110,75 +110,7 @@ async function setupSampleData() {
       console.log('Inserted', subscribers.length, 'subscribers')
     }
 
-    // Insert sample email stats (no user_id needed)
-    const sampleEmailStats = [
-      {
-        campaign_name: 'Welcome Series',
-        campaign_id: 'welcome-001',
-        sent_count: 2847,
-        open_count: 698,
-        click_count: 91,
-        bounce_count: 12,
-        open_rate: 24.5,
-        click_rate: 3.2,
-        sent_date: new Date().toISOString()
-      },
-      {
-        campaign_name: 'Product Launch',
-        campaign_id: 'product-001',
-        sent_count: 2847,
-        open_count: 742,
-        click_count: 117,
-        bounce_count: 8,
-        open_rate: 26.1,
-        click_rate: 4.1,
-        sent_date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
-      },
-      {
-        campaign_name: 'Holiday Promotion',
-        campaign_id: 'holiday-001',
-        sent_count: 2847,
-        open_count: 569,
-        click_count: 85,
-        bounce_count: 15,
-        open_rate: 20.0,
-        click_rate: 3.0,
-        sent_date: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString()
-      },
-      {
-        campaign_name: 'Weekly Newsletter',
-        campaign_id: 'newsletter-001',
-        sent_count: 2847,
-        open_count: 625,
-        click_count: 78,
-        bounce_count: 10,
-        open_rate: 22.0,
-        click_rate: 2.7,
-        sent_date: new Date(Date.now() - 21 * 24 * 60 * 60 * 1000).toISOString()
-      },
-      {
-        campaign_name: 'Feature Update',
-        campaign_id: 'feature-001',
-        sent_count: 2847,
-        open_count: 712,
-        click_count: 142,
-        bounce_count: 6,
-        open_rate: 25.0,
-        click_rate: 5.0,
-        sent_date: new Date(Date.now() - 28 * 24 * 60 * 60 * 1000).toISOString()
-      }
-    ]
 
-    const { data: emailStats, error: statsError } = await supabase
-      .from('email_stats')
-      .insert(sampleEmailStats)
-      .select()
-
-    if (statsError) {
-      console.error('Error inserting email stats:', statsError)
-    } else {
-      console.log('Inserted', emailStats.length, 'email stats')
-    }
 
     // Insert sample segments (no user_id needed)
     const sampleSegments = [

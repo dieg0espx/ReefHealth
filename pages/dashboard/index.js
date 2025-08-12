@@ -77,7 +77,7 @@ export default function Dashboard() {
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Dashboard Overview</h1>
             <p className="mt-1 text-sm text-gray-500">
-              Welcome back! Here&apos;s what&apos;s happening with your campaigns.
+              Welcome back! Here&apos;s what&apos;s happening with your subscribers.
             </p>
           </div>
 
@@ -190,7 +190,7 @@ export default function Dashboard() {
                     <thead className="bg-gray-50">
                       <tr>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Campaign
+                          Email
                         </th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Sent
@@ -228,8 +228,8 @@ export default function Dashboard() {
                   <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
-                  <h3 className="mt-2 text-sm font-medium text-gray-900">No email campaigns yet</h3>
-                  <p className="mt-1 text-sm text-gray-500">Start your first campaign to see performance data here.</p>
+                  <h3 className="mt-2 text-sm font-medium text-gray-900">No email activity yet</h3>
+                  <p className="mt-1 text-sm text-gray-500">Send emails to see performance data here.</p>
                 </div>
               )}
             </div>
@@ -251,10 +251,10 @@ export default function Dashboard() {
                   <div className="mt-8">
                     <h3 className="text-lg font-medium">
                       <span className="absolute inset-0" aria-hidden="true" />
-                      Create Campaign
+                      Send Email
                     </h3>
                     <p className="mt-2 text-sm text-gray-500">
-                      Start a new email campaign to engage your audience.
+                      Send an email to your subscribers.
                     </p>
                   </div>
                 </button>
@@ -292,7 +292,7 @@ export default function Dashboard() {
                       View Analytics
                     </h3>
                     <p className="mt-2 text-sm text-gray-500">
-                      Analyze your campaign performance and insights.
+                      Analyze your email performance and insights.
                     </p>
                   </div>
                 </button>

@@ -112,40 +112,6 @@ body::-webkit-scrollbar {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Campaign preview styles */
-.campaign-preview {
-  /* Ensure email content renders properly */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
 
-.campaign-preview img {
-  max-width: 100%;
-  height: auto;
-}
-
-.campaign-preview table {
-  border-collapse: collapse;
-}
-
-.campaign-preview td,
-.campaign-preview th {
-  padding: 0;
-}
-
-/* Ensure email styles don't conflict with dashboard */
-.campaign-preview * {
-  box-sizing: border-box;
-}
-
-/* Override any problematic email styles */
-.campaign-preview body {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-}
-
-.campaign-preview html {
-  background: transparent;
-}
 
 

@@ -33,31 +33,7 @@ async function setupDatabase() {
       console.log('✅ Subscribers table created')
     }
 
-    // Create email_stats table
-    console.log('Creating email_stats table...')
-    const { error: emailStatsError } = await supabase.rpc('exec_sql', {
-      sql: `
-        CREATE TABLE IF NOT EXISTS email_stats (
-          id SERIAL PRIMARY KEY,
-          campaign_name VARCHAR NOT NULL,
-          campaign_id VARCHAR,
-          sent_count INTEGER DEFAULT 0,
-          open_count INTEGER DEFAULT 0,
-          click_count INTEGER DEFAULT 0,
-          bounce_count INTEGER DEFAULT 0,
-          open_rate DECIMAL(5,2) DEFAULT 0.00,
-          click_rate DECIMAL(5,2) DEFAULT 0.00,
-          sent_date TIMESTAMP DEFAULT NOW(),
-          user_id UUID REFERENCES auth.users(id)
-        );
-      `
-    })
 
-    if (emailStatsError) {
-      console.log('Email stats table error:', emailStatsError)
-    } else {
-      console.log('✅ Email stats table created')
-    }
 
     // Create segments table
     console.log('Creating segments table...')
@@ -85,7 +61,6 @@ async function setupDatabase() {
     const { error: rlsError } = await supabase.rpc('exec_sql', {
       sql: `
         ALTER TABLE subscribers ENABLE ROW LEVEL SECURITY;
-        ALTER TABLE email_stats ENABLE ROW LEVEL SECURITY;
         ALTER TABLE segments ENABLE ROW LEVEL SECURITY;
       `
     })
@@ -117,22 +92,7 @@ async function setupDatabase() {
         CREATE POLICY "Users can delete own subscribers" ON subscribers
           FOR DELETE USING (auth.uid() = user_id);
 
-        -- Email stats policies
-        DROP POLICY IF EXISTS "Users can view own email stats" ON email_stats;
-        CREATE POLICY "Users can view own email stats" ON email_stats
-          FOR SELECT USING (auth.uid() = user_id);
 
-        DROP POLICY IF EXISTS "Users can insert own email stats" ON email_stats;
-        CREATE POLICY "Users can insert own email stats" ON email_stats
-          FOR INSERT WITH CHECK (auth.uid() = user_id);
-
-        DROP POLICY IF EXISTS "Users can update own email stats" ON email_stats;
-        CREATE POLICY "Users can update own email stats" ON email_stats
-          FOR UPDATE USING (auth.uid() = user_id);
-
-        DROP POLICY IF EXISTS "Users can delete own email stats" ON email_stats;
-        CREATE POLICY "Users can delete own email stats" ON email_stats
-          FOR DELETE USING (auth.uid() = user_id);
 
         -- Segments policies
         DROP POLICY IF EXISTS "Users can view own segments" ON segments;
@@ -178,22 +138,7 @@ async function setupDatabase() {
       console.log('✅ Sample subscribers inserted')
     }
 
-    const { error: emailStatsDataError } = await supabase.rpc('exec_sql', {
-      sql: `
-        INSERT INTO email_stats (campaign_name, campaign_id, sent_count, open_count, click_count, bounce_count, open_rate, click_rate) VALUES
-        ('Welcome Series', 'welcome-001', 2847, 698, 91, 12, 24.50, 3.20),
-        ('Product Launch', 'product-002', 2847, 742, 117, 8, 26.10, 4.10),
-        ('Holiday Promotion', 'holiday-003', 2847, 569, 85, 15, 20.00, 3.00),
-        ('Newsletter #15', 'newsletter-015', 2847, 654, 98, 10, 23.00, 3.40)
-        ON CONFLICT DO NOTHING;
-      `
-    })
 
-    if (emailStatsDataError) {
-      console.log('Email stats data error:', emailStatsDataError)
-    } else {
-      console.log('✅ Sample email stats inserted')
-    }
 
     const { error: segmentsDataError } = await supabase.rpc('exec_sql', {
       sql: `

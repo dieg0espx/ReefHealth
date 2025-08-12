@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { action, email_address, campaign, first_name, last_name } = req.query
+    const { action, email_address, first_name, last_name } = req.query
 
     // Import Supabase client
     const { createClient } = require('@supabase/supabase-js')
@@ -16,9 +16,11 @@ export default async function handler(req, res) {
 
     // Log the tracking event
     console.log('=== SIMPLE TRACKING PIXEL HIT ===')
+    console.log('Request URL:', req.url)
+    console.log('Request headers:', req.headers)
     console.log('Action:', action || 'open')
     console.log('Email Address:', email_address)
-    console.log('Campaign:', campaign)
+
     console.log('First Name:', first_name)
     console.log('Last Name:', last_name)
     
@@ -28,9 +30,8 @@ export default async function handler(req, res) {
       .insert({
         action: action || 'open',
         email_address: email_address,
-        campaign: campaign,
-        first_name: first_name || null,
-        last_name: last_name || null
+  
+        // Note: first_name and last_name columns don't exist in current table structure
       })
       .select()
 

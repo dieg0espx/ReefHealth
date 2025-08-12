@@ -16,7 +16,7 @@ export default function DashboardLayout({ children }) {
 
   const navigation = [
     { name: 'Overview', href: '/dashboard', icon: '📊' },
-    { name: 'Campaigns', href: '/dashboard/campaigns', icon: '📧' },
+    
     { name: 'Audience', href: '/dashboard/audience', icon: '👥' },
   ]
 

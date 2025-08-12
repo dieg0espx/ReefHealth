@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { action, email_address, campaign, limit = 100 } = req.query
+    const { action, email_address, limit = 100 } = req.query
 
     // Import Supabase client
     const { createClient } = require('@supabase/supabase-js')
@@ -28,9 +28,7 @@ export default async function handler(req, res) {
     if (email_address) {
       query = query.eq('email_address', email_address)
     }
-    if (campaign) {
-      query = query.eq('campaign', campaign)
-    }
+
 
     const { data, error } = await query
 

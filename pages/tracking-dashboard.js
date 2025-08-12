@@ -7,7 +7,6 @@ export default function TrackingDashboard() {
   const [filters, setFilters] = useState({
     action: '',
     email_address: '',
-    campaign: '',
     limit: 100
   })
 
@@ -52,7 +51,6 @@ export default function TrackingDashboard() {
     setFilters({
       action: '',
       email_address: '',
-      campaign: '',
       limit: 100
     })
   }
@@ -124,18 +122,7 @@ export default function TrackingDashboard() {
               />
             </div>
             
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Campaign
-              </label>
-              <input
-                type="text"
-                value={filters.campaign}
-                onChange={(e) => handleFilterChange('campaign', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Filter by campaign"
-              />
-            </div>
+
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -212,9 +199,7 @@ export default function TrackingDashboard() {
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Email Address
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Campaign
-                    </th>
+
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Created At
                     </th>
@@ -239,9 +224,7 @@ export default function TrackingDashboard() {
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {event.email_address || 'N/A'}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {event.campaign || 'N/A'}
-                      </td>
+
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         {new Date(event.created_at).toLocaleString()}
                       </td>
