@@ -35,8 +35,8 @@ export default function TraditionalInsuranceProblem() {
             <span className="block text-[#e03a6a]">Is Broken</span>
           </h2>
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            For decades, health insurance has been sold as "protection" — but for employers and employees, 
-            it's become an expensive trap that delivers less value every year.
+            For decades, health insurance has been sold as &quot;protection&quot; — but for employers and employees, 
+            it&apos;s become an expensive trap that delivers less value every year.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function TraditionalInsuranceProblem() {
                   </svg>
                 </div>
                 <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Skyrocketing Premiums</h4>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Every year costs go up by 10-18%, yet coverage rarely improves. It's like paying more for less.</p>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Every year costs go up by 10-18%, yet coverage rarely improves. It&apos;s like paying more for less.</p>
               </div>
             </div>
 
@@ -263,12 +263,12 @@ export default function TraditionalInsuranceProblem() {
               <span className="block text-[#e03a6a] mt-1 sm:mt-2">Zero confusion.</span>
             </h3>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-6 sm:mb-8 md:mb-12 leading-relaxed px-2 sm:px-0">
-              With Reef, you're not buying "insurance"—you're getting healthcare that actually works. 
+              With Reef, you&apos;re not buying &quot;insurance&quot;—you&apos;re getting healthcare that actually works. 
               We protect your people, reduce your costs, and eliminate the hidden traps that make 
               traditional insurance so expensive and frustrating.
             </p>
             <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
-              That's the Reef difference.
+              That&apos;s the Reef difference.
             </div>
           </div>
         </div>
