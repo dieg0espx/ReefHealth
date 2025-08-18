@@ -164,110 +164,110 @@ export default function TraditionalInsuranceProblem() {
 
         {/* Reef Solution Section */}
         <div className="mb-24">
-          <div className="bg-gradient-to-br from-[#e03a6a] to-[#d12e5c] rounded-3xl p-12 lg:p-16 text-white relative overflow-hidden ">
+          <div className="bg-gradient-to-br from-[#e03a6a] to-[#d12e5c] rounded-2xl sm:rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-10 right-10 w-32 h-32 bg-white rounded-full"></div>
               <div className="absolute bottom-10 left-10 w-24 h-24 bg-white rounded-full"></div>
             </div>
             
-            <div className="relative text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white text-sm font-medium mb-6">
+            <div className="relative text-center mb-12 sm:mb-16">
+              <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
                 The Reef Solution
               </div>
-              <h3 className="text-4xl lg:text-6xl font-bold mb-6">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                 We Flip the Model
               </h3>
-              <p className="text-xl lg:text-2xl max-w-3xl mx-auto opacity-90 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-xl lg:text-2xl max-w-3xl mx-auto opacity-90 leading-relaxed px-4 sm:px-0">
                 Reef removes the bloat, confusion, and inflated pricing of traditional insurance to deliver 
                 healthcare that actually works.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <svg className="w-8 h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold mb-4 text-center">Transparent, Predictable Pricing</h4>
-              <p className="text-center opacity-90 leading-relaxed">Flat monthly rates—no guessing, no surprise bills, no hidden fees.</p>
+              <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Transparent, Predictable Pricing</h4>
+              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">Flat monthly rates—no guessing, no surprise bills, no hidden fees.</p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <svg className="w-8 h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold mb-4 text-center">Virtual-First Care, 24/7/365</h4>
-              <p className="text-center opacity-90 leading-relaxed">Access to doctors, urgent care, specialists, and mental health support anytime, anywhere.</p>
+              <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Virtual-First Care, 24/7/365</h4>
+              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">Access to doctors, urgent care, specialists, and mental health support anytime, anywhere.</p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <svg className="w-8 h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold mb-4 text-center">Minimal or $0 Out-of-Pocket</h4>
-              <p className="text-center opacity-90 leading-relaxed">No one skips treatment because of cost. Period.</p>
+              <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Minimal or $0 Out-of-Pocket</h4>
+              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">No one skips treatment because of cost. Period.</p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <svg className="w-8 h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold mb-4 text-center">Personal Care Navigation</h4>
-              <p className="text-center opacity-90 leading-relaxed">We handle scheduling, referrals, cost negotiations, and follow-ups so you never navigate alone.</p>
+              <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Personal Care Navigation</h4>
+              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">We handle scheduling, referrals, cost negotiations, and follow-ups so you never navigate alone.</p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <svg className="w-8 h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold mb-4 text-center">Nationwide Access</h4>
-              <p className="text-center opacity-90 leading-relaxed">Same pricing in every state, without punishing small groups or specific industries.</p>
+              <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Nationwide Access</h4>
+              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">Same pricing in every state, without punishing small groups or specific industries.</p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <svg className="w-8 h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold mb-4 text-center">Whole-Family Coverage</h4>
-              <p className="text-center opacity-90 leading-relaxed">Affordable plans that protect your entire household—not just the employee.</p>
+              <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Whole-Family Coverage</h4>
+              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">Affordable plans that protect your entire household—not just the employee.</p>
             </div>
           </div>
           </div>
         </div>
 
         {/* Value Promise Section */}
-        <div className="bg-white rounded-3xl shadow-2xl p-12 lg:p-16 mb-16 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#e03a6a]/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 lg:p-16 mb-12 sm:mb-16 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-gradient-to-br from-[#e03a6a]/10 to-transparent rounded-full blur-2xl sm:blur-3xl"></div>
           
           <div className="relative text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-[#e03a6a]/10 border border-[#e03a6a]/20 rounded-full text-[#e03a6a] text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-[#e03a6a] rounded-full mr-2"></span>
+            <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-[#e03a6a]/10 border border-[#e03a6a]/20 rounded-full text-[#e03a6a] text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#e03a6a] rounded-full mr-1.5 sm:mr-2"></span>
               Our Promise to You
             </div>
-            <h3 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight">
               Lower costs. Better care.
-              <span className="block text-[#e03a6a]">Zero confusion.</span>
+              <span className="block text-[#e03a6a] mt-1 sm:mt-2">Zero confusion.</span>
             </h3>
-            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-6 sm:mb-8 md:mb-12 leading-relaxed px-2 sm:px-0">
               With Reef, you're not buying "insurance"—you're getting healthcare that actually works. 
               We protect your people, reduce your costs, and eliminate the hidden traps that make 
               traditional insurance so expensive and frustrating.
             </p>
-            <div className="text-3xl lg:text-4xl font-bold text-gray-900">
+            <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
               That's the Reef difference.
             </div>
           </div>

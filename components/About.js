@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About() {
   return (
-    <section id="about" className="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-5 bg-white">
+    <section id="about" className="pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4 sm:px-6 md:px-5 bg-white">
       <div className="mx-auto text-center max-w-7xl">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#e03a6a] mb-4 sm:mb-6 md:mb-8 leading-tight">Healthcare was a maze. We brought a bulldozer</h2>
         <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 mb-8 sm:mb-12 md:mb-16 max-w-4xl mx-auto px-4">
