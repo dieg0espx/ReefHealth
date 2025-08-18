@@ -96,7 +96,7 @@ export default function Testimonials() {
         <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-4xl mx-auto">Real feedback from business owners and employees who&apos;ve experienced the Reef difference in their health coverage.</p>
         <Slider {...sliderSettings} className="pb-6 sm:pb-8">
           {testimonials.map((t, idx) => (
-            <div key={idx} className="px-2 sm:px-3">
+            <div key={idx} className="px-2 sm:px-3 py-5">
               <div className="bg-white rounded-3xl p-6 sm:p-8 text-left flex flex-col justify-between shadow h-[350px] sm:h-[380px]">
                 <div>
                   <Stars count={t.rating} />

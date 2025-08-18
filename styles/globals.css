@@ -112,6 +112,66 @@ body::-webkit-scrollbar {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Campaign preview styles */
+.campaign-preview {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.campaign-preview table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.campaign-preview td {
+  padding: 0;
+  vertical-align: top;
+}
+
+.campaign-preview img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.campaign-preview .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.campaign-preview .mobile-full {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.campaign-preview .mobile-text-center {
+  text-align: center !important;
+}
+
+.campaign-preview .mobile-padding {
+  padding: 10px !important;
+}
+
+.campaign-preview .cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ee2966;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.campaign-preview .benefit-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 
 
