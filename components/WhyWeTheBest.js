@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-export default function WhyWeTheBest() {
+export default function WhyWeTheBest({ isAboutPage = false }) {
   const scrollToPricing = () => {
     const pricingSection = document.querySelector('#pricing');
     if (pricingSection) {
@@ -22,7 +22,7 @@ export default function WhyWeTheBest() {
         {/* Left: Image */}
         <div className="rounded-3xl overflow-hidden shadow-lg h-full order-2 lg:order-1">
           <Image
-            src="/stock/iStock-2197157146.jpg"
+            src={isAboutPage ? "/doctor3.jpg" : "/doctor4.jpg"}
             alt="How It Works"
             width={700}
             height={700}

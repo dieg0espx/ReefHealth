@@ -212,25 +212,25 @@ Would you like to contact us now to get started?`);
   const availableCoverageOptions = getAvailableCoverageOptions();
 
   return (
-    <section id="pricing" className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 bg-white">
-      <div className="mx-auto">
+    <section id="pricing" className="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 bg-white">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">Choose Your Plan</h2>
-          <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-10 max-w-3xl mx-auto">Affordable small business health insurance with transparent pricing and no markups. All plans include comprehensive coverage.</p>
+        <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight">Choose Your Plan</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-500 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto px-4">Affordable small business health insurance with transparent pricing and no markups. All plans include comprehensive coverage.</p>
         </div>
 
         {/* Selection Controls */}
-        <div className="mb-8 sm:mb-10 bg-gray-50 rounded-3xl p-6 sm:p-8">
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center">
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <label className="text-sm sm:text-base font-medium text-gray-700">
+        <div className="mb-6 sm:mb-8 md:mb-10 bg-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8">
+          <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 items-center justify-center">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+              <label className="text-xs sm:text-sm md:text-base font-medium text-gray-700">
                 Step 1: Select your age range:
               </label>
               <select
                 value={selectedAgeRange}
                 onChange={(e) => setSelectedAgeRange(e.target.value)}
-                className="px-4 sm:px-6 py-2 sm:py-3 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-[#e03a6a] focus:border-[#e03a6a] text-sm sm:text-base"
+                className="px-3 sm:px-4 md:px-6 py-2 sm:py-3 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-[#e03a6a] focus:border-[#e03a6a] text-xs sm:text-sm md:text-base"
               >
                 <option value="18-44">18 to 44</option>
                 <option value="45-59">45 to 59</option>
@@ -238,14 +238,14 @@ Would you like to contact us now to get started?`);
               </select>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <label className="text-sm sm:text-base font-medium text-gray-700">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+              <label className="text-xs sm:text-sm md:text-base font-medium text-gray-700">
                 Step 2: Select your coverage:
               </label>
               <select
                 value={selectedCoverage}
                 onChange={(e) => setSelectedCoverage(e.target.value)}
-                className="px-4 sm:px-6 py-2 sm:py-3 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-[#e03a6a] focus:border-[#e03a6a] text-sm sm:text-base"
+                className="px-3 sm:px-4 md:px-6 py-2 sm:py-3 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-[#e03a6a] focus:border-[#e03a6a] text-xs sm:text-sm md:text-base"
               >
                 {availableCoverageOptions.map(option => (
                   <option key={option} value={option}>{option}</option>
@@ -256,20 +256,20 @@ Would you like to contact us now to get started?`);
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {Object.entries(currentPricing).map(([planName, price], idx) => (
             <div
               key={planName}
-              className="bg-white rounded-3xl shadow-lg p-6 sm:p-8 border border-gray-200 hover:shadow-xl transition-all duration-200 hover:scale-105"
+              className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-4 sm:p-6 md:p-8 border border-gray-200 hover:shadow-xl transition-all duration-200 hover:scale-105"
             >
-              <h3 className="text-xl sm:text-2xl font-bold text-[#e03a6a] mb-2">{planName}</h3>
-              <div className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">${price}.00</div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#e03a6a] mb-2">{planName}</h3>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">${price}.00</div>
               
-              <ul className="space-y-3 mb-6 sm:mb-8">
+              <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 md:mb-8">
                 {planFeatures[planName]?.map((feature, i) => {
                   const isIncluded = featureEmphasis[planName]?.[feature];
                   return (
-                    <li key={i} className={`text-sm sm:text-base ${isIncluded ? 'text-gray-900 font-medium' : 'text-gray-400'}`}>
+                    <li key={i} className={`text-xs sm:text-sm md:text-base ${isIncluded ? 'text-gray-900 font-medium' : 'text-gray-400'}`}>
                       {feature}
                     </li>
                   );
@@ -278,9 +278,9 @@ Would you like to contact us now to get started?`);
 
               <button 
                 onClick={() => handlePlanSelection(planName, price)}
-                className="w-full bg-[#e03a6a] text-white py-3 sm:py-4 px-4 sm:px-6 rounded-full font-semibold hover:bg-[#d12e5c] transition-all duration-200 flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer hover:scale-105 transform"
+                className="w-full bg-[#e03a6a] text-white py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-6 rounded-full font-semibold hover:bg-[#d12e5c] transition-all duration-200 flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base cursor-pointer hover:scale-105 transform"
               >
-                Enroll Now <i className="bi bi-arrow-up-right"></i>
+                Enroll Now <i className="bi bi-arrow-up-right text-xs sm:text-sm md:text-base"></i>
               </button>
             </div>
           ))}

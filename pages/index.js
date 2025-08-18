@@ -70,7 +70,7 @@ function Home() {
         />
       </Head>
       
-      <main className='max-w-[1500px] mx-auto md:px-5 space-y-10'>
+      <main className='max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5 space-y-8 sm:space-y-10'>
         <Hero />
         <Testimonials />
         <TraditionalInsuranceProblem />

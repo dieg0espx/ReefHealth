@@ -90,7 +90,7 @@ export default function Hero2() {
               <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl">
                 <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl">
                   <Image
-                    src="/stock/iStock-2217159786.jpg"
+                    src="/doctor1.jpg"
                     alt="Reef Health - Transforming Healthcare"
                     width={800}
                     height={900}
@@ -108,7 +108,7 @@ export default function Hero2() {
                     <div className="w-6 h-6 sm:w-8 md:w-10 sm:h-8 md:h-10 bg-[#e03a6a]/10 rounded-full flex items-center justify-center">
                       <i className="bi bi-heart-pulse text-[#e03a6a] text-xs sm:text-sm"></i>
                     </div>
-                    <div className="hidden sm:block">
+                    <div className="block">
                       <div className="text-xs sm:text-sm font-bold text-gray-900">Health Coverage</div>
                       <div className="text-xs text-gray-500">24/7 Access</div>
                     </div>
@@ -120,7 +120,7 @@ export default function Hero2() {
                     <div className="w-6 h-6 sm:w-8 md:w-10 sm:h-8 md:h-10 bg-green-100 rounded-full flex items-center justify-center">
                       <i className="bi bi-currency-dollar text-green-600 text-xs sm:text-sm"></i>
                     </div>
-                    <div className="hidden sm:block">
+                    <div className="block">
                       <div className="text-xs sm:text-sm font-bold text-gray-900">Save 40%</div>
                       <div className="text-xs text-gray-500">On Plans</div>
                     </div>
@@ -132,7 +132,7 @@ export default function Hero2() {
                     <div className="w-6 h-6 sm:w-8 md:w-10 sm:h-8 md:h-10 bg-blue-100 rounded-full flex items-center justify-center">
                       <i className="bi bi-people text-blue-600 text-xs sm:text-sm"></i>
                     </div>
-                    <div className="hidden sm:block">
+                    <div className="block">
                       <div className="text-xs sm:text-sm font-bold text-gray-900">100k+ Members</div>
                       <div className="text-xs text-gray-500">Trusted</div>
                     </div>

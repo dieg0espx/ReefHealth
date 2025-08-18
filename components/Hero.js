@@ -13,10 +13,10 @@ export default function Hero() {
   };
 
   return (
-    <div className="h-screen flex">
-      <section className=" flex items-center justify-center px-4 sm:px-6 md:px-10 py-10 ">
-        <div className=" mx-auto w-full">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+    <div className="min-h-screen flex flex-col">
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-10 py-8 sm:py-10 flex-1">
+        <div className="mx-auto w-full max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             
             {/* Left Side - Image with Benefit Callouts */}
             <div className="relative">
@@ -31,35 +31,39 @@ export default function Hero() {
                 />
                 
                 {/* Benefit Callouts Overlay */}
-                <div className="absolute -left-3 sm:-left-10 top-[30%] space-y-3">
-                  <div className="bg-blue-500 text-white pl-5 pr-10 py-4 rounded-full flex items-center gap-2 text-sm font-medium shadow-lg">
-                    <i className="bi bi-plus-circle"></i>
-                    24/7 Healthcare
+                <div className="absolute -left-2 sm:-left-3 md:-left-10 top-[20%] sm:top-[30%] space-y-2 sm:space-y-3">
+                  <div className="bg-blue-500 text-white pl-3 sm:pl-5 pr-6 sm:pr-10 py-2 sm:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
+                    <i className="bi bi-plus-circle text-xs sm:text-sm"></i>
+                    <span className="hidden sm:inline">24/7 Healthcare</span>
+                    <span className="sm:hidden">24/7 Care</span>
                   </div>
-                  <div className="bg-main-pink text-white pl-5 pr-10 py-4 rounded-full flex items-center gap-2 text-sm font-medium shadow-lg">
-                    <i className="bi bi-heart"></i>
-                    Wellness Benefits
+                  <div className="bg-main-pink text-white pl-3 sm:pl-5 pr-6 sm:pr-10 py-2 sm:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
+                    <i className="bi bi-heart text-xs sm:text-sm"></i>
+                    <span className="hidden sm:inline">Wellness Benefits</span>
+                    <span className="sm:hidden">Wellness</span>
                   </div>
-                  <div className="bg-purple-500 text-white pl-5 pr-10 py-4 rounded-full flex items-center gap-2 text-sm font-medium shadow-lg">
-                    <i className="bi bi-currency-dollar"></i>
-                    40% avg savings
+                  <div className="bg-purple-500 text-white pl-3 sm:pl-5 pr-6 sm:pr-10 py-2 sm:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
+                    <i className="bi bi-currency-dollar text-xs sm:text-sm"></i>
+                    <span className="hidden sm:inline">40% avg savings</span>
+                    <span className="sm:hidden">40% off</span>
                   </div>
-                  <div className="bg-green-500 text-white pl-5 pr-10 py-4 rounded-full flex items-center gap-2 text-sm font-medium shadow-lg">
-                    <i className="bi bi-file-earmark"></i>
-                    As low as $1/day
+                  <div className="bg-green-500 text-white pl-3 sm:pl-5 pr-6 sm:pr-10 py-2 sm:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
+                    <i className="bi bi-file-earmark text-xs sm:text-sm"></i>
+                    <span className="hidden sm:inline">As low as $1/day</span>
+                    <span className="sm:hidden">$1/day</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Side - Redesigned Text Content */}
-            <div className="flex flex-col space-y-8">
+            <div className="flex flex-col space-y-6 sm:space-y-8">
               {/* Trust Badge */}
              
 
               {/* Main Headline */}
-              <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+              <div className="space-y-3 sm:space-y-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="text-main-pink">Small business</span>{' '}
                   <span className="text-main-pink">health benefits</span>{' '}
                   <span className="text-black">that actually</span>{' '}
@@ -67,76 +71,76 @@ export default function Hero() {
                 </h1>
                 
                 {/* Subheadline */}
-                <p className="text-xl text-gray-600 font-medium">
+                <p className="text-lg sm:text-xl text-gray-600 font-medium">
                   From <span className="text-main-pink font-bold">$1/day</span> per employee
                 </p>
               </div>
 
               {/* Description */}
-              <p className="text-lg text-gray-700 leading-relaxed max-w-lg">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-lg">
                 Stop overpaying for health benefits. Get comprehensive coverage including health insurance, dental, vision, and wellness programs at 40% less than traditional providers.
               </p>
 
               {/* Key Benefits Grid */}
-              <div className="grid grid-cols-2 gap-4 max-w-md">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-main-pink/10 rounded-full flex items-center justify-center">
-                    <i className="bi bi-check-lg text-main-pink text-sm"></i>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-md">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="bi bi-check-lg text-main-pink text-xs sm:text-sm"></i>
                   </div>
-                  <span className="text-sm font-medium text-gray-700">No setup fees</span>
+                  <span className="text-xs sm:text-sm font-medium text-gray-700">No setup fees</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-main-pink/10 rounded-full flex items-center justify-center">
-                    <i className="bi bi-check-lg text-main-pink text-sm"></i>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="bi bi-check-lg text-main-pink text-xs sm:text-sm"></i>
                   </div>
-                  <span className="text-sm font-medium text-gray-700">Instant quotes</span>
+                  <span className="text-xs sm:text-sm font-medium text-gray-700">Instant quotes</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-main-pink/10 rounded-full flex items-center justify-center">
-                    <i className="bi bi-check-lg text-main-pink text-sm"></i>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="bi bi-check-lg text-main-pink text-xs sm:text-sm"></i>
                   </div>
-                  <span className="text-sm font-medium text-gray-700">24/7 support</span>
+                  <span className="text-xs sm:text-sm font-medium text-gray-700">24/7 support</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-main-pink/10 rounded-full flex items-center justify-center">
-                    <i className="bi bi-check-lg text-main-pink text-sm"></i>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="bi bi-check-lg text-main-pink text-xs sm:text-sm"></i>
                   </div>
-                  <span className="text-sm font-medium text-gray-700">Cancel anytime</span>
+                  <span className="text-xs sm:text-sm font-medium text-gray-700">Cancel anytime</span>
                 </div>
               </div>
 
               {/* CTA Section */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button 
                   onClick={scrollToPricing}
-                  className="bg-main-pink text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   Get Your Free Quote
-                  <i className="bi bi-arrow-right text-xl"></i>
+                  <i className="bi bi-arrow-right text-lg sm:text-xl"></i>
                 </button>
                 
-                <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold text-lg hover:border-main-pink hover:text-main-pink transition-all duration-300 flex items-center justify-center gap-3">
-                  <i className="bi bi-envelope text-xl"></i>
+                <button className="border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:border-main-pink hover:text-main-pink transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3">
+                  <i className="bi bi-envelope text-lg sm:text-xl"></i>
                   Contact Us
                 </button>
               </div>
 
               {/* Social Proof */}
-              <div className="flex items-center gap-6 pt-4 border-t border-gray-200">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 pt-4 border-t border-gray-200">
                 <div className="flex items-center gap-2">
                  
-                  <span className="text-sm text-gray-600">Join 2,500+ businesses</span>
+                  <span className="text-xs sm:text-sm text-gray-600">Join 2,500+ businesses</span>
                 </div>
                 
                 <div className="flex items-center gap-1">
                   <div className="flex text-yellow-400">
-                    <i className="bi bi-star-fill"></i>
-                    <i className="bi bi-star-fill"></i>
-                    <i className="bi bi-star-fill"></i>
-                    <i className="bi bi-star-fill"></i>
-                    <i className="bi bi-star-fill"></i>
+                    <i className="bi bi-star-fill text-xs sm:text-sm"></i>
+                    <i className="bi bi-star-fill text-xs sm:text-sm"></i>
+                    <i className="bi bi-star-fill text-xs sm:text-sm"></i>
+                    <i className="bi bi-star-fill text-xs sm:text-sm"></i>
+                    <i className="bi bi-star-fill text-xs sm:text-sm"></i>
                   </div>
-                  <span className="text-sm text-gray-600 ml-1">4.9/5 rating</span>
+                  <span className="text-xs sm:text-sm text-gray-600 ml-1">4.9/5 rating</span>
                 </div>
               </div>
             </div>
