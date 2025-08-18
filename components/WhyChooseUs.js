@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
         {/* Left: Image */}
         <div className="rounded-3xl overflow-hidden shadow-lg order-2 lg:order-1">
           <Image
-            src="/stock/iStock-2197157146.jpg"
+            src="/doctor1.jpg"
             alt="What Makes Reef Different"
             width={700}
             height={500}

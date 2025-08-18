@@ -5,17 +5,17 @@ const team = [
   {
     name: 'Sarah Williams',
     role: 'Health Benefits Specialist',
-    img: '/stock/iStock-2183708457.jpg',
+    img: '/doctor2.jpg',
   },
   {
     name: 'Dr. Michael Chen',
     role: 'Medical Director',
-    img: '/stock/iStock-2166712407 (1).jpg',
+    img: '/doctor3.jpg',
   },
   {
     name: 'Jennifer Davis',
     role: 'Member Care Coordinator',
-    img: '/stock/iStock-2155522886 (1).jpg',
+    img: '/doctor4.jpg',
   },
 ];
 

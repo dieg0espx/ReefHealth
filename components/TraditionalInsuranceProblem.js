@@ -29,6 +29,25 @@ export default function TraditionalInsuranceProblem() {
           </p>
         </div>
 
+        {/* Hero Image Section */}
+        <div className="mb-16">
+          <div className="relative rounded-3xl overflow-hidden shadow-xl">
+            <Image
+              src="/stock/iStock-2197157146.jpg"
+              alt="Traditional Health Insurance Problems"
+              width={1200}
+              height={400}
+              className="w-full h-64 sm:h-80 object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div className="absolute bottom-6 left-6 text-white">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2">The Broken System</h3>
+              <p className="text-lg">High costs, confusing rules, and poor coverage</p>
+            </div>
+          </div>
+        </div>
+
         {/* Problems Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">

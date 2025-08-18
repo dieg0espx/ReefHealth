@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -8,6 +9,26 @@ export default function About() {
         <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-12 sm:mb-16 max-w-5xl mx-auto">
           Powered by our parent company, Redirect Health, our health insurance saves you up to 40% on small business health plans with transparent pricing and no markups. Reduce employee turnover with meaningful health benefits starting at $29/mo, including mental health benefits and virtual primary care.
         </p>
+        
+        {/* Hero Image */}
+        <div className="mb-12">
+          <div className="relative rounded-3xl overflow-hidden shadow-xl max-w-4xl mx-auto">
+            <Image
+              src="/stock/iStock-2155522886 (1).jpg"
+              alt="Healthcare Innovation"
+              width={800}
+              height={400}
+              className="w-full h-64 sm:h-80 object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div className="absolute bottom-6 left-6 text-white">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2">Innovation in Healthcare</h3>
+              <p className="text-lg">Breaking down barriers to affordable care</p>
+            </div>
+          </div>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <div className="bg-[#fbe6ed] rounded-3xl py-8 sm:py-10 md:py-12 px-4 sm:px-6 flex flex-col items-center">
             <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#e03a6a] mb-2">100,000+</span>

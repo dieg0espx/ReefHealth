@@ -216,7 +216,6 @@ Would you like to contact us now to get started?`);
       <div className="mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-          <span className="inline-block bg-[#e03a6a] text-white px-4 sm:px-6 py-2 rounded-full font-semibold mb-6 sm:mb-8 text-sm sm:text-base">Pricing</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">Choose Your Plan</h2>
           <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-10 max-w-3xl mx-auto">Affordable small business health insurance with transparent pricing and no markups. All plans include comprehensive coverage.</p>
         </div>

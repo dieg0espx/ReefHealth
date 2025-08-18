@@ -22,7 +22,7 @@ export default function WhyWeTheBest() {
         {/* Left: Image */}
         <div className="rounded-3xl overflow-hidden shadow-lg h-full order-2 lg:order-1">
           <Image
-            src="/stock/iStock-2197157146.jpg"
+            src="/doctorOnPhone.jpg"
             alt="How It Works"
             width={700}
             height={700}
