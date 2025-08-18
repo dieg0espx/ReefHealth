@@ -44,7 +44,7 @@ export default function Footer() {
       {/* Cover Image Section */}
       <div className="relative max-w-[1500px] mx-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] rounded-3xl overflow-hidden mb-[40px] z-10 border border-white/40 flex flex-col justify-center">
         <Image
-          src="/sport-woman.jpg"
+          src="/stock/iStock-2183708457.jpg"
           alt="Doctor on Phone"
           layout="fill"
           objectFit="cover"

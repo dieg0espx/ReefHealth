@@ -1,6 +1,5 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 
 const iconMedical = (
   <i className="bi bi-heart-pulse text-3xl mb-4 text-[#e03a6a]"></i>
@@ -50,25 +49,6 @@ export default function Services() {
   return (
     <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 bg-white">
       <div className=" mx-auto">
-        {/* Hero Image Section */}
-        <div className="mb-12">
-          <div className="relative rounded-3xl overflow-hidden shadow-xl">
-            <Image
-              src="/stock/iStock-2183708457.jpg"
-              alt="Comprehensive Health Benefits"
-              width={1200}
-              height={400}
-              className="w-full h-64 sm:h-80 object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-            <div className="absolute bottom-6 left-6 text-white">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-2">Your Complete Health Solution</h3>
-              <p className="text-lg">Medical, mental, physical, and financial wellness all in one</p>
-            </div>
-          </div>
-        </div>
-
         {/* Top Row */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-8">
           <div className="mb-6 lg:mb-0">
