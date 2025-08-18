@@ -22,7 +22,7 @@ export default function Hero() {
             <div className="relative">
               <div className="relative">
                 <Image
-                  src="/female-doctor.jpg"
+                  src="/stock/iStock-2217159786.jpg"
                   alt="Healthcare professional in medical scrubs"
                   width={600}
                   height={600}

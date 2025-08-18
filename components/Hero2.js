@@ -90,7 +90,7 @@ export default function Hero2() {
               <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl">
                 <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl">
                   <Image
-                    src="/sport-woman.jpg"
+                    src="/stock/iStock-2217159786.jpg"
                     alt="Reef Health - Transforming Healthcare"
                     width={800}
                     height={900}

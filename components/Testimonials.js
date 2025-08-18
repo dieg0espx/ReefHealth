@@ -11,7 +11,7 @@ const testimonials = [
     text: 'We switched from Blue Cross and have no regrets. The coverage is comprehensive and the cost savings are significant.',
     name: 'Jason H.',
     role: 'Business Owner',
-    img: '/doctor1.jpg',
+    img: '/stock/iStock-2151967049.jpg',
   },
   {
     rating: 5,
@@ -19,7 +19,7 @@ const testimonials = [
     text: 'Reef helped reduce employee turnover significantly. Our team loves the benefits and it shows in their retention.',
     name: 'Paul J.',
     role: 'HR Director',
-    img: '/doctor2.jpg',
+    img: '/stock/iStock-2148812508.jpg',
   },
   {
     rating: 5,
@@ -27,7 +27,7 @@ const testimonials = [
     text: 'Huge value and incredible convenience. The platform is easy to use and the benefits are exactly what we needed.',
     name: 'Nathan S.',
     role: 'Small Business Owner',
-    img: '/doctor3.jpg',
+    img: '/stock/iStock-1312635558.jpg',
   },
   {
     rating: 5,
@@ -35,7 +35,7 @@ const testimonials = [
     text: 'Easy to schedule appointments and the 24/7 telehealth access has been a game-changer for our team.',
     name: 'Hilary J.',
     role: 'Operations Manager',
-    img: '/doctor1.jpg',
+    img: '/stock/iStock-1306977756 (1).jpg',
   },
   {
     rating: 5,
@@ -43,7 +43,7 @@ const testimonials = [
     text: 'Saved us thousands compared to our previous plan while providing better coverage and more benefits.',
     name: 'Verne H.',
     role: 'Franchise Owner',
-    img: '/doctor4.jpg',
+    img: '/stock/iStock-1036131880.jpg',
   },
 ];
 
