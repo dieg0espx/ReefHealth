@@ -68,7 +68,7 @@ function Individuals() {
                 <div className="relative">
                   <div className="relative">
                     <Image
-                      src="/stock/iStock-2217159786.jpg"
+                      src="/sport-woman.jpg"
                       alt="Individual healthcare coverage"
                       width={600}
                       height={800}
