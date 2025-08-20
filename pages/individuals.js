@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import TraditionalInsuranceProblem from '@/components/TraditionalInsuranceProblem'
 
 function Individuals() {
   const scrollToPricing = () => {
@@ -190,14 +191,10 @@ function Individuals() {
           </section>
         </div>
 
+        {/* The Real Problem Section */}
+        <TraditionalInsuranceProblem />
+
         {/* Additional sections can be added here */}
-        <div id="pricing" className="py-16">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Individual Health Plans</h2>
-            <p className="text-lg text-gray-600 mb-8">Choose the plan that works best for you</p>
-            {/* Add pricing component here */}
-          </div>
-        </div>
       </main>
     </>
   )

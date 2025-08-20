@@ -10,8 +10,6 @@ import Pricing from '@/components/Pricing'
 import Faq from '@/components/FAQ'
 import WhyWeTheBest from '@/components/WhyWeTheBest'
 import MemberPortalCTA from '@/components/MemberPortalCTA'
-import TraditionalInsuranceProblem from '@/components/TraditionalInsuranceProblem'
-
 function Home() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -73,7 +71,6 @@ function Home() {
       <main className='max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5 space-y-8 sm:space-y-10'>
         <Hero />
         <Testimonials />
-        <TraditionalInsuranceProblem />
         <About />
         <Services />
         <WhyChooseUs />
