@@ -25,8 +25,8 @@ export default function Hero() {
                   src="/stock/iStock-2217159786.jpg"
                   alt="Healthcare professional in medical scrubs"
                   width={600}
-                  height={600}
-                  className="w-full aspect-square rounded-2xl object-cover object-center sm:object-center object-left"
+                  height={800}
+                  className="w-full aspect-[3/4] rounded-2xl object-cover object-center sm:object-center object-left"
                   priority
                 />
                 

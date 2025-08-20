@@ -28,6 +28,12 @@ export default function Header() {
               <a href={"/"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Home</a>
           </li>
           <li>
+              <a href={"/individuals"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Individuals</a>
+          </li>
+          <li>
+              <a href={"/employees"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Businesses</a>
+          </li>
+          <li>
               <a href={"/about"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">About Us</a>
           </li>
           <li>
@@ -73,6 +79,26 @@ export default function Header() {
                  >
                    <i className="bi bi-house mr-3 text-main-pink"></i>
                    Home
+                 </a>
+               </li>
+               <li>
+                 <a 
+                   href={"/individuals"} 
+                   className="text-gray-800 font-medium text-base px-6 py-3 hover:bg-gray-50 transition-colors cursor-pointer flex items-center"
+                   onClick={() => setIsMenuOpen(false)}
+                 >
+                   <i className="bi bi-person mr-3 text-main-pink"></i>
+                   Individuals
+                 </a>
+               </li>
+               <li>
+                 <a 
+                   href={"/employees"} 
+                   className="text-gray-800 font-medium text-base px-6 py-3 hover:bg-gray-50 transition-colors cursor-pointer flex items-center"
+                   onClick={() => setIsMenuOpen(false)}
+                 >
+                   <i className="bi bi-building mr-3 text-main-pink"></i>
+                   Businesses
                  </a>
                </li>
                <li>
