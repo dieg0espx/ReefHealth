@@ -59,7 +59,7 @@ function Individuals() {
       
       <main className='max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5 space-y-8 sm:space-y-10'>
         {/* Hero Section for Individuals */}
-        <div className="min-h-screen flex flex-col">
+        <div className="md:pt-20  flex flex-col">
           <section className="flex items-center justify-center px-4 sm:px-6 md:px-10 py-8 sm:py-10 flex-1">
             <div className="mx-auto w-full max-w-7xl">
               <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
@@ -71,8 +71,8 @@ function Individuals() {
                       src="/sport-woman.jpg"
                       alt="Individual healthcare coverage"
                       width={600}
-                      height={800}
-                      className="w-full aspect-[3/4] rounded-2xl object-cover object-center sm:object-center object-left"
+                      height={600}
+                      className="w-full aspect-square rounded-2xl object-cover object-center sm:object-center object-left"
                       priority
                     />
                     
