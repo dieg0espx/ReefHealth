@@ -25,13 +25,10 @@ export default function Header() {
       <nav className="hidden md:flex flex-1 justify-center">
         <ul className="flex gap-4 lg:gap-6 xl:gap-10">
           <li>
-              <a href={"/"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Home</a>
+              <a href={"/"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Businesses</a>
           </li>
           <li>
               <a href={"/individuals"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Individuals</a>
-          </li>
-          <li>
-              <a href={"/employees"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Businesses</a>
           </li>
           <li>
               <a href={"/about"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">About Us</a>
