@@ -75,7 +75,7 @@ export default function Header() {
                    onClick={() => setIsMenuOpen(false)}
                  >
                    <i className="bi bi-house mr-3 text-main-pink"></i>
-                   Home
+                   Businesses
                  </a>
                </li>
                <li>
@@ -86,16 +86,6 @@ export default function Header() {
                  >
                    <i className="bi bi-person mr-3 text-main-pink"></i>
                    Individuals
-                 </a>
-               </li>
-               <li>
-                 <a 
-                   href={"/employees"} 
-                   className="text-gray-800 font-medium text-base px-6 py-3 hover:bg-gray-50 transition-colors cursor-pointer flex items-center"
-                   onClick={() => setIsMenuOpen(false)}
-                 >
-                   <i className="bi bi-building mr-3 text-main-pink"></i>
-                   Businesses
                  </a>
                </li>
                <li>
