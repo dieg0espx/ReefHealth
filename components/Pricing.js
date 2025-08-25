@@ -7,15 +7,15 @@ const icon = (
 
 // Plan features based on the image description
 const planFeatures = {
-  "Starter": [
-    "Health + Fitness Classes at 20k facilities + 4k virtual classes",
-    "Health and Wellness Discounts, up to 40% off at 400 national retailers",
-    "Members Only, Owner Networking",
-    "24/7/365 Telehealth Primary Care",
-    "24/7 Medical Concierge",
-    "No fee generic medications",
-    "Urgent Care",
-    "Hospital Coverage"
+  "Dental": [
+    "Nationwide discount program for dental and vision",
+    "No waiting periods—use immediately, even for pre-existing conditions",
+    "Pay the discounted price directly at participating dentists",
+    "Dental 40-60% discounts off all dental service",
+    "Vision 20-40% off all vision and eyewear or Lasik surgery",
+    "Comprehensive dental coverage",
+    "Network of dental providers",
+    "Emergency dental care"
   ],
   "Foundation": [
     "Health + Fitness Classes at 20k facilities + 4k virtual classes",
@@ -51,15 +51,15 @@ const planFeatures = {
 
 // Feature emphasis mapping (which features are included for each plan)
 const featureEmphasis = {
-  "Starter": {
-    "Health + Fitness Classes at 20k facilities + 4k virtual classes": true,
-    "Health and Wellness Discounts, up to 40% off at 400 national retailers": true,
-    "Members Only, Owner Networking": true,
-    "24/7/365 Telehealth Primary Care": false,
-    "24/7 Medical Concierge": false,
-    "No fee generic medications": false,
-    "Urgent Care": false,
-    "Hospital Coverage": false
+  "Dental": {
+    "Nationwide discount program for dental and vision": true,
+    "No waiting periods—use immediately, even for pre-existing conditions": true,
+    "Pay the discounted price directly at participating dentists": true,
+    "Dental 40-60% discounts off all dental service": true,
+    "Vision 20-40% off all vision and eyewear or Lasik surgery": true,
+    "Comprehensive dental coverage": true,
+    "Network of dental providers": true,
+    "Emergency dental care": true
   },
   "Foundation": {
     "Health + Fitness Classes at 20k facilities + 4k virtual classes": true,
@@ -102,25 +102,25 @@ export default function Pricing() {
   const pricingData = {
     "18-44": {
       "Primary Member Only": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 99,
         "iPremium": 199,
         "iPremium PLUS": 479
       },
       "Primary Member + Spouse": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 189,
         "iPremium": 349,
         "iPremium PLUS": 919
       },
       "Primary Member + Child(ren)": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 189,
         "iPremium": 349,
         "iPremium PLUS": 919
       },
       "Primary Member + Family": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 269,
         "iPremium": 499,
         "iPremium PLUS": 1299
@@ -128,25 +128,25 @@ export default function Pricing() {
     },
     "45-59": {
       "Primary Member Only": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 99,
         "iPremium": 199,
         "iPremium PLUS": 479
       },
       "Primary Member + Spouse": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 189,
         "iPremium": 349,
         "iPremium PLUS": 919
       },
       "Primary Member + Child(ren)": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 189,
         "iPremium": 349,
         "iPremium PLUS": 919
       },
       "Primary Member + Family": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 269,
         "iPremium": 499,
         "iPremium PLUS": 1299
@@ -154,25 +154,25 @@ export default function Pricing() {
     },
     "60-64": {
       "Primary Member Only": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 99,
         "iPremium": 199,
         "iPremium PLUS": 579
       },
       "Primary Member + Spouse": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 189,
         "iPremium": 349,
         "iPremium PLUS": 1029
       },
       "Primary Member + Child(ren)": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 189,
         "iPremium": 349,
         "iPremium PLUS": 1029
       },
       "Primary Member + Family": {
-        "Starter": 29,
+        "Dental": 15,
         "Foundation": 269,
         "iPremium": 499,
         "iPremium PLUS": 1399
@@ -216,8 +216,8 @@ Would you like to contact us now to get started?`);
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight">Choose Your Plan</h2>
-          <p className="text-sm sm:text-base md:text-lg text-gray-500 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto px-4">Affordable small business health insurance with transparent pricing and no markups. All plans include comprehensive coverage.</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight">Choose your plan:</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-500 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto px-4">Showcase pricing of plans - do not show starter - put dental instead</p>
         </div>
 
         {/* Selection Controls */}
@@ -255,36 +255,38 @@ Would you like to contact us now to get started?`);
           </div>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-          {Object.entries(currentPricing).map(([planName, price], idx) => (
-            <div
-              key={planName}
-              className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-4 sm:p-6 md:p-8 border border-gray-200 hover:shadow-xl transition-all duration-200 hover:scale-105"
-            >
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#e03a6a] mb-2">{planName}</h3>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">${price}.00</div>
-              
-              <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 md:mb-8">
-                {planFeatures[planName]?.map((feature, i) => {
-                  const isIncluded = featureEmphasis[planName]?.[feature];
-                  return (
-                    <li key={i} className={`text-xs sm:text-sm md:text-base ${isIncluded ? 'text-gray-900 font-medium' : 'text-gray-400'}`}>
-                      {feature}
-                    </li>
-                  );
-                })}
-              </ul>
+                 {/* Pricing Cards */}
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+           {Object.entries(currentPricing).map(([planName, price], idx) => (
+             <div
+               key={planName}
+               className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-4 sm:p-6 md:p-8 border border-gray-200 hover:shadow-xl transition-all duration-200 hover:scale-105 flex flex-col h-full"
+             >
+               <div className="flex-grow">
+                                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#e03a6a] mb-2">{planName === "Dental" ? "Dental and Vision" : planName}</h3>
+                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">${price}.00</div>
+                 
+                 <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 md:mb-8">
+                   {planFeatures[planName]?.map((feature, i) => {
+                     const isIncluded = featureEmphasis[planName]?.[feature];
+                     return (
+                       <li key={i} className={`text-xs sm:text-sm md:text-base ${isIncluded ? 'text-gray-900 font-medium' : 'text-gray-400'}`}>
+                         {feature}
+                       </li>
+                     );
+                   })}
+                 </ul>
+               </div>
 
-              <button 
-                onClick={() => handlePlanSelection(planName, price)}
-                className="w-full bg-[#e03a6a] text-white py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-6 rounded-full font-semibold hover:bg-[#d12e5c] transition-all duration-200 flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base cursor-pointer hover:scale-105 transform"
-              >
-                Enroll Now <i className="bi bi-arrow-up-right text-xs sm:text-sm md:text-base"></i>
-              </button>
-            </div>
-          ))}
-        </div>
+               <button 
+                 onClick={() => handlePlanSelection(planName, price)}
+                 className="w-full bg-[#e03a6a] text-white py-2 sm:py-3 md:py-4 px-3 sm:px-4 md:px-6 rounded-full font-semibold hover:bg-[#d12e5c] transition-all duration-200 flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base cursor-pointer hover:scale-105 transform mt-auto"
+               >
+                 Enroll Now <i className="bi bi-arrow-up-right text-xs sm:text-sm md:text-base"></i>
+               </button>
+             </div>
+           ))}
+         </div>
       </div>
     </section>
   );

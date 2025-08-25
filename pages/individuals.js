@@ -18,7 +18,7 @@ function Individuals() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Individual Health Insurance - Reef Health Benefits",
-    "description": "Get affordable individual health insurance starting at $29/mo. Comprehensive coverage with 24/7 telehealth access, wellness benefits, and transparent pricing.",
+    "description": "Get affordable individual health insurance for just a few dollars a day. Comprehensive coverage with 24/7 telehealth access, wellness benefits, and transparent pricing.",
     "url": "https://reefhealth.com/individuals",
     "mainEntity": {
       "@type": "Organization",
@@ -43,8 +43,8 @@ function Individuals() {
   return (
     <>
       <Head>
-        <title>Individual Health Insurance - Affordable Coverage Starting at $29/mo | Reef Health</title>
-        <meta name="description" content="Get affordable individual health insurance starting at $29/mo. Comprehensive coverage with 24/7 telehealth access, wellness benefits, and transparent pricing. No setup fees, instant quotes." />
+        <title>Individual Health Insurance - Affordable Coverage for Just a Few Dollars a Day | Reef Health</title>
+        <meta name="description" content="Get affordable individual health insurance for just a few dollars a day. Comprehensive coverage with 24/7 telehealth access, wellness benefits, and transparent pricing. No setup fees, instant quotes." />
         <meta name="keywords" content="individual health insurance, personal health coverage, affordable health plans, telehealth, wellness benefits, health insurance quotes" />
         
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -90,8 +90,8 @@ function Individuals() {
                       </div>
                       <div className="bg-purple-500 text-white pl-3 sm:pl-5 pr-6 sm:pr-10 py-2 sm:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
                         <i className="bi bi-currency-dollar text-xs sm:text-sm"></i>
-                        <span className="hidden sm:inline">Starting at $29/mo</span>
-                        <span className="sm:hidden">$29/mo</span>
+                                        <span className="hidden sm:inline">Just a few dollars a day</span>
+                <span className="sm:hidden">Just a few dollars a day</span>
                       </div>
                       <div className="bg-green-500 text-white pl-3 sm:pl-5 pr-6 sm:pr-10 py-2 sm:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
                         <i className="bi bi-file-earmark text-xs sm:text-sm"></i>
@@ -115,7 +115,7 @@ function Individuals() {
                     
                     {/* Subheadline */}
                     <p className="text-lg sm:text-xl text-gray-600 font-medium">
-                      Starting at <span className="text-main-pink font-bold">$29/month</span>
+                      Starting at <span className="text-main-pink font-bold">just a few dollars a day</span>
                     </p>
                   </div>
 

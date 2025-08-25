@@ -1,19 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-const iconMedical = (
-  <i className="bi bi-heart-pulse text-3xl mb-4 text-[#e03a6a]"></i>
-);
-const iconMental = (
-  <i className="bi bi-brain text-3xl mb-4 text-[#e03a6a]"></i>
-);
-const iconPhysical = (
-  <i className="bi bi-lightning text-3xl mb-4 text-[#e03a6a]"></i>
-);
-const iconFinancial = (
-  <i className="bi bi-currency-dollar text-3xl mb-4 text-purple-600"></i>
-);
-
 export default function Services() {
   const router = useRouter();
 
@@ -27,105 +14,91 @@ export default function Services() {
     }
   };
 
-  const scrollToAbout = () => {
-    const aboutSection = document.querySelector('#about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
   const handleContactClick = () => {
     router.push("/contact");
   };
 
-  const handleServiceLearnMore = (service) => {
-    // You can customize this to show modals or navigate to specific service pages
-    alert(`Learn more about ${service} benefits! Contact us for detailed information.`);
-  };
-
   return (
-    <section className="py-8 sm:py-12 md:py-14 lg:py-16 px-4 sm:px-6 bg-white">
-      <div className="mx-auto max-w-7xl">
-        {/* Top Row */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6 sm:mb-8">
-          <div className="mb-4 sm:mb-6 lg:mb-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">Your new health benefits</h2>
-          </div>
-          <div className="flex flex-col items-start lg:items-end gap-3 sm:gap-4">
-            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-md mb-3 sm:mb-4 lg:mb-0">Comprehensive coverage with $0 deductibles.</p>
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 w-full sm:w-auto">
-              <button 
-                onClick={scrollToPricing}
-                className="bg-[#e03a6a] text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-[#d12e5c] transition flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base cursor-pointer"
-              >
-                Get Started <i className="bi bi-arrow-right text-xs sm:text-sm md:text-base"></i>
-              </button>
-              <button 
-                onClick={scrollToAbout}
-                className="bg-white border border-[#e03a6a] text-[#e03a6a] px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base cursor-pointer"
-              >
-                Learn More <i className="bi bi-arrow-right text-xs sm:text-sm md:text-base"></i>
-              </button>
-            </div>
-          </div>
+    <section className="py-16 md:py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4">
+            Your new health benefits
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 mb-8">
+            Comprehensive coverage with $0 deductibles
+          </p>
+          <button 
+            onClick={scrollToPricing}
+            className="bg-main-pink text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-main-pink/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            Get Started
+          </button>
         </div>
-        {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
-          {/* Main Card */}
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
-            <div className="bg-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 flex flex-col justify-between min-h-[180px] sm:min-h-[200px] md:min-h-[220px]">
-              {iconMedical}
-              <div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">Medical</h3>
-                <p className="text-xs sm:text-sm md:text-base text-gray-700 mb-3 sm:mb-4">24/7/365 virtual primary care, urgent care, and telehealth. No fee generic medications and hospital coverage included.</p>
-                <button 
-                  onClick={() => handleServiceLearnMore('Medical')}
-                  className="text-[#e03a6a] font-semibold flex items-center gap-1 text-xs sm:text-sm md:text-base cursor-pointer hover:underline"
-                >
-                  Learn More <i className="bi bi-arrow-right text-xs sm:text-sm md:text-base"></i>
-                </button>
-              </div>
-            </div>
-            <div className="flex flex-col gap-3 sm:gap-4 md:gap-6">
-              <div className="bg-blue-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 flex flex-col justify-between min-h-[90px] sm:min-h-[100px]">
-                {iconMental}
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">Mental</h3>
-                <p className="text-xs sm:text-sm md:text-base text-gray-700 mb-3 sm:mb-4">Nationwide mental health benefits and virtual support for your wellbeing.</p>
-                <button 
-                  onClick={() => handleServiceLearnMore('Mental Health')}
-                  className="text-[#e03a6a] font-semibold flex items-center gap-1 text-xs sm:text-sm md:text-base cursor-pointer hover:underline"
-                >
-                  Learn More <i className="bi bi-arrow-right text-xs sm:text-sm md:text-base"></i>
-                </button>
-              </div>
-              <div className="bg-green-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 flex flex-col justify-between min-h-[90px] sm:min-h-[100px]">
-                {iconPhysical}
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">Physical</h3>
-                <p className="text-xs sm:text-sm md:text-base text-gray-700 mb-3 sm:mb-4">Access to 20k+ gyms and 4k virtual fitness classes nationwide.</p>
-                <button 
-                  onClick={() => handleServiceLearnMore('Physical Wellness')}
-                  className="text-[#e03a6a] font-semibold flex items-center gap-1 text-xs sm:text-sm md:text-base cursor-pointer hover:underline"
-                >
-                  Learn More <i className="bi bi-arrow-right text-xs sm:text-sm md:text-base"></i>
-                </button>
-              </div>
-            </div>
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                     {/* Medical */}
+           <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+             <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+               <div className="text-2xl text-red-700 font-bold">+</div>
+             </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Medical</h3>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
+              24/7/365 virtual primary care, urgent care, and telehealth. No fee generic medications and hospital coverage included.
+            </p>
+            <button className="text-main-pink font-semibold text-sm hover:underline mt-auto">
+              Learn More →
+            </button>
           </div>
-          {/* Financial Card */}
-          <div className="bg-purple-100 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 flex flex-col justify-between min-h-[250px] sm:min-h-[280px] md:min-h-[340px] text-purple-900">
-            <div>
-              <span className="inline-block mb-3 sm:mb-4">{iconFinancial}</span>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Financial + Social</h3>
-              <p className="text-xs sm:text-sm md:text-base mb-4 sm:mb-6 md:mb-8">Save $5,000+ through 400+ national wellness discounts. Plus networking opportunities for owners and franchisees.</p>
-            </div>
+
+                     {/* Mental */}
+           <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+               <svg className="w-6 h-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+               </svg>
+             </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Mental</h3>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
+              Nationwide mental health benefits and virtual support for your wellbeing.
+            </p>
+            <button className="text-main-pink font-semibold text-sm hover:underline mt-auto">
+              Learn More →
+            </button>
+          </div>
+
+                     {/* Physical */}
+           <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+               <svg className="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+               </svg>
+             </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Physical</h3>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
+              Access to 20k+ gyms and 4k virtual fitness classes nationwide.
+            </p>
+            <button className="text-main-pink font-semibold text-sm hover:underline mt-auto">
+              Learn More →
+            </button>
+          </div>
+
+                     {/* Financial + Social */}
+           <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+             <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+               <div className="text-2xl text-purple-700 font-bold">$</div>
+             </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Financial + Social</h3>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
+              Save $5,000+ through 400+ national wellness discounts. Plus networking opportunities for owners and franchisees.
+            </p>
             <button 
               onClick={handleContactClick}
-              className="text-purple-700 font-semibold flex items-center gap-1 underline underline-offset-4 text-xs sm:text-sm md:text-base cursor-pointer hover:text-purple-900"
+              className="text-main-pink font-semibold text-sm hover:underline mt-auto"
             >
-              Get in Touch <i className="bi bi-arrow-right text-xs sm:text-sm md:text-base"></i>
+              Get in Touch →
             </button>
           </div>
         </div>

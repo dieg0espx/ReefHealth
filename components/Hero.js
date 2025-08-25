@@ -70,10 +70,6 @@ export default function Hero() {
                   <span className="text-main-pink font-black">work.</span>
                 </h1>
                 
-                {/* Subheadline */}
-                <p className="text-lg sm:text-xl text-gray-600 font-medium">
-                  From <span className="text-main-pink font-bold">$1/day</span> per employee
-                </p>
               </div>
 
               {/* Description */}

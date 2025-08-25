@@ -45,8 +45,8 @@ const BlogsPage = () => {
             Health Benefits <span className="text-main-pink">Blog</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Discover how Reef Health is revolutionizing healthcare benefits for small businesses and franchisees. 
-            Get insights, tips, and strategies to transform your employee benefits.
+            Discover how Reef Health is revolutionizing healthcare benefits for individuals and families. 
+            Get insights, tips, and strategies to transform your health coverage.
           </p>
         </div>
 

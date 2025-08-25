@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: 'Can I personalize my plan?',
-    answer: 'Yes! We offer multiple plan options from Starter ($29/mo) to Premium+ ($479/mo) to fit your specific business needs and budget.'
+    answer: 'Yes! We offer multiple plan options from Starter (just a few dollars a day) to Premium+ ($479/mo) to fit your specific business needs and budget.'
   },
   {
     question: 'What if I\'m already enrolled in a group health plan?',
@@ -22,8 +22,8 @@ const faqs = [
     answer: 'No, we work with all types of small businesses. While we offer franchise opportunities, our health plans are available to any qualifying small business.'
   },
   {
-    question: 'Can you help reduce employee turnover?',
-    answer: 'Yes! Meaningful health benefits are proven to increase employee satisfaction and retention. Our comprehensive coverage helps you attract and keep top talent.'
+    question: 'Can you help provide better health coverage?',
+    answer: 'Yes! Meaningful health benefits are proven to increase satisfaction and retention. Our comprehensive coverage helps individuals and families get the care they need.'
   },
   {
     question: 'How do Reef Health plans compare to traditional health insurance?',
