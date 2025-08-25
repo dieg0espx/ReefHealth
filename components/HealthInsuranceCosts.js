@@ -10,24 +10,24 @@ export default function HealthInsuranceCosts() {
           <div className="flex flex-col lg:flex-row items-stretch min-h-[600px] relative">
             {/* Left Column - White Background */}
             <div className="flex-1 bg-white p-8 sm:p-12 md:p-16 lg:p-20 flex flex-col justify-center relative">
-              {/* Large Vertical $603B Text on Right Side */}
-              <div className="absolute right-0 translate-x-16 md:translate-x-20 lg:translate-x-24 top-1/2 -translate-y-1/2 text-[6rem] lg:text-[8rem] font-black leading-none tracking-tight text-black/90 transform rotate-90 z-0 pointer-events-none">
+              {/* Large Vertical $603B Text on Right Side - Hidden on Mobile */}
+              <div className="hidden md:block absolute right-0 translate-x-16 md:translate-x-20 lg:translate-x-24 top-1/2 -translate-y-1/2 text-[6rem] lg:text-[8rem] font-black leading-none tracking-tight text-black/90 transform rotate-90 z-0 pointer-events-none">
                 $603B
               </div>
               
-              <div className="max-w-2xl mr-16 md:mr-20 lg:mr-24">
+              <div className="max-w-2xl sm:mr-16 md:mr-20 lg:mr-24 text-center sm:text-left">
                 {/* Main Headline */}
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 sm:mb-8">
                   <span className="text-main-pink">Health insurance costs</span>{' '}
                   <span className="text-main-pink">your business a</span>{' '}
                   <span className="text-main-pink">fortune</span>{' '}
-                  <span className="text-black">because middlemen take a $603B cut.</span>
+                  <span className="text-black">because middlemen take a cut.</span>
                 </h2>
 
                 {/* First Body Paragraph */}
                 <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                   It's a dinosaur model that profited{' '}
-                  <span className="font-bold">$603B last year alone</span>. You're left with the bill, and that's IF you're even covered. Healthcare shouldn't feel like financial roulette every time you go see the doctor.
+                  <span className="font-bold">billions last year alone</span>. You're left with the bill, and that's IF you're even covered. Healthcare shouldn't feel like financial roulette every time you go see the doctor.
                 </p>
 
                 {/* Second Body Paragraph */}
@@ -36,15 +36,15 @@ export default function HealthInsuranceCosts() {
                   </p>
 
                 {/* Call to Action Button */}
-                <Link href="/contact" className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-fit">
+                <Link href="/contact" className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-fit mx-auto sm:mx-0">
                   Get Better Healthcare
                   <i className="bi bi-arrow-right text-lg sm:text-xl"></i>
                 </Link>
               </div>
             </div>
 
-            {/* Circular Image - Predominantly on white, extending into pink */}
-            <div className="absolute left-[58%] top-1/2 -translate-y-1/2 z-20">
+            {/* Circular Image - Predominantly on white, extending into pink - Hidden on Mobile */}
+            <div className="hidden md:block absolute left-[58%] top-1/2 -translate-y-1/2 z-20">
               <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-2xl">
                 <Image 
                   src="/stock/iStock-2166712407 (1).jpg" 
@@ -76,8 +76,8 @@ export default function HealthInsuranceCosts() {
       <section className="py-12 sm:py-16 md:py-20 w-full" style={{ backgroundColor: '#262325' }}>
         <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5">
           <div className="flex flex-col lg:flex-row items-center min-h-[600px] gap-8 lg:gap-12">
-            {/* Left Column - Image */}
-            <div className="flex-1 flex justify-center">
+                         {/* Left Column - Image */}
+             <div className="flex-1 flex justify-center">
               <div className="w-full max-w-sm lg:max-w-md xl:max-w-lg">
                 <div className="bg-white rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
                   <Image 
@@ -93,7 +93,7 @@ export default function HealthInsuranceCosts() {
 
             {/* Right Column - Text Content */}
             <div className="flex-1 flex flex-col justify-center">
-              <div className="max-w-2xl mr-16 md:mr-20 lg:mr-24">
+              <div className="max-w-2xl sm:mr-16 md:mr-20 lg:mr-24 text-center sm:text-left">
                 {/* Main Headline */}
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 sm:mb-8">
                   <span className="text-white">We changed the game so you get assurance, </span>
@@ -112,7 +112,7 @@ export default function HealthInsuranceCosts() {
                 </p>
 
                 {/* Call to Action Button */}
-                <button className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-fit">
+                <button className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-fit mx-auto sm:mx-0">
                   Get Healthcare you can Trust
                   <i className="bi bi-arrow-right text-lg sm:text-xl"></i>
                 </button>
@@ -126,9 +126,9 @@ export default function HealthInsuranceCosts() {
       <section className="py-12 sm:py-16 md:py-20 w-full bg-white">
         <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5">
           <div className="flex flex-col lg:flex-row items-center min-h-[600px] gap-8 lg:gap-12 relative">
-            {/* Left Column - Text Content */}
-            <div className="flex-1 flex flex-col justify-center">
-              <div className="max-w-6xl text-left mt-8 lg:mt-12 ml-8 lg:ml-16">
+                         {/* Left Column - Text Content */}
+             <div className="flex-1 flex flex-col justify-center">
+               <div className="max-w-6xl text-center sm:text-left mt-8 lg:mt-12 sm:ml-8 lg:ml-16">
                 {/* Main Headline */}
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 sm:mb-8">
                   <span className="text-main-pink">The bottom line?</span>
@@ -144,17 +144,17 @@ export default function HealthInsuranceCosts() {
                    From healthcare coverage you can trust to gym memberships, mental health, and more, Reef health benefits is about to save your business a lot of money.
                  </p>
 
-                {/* Call to Action Button */}
-                <Link href="/contact" className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-fit">
-                  Save money on healthcare
-                  <i className="bi bi-arrow-right text-lg sm:text-xl"></i>
-                </Link>
+                                 {/* Call to Action Button */}
+                 <Link href="/contact" className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-fit mx-auto sm:mx-0">
+                   Save money on healthcare
+                   <i className="bi bi-arrow-right text-lg sm:text-xl"></i>
+                 </Link>
               </div>
             </div>
 
-            {/* Right Column - Image with Pink Background */}
-            <div className="flex-1 flex justify-end items-center relative p-8 lg:p-12">
-              <div className="relative w-full max-w-xs lg:max-w-sm xl:max-w-md -translate-x-16 lg:-translate-x-28">
+                         {/* Right Column - Image with Pink Background */}
+             <div className="flex-1 flex justify-center sm:justify-end items-center relative p-8 lg:p-12">
+               <div className="relative w-full max-w-xs lg:max-w-sm xl:max-w-md sm:-translate-x-16 lg:-translate-x-28">
                 {/* Pink Accent Block - Behind the photo card */}
                 <div 
                   className="absolute bg-main-pink rounded-[28px] w-[60%] h-[60%] -bottom-6 -right-6 z-0"

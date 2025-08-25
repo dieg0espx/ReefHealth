@@ -56,43 +56,43 @@ function Employees() {
         />
       </Head>
       
-      <main className='max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5 space-y-8 sm:space-y-10'>
+      <main className='max-w-[1500px] mx-auto px-3 sm:px-4 md:px-6 space-y-6 sm:space-y-8 md:space-y-10'>
         {/* Hero Section for Employees/Businesses */}
         <div className="min-h-screen flex flex-col">
-          <section className="flex items-center justify-center px-4 sm:px-6 md:px-10 py-8 sm:py-10 flex-1">
+          <section className="flex items-center justify-center px-3 sm:px-4 md:px-6 lg:px-10 py-6 sm:py-8 md:py-10 flex-1">
             <div className="mx-auto w-full max-w-7xl">
-              <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+              <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center">
                 
                 {/* Left Side - Image with Benefit Callouts */}
-                <div className="relative">
+                <div className="relative order-2 lg:order-1">
                   <div className="relative">
                     <Image
                       src="/stock/iStock-2217159786.jpg"
                       alt="Business healthcare benefits"
                       width={600}
                       height={800}
-                      className="w-full aspect-[3/4] rounded-2xl object-cover object-center sm:object-center object-left"
+                      className="w-full aspect-[3/4] rounded-xl sm:rounded-2xl object-cover object-center"
                       priority
                     />
                     
                     {/* Benefit Callouts Overlay */}
-                    <div className="absolute -left-2 sm:-left-3 md:-left-10 top-[20%] sm:top-[30%] space-y-2 sm:space-y-3">
-                      <div className="bg-blue-500 text-white pl-3 sm:pl-5 pr-6 sm:pr-10 py-2 sm:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
+                    <div className="absolute -left-1 sm:-left-2 md:-left-3 lg:-left-10 top-[15%] sm:top-[20%] md:top-[30%] space-y-1.5 sm:space-y-2 md:space-y-3">
+                      <div className="bg-blue-500 text-white pl-2 sm:pl-3 md:pl-5 pr-4 sm:pr-6 md:pr-10 py-1.5 sm:py-2 md:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
                         <i className="bi bi-plus-circle text-xs sm:text-sm"></i>
                         <span className="hidden sm:inline">24/7 Healthcare</span>
                         <span className="sm:hidden">24/7 Care</span>
                       </div>
-                      <div className="bg-main-pink text-white pl-3 sm:pl-5 pr-6 sm:pr-10 py-2 sm:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
+                      <div className="bg-main-pink text-white pl-2 sm:pl-3 md:pl-5 pr-4 sm:pr-6 md:pr-10 py-1.5 sm:py-2 md:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
                         <i className="bi bi-heart text-xs sm:text-sm"></i>
                         <span className="hidden sm:inline">Wellness Benefits</span>
                         <span className="sm:hidden">Wellness</span>
                       </div>
-                      <div className="bg-purple-500 text-white pl-3 sm:pl-5 pr-6 sm:pr-10 py-2 sm:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
+                      <div className="bg-purple-500 text-white pl-2 sm:pl-3 md:pl-5 pr-4 sm:pr-6 md:pr-10 py-1.5 sm:py-2 md:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
                         <i className="bi bi-currency-dollar text-xs sm:text-sm"></i>
                         <span className="hidden sm:inline">40% avg savings</span>
                         <span className="sm:hidden">40% off</span>
                       </div>
-                      <div className="bg-green-500 text-white pl-3 sm:pl-5 pr-6 sm:pr-10 py-2 sm:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
+                      <div className="bg-green-500 text-white pl-2 sm:pl-3 md:pl-5 pr-4 sm:pr-6 md:pr-10 py-1.5 sm:py-2 md:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
                         <i className="bi bi-file-earmark text-xs sm:text-sm"></i>
                         <span className="hidden sm:inline">As low as $1/day</span>
                         <span className="sm:hidden">$1/day</span>
@@ -102,10 +102,10 @@ function Employees() {
                 </div>
 
                 {/* Right Side - Text Content for Employees/Businesses */}
-                <div className="flex flex-col space-y-6 sm:space-y-8">
+                <div className="flex flex-col space-y-4 sm:space-y-6 md:space-y-8 order-1 lg:order-2">
                   {/* Main Headline */}
-                  <div className="space-y-3 sm:space-y-4">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <div className="space-y-2 sm:space-y-3 md:space-y-4">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                       <span className="text-main-pink">Small business</span>{' '}
                       <span className="text-main-pink">health benefits</span>{' '}
                       <span className="text-black">that actually</span>{' '}
@@ -113,38 +113,38 @@ function Employees() {
                     </h1>
                     
                     {/* Subheadline */}
-                    <p className="text-lg sm:text-xl text-gray-600 font-medium">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-600 font-medium">
                       From <span className="text-main-pink font-bold">$1/day</span> per employee
                     </p>
                   </div>
 
                   {/* Description */}
-                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-lg">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed max-w-lg">
                     Stop overpaying for health benefits. Provide comprehensive coverage including health insurance, dental, vision, and wellness programs at 40% less than traditional providers.
                   </p>
 
                   {/* Key Benefits Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-md">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4 max-w-md">
                     <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-5 h-5 sm:w-6 md:w-8 sm:h-6 md:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
                         <i className="bi bi-check-lg text-main-pink text-xs sm:text-sm"></i>
                       </div>
                       <span className="text-xs sm:text-sm font-medium text-gray-700">No setup fees</span>
                     </div>
                     <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-5 h-5 sm:w-6 md:w-8 sm:h-6 md:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
                         <i className="bi bi-check-lg text-main-pink text-xs sm:text-sm"></i>
                       </div>
                       <span className="text-xs sm:text-sm font-medium text-gray-700">Instant quotes</span>
                     </div>
                     <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-5 h-5 sm:w-6 md:w-8 sm:h-6 md:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
                         <i className="bi bi-check-lg text-main-pink text-xs sm:text-sm"></i>
                       </div>
                       <span className="text-xs sm:text-sm font-medium text-gray-700">24/7 support</span>
                     </div>
                     <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div className="w-5 h-5 sm:w-6 md:w-8 sm:h-6 md:h-8 bg-main-pink/10 rounded-full flex items-center justify-center flex-shrink-0">
                         <i className="bi bi-check-lg text-main-pink text-xs sm:text-sm"></i>
                       </div>
                       <span className="text-xs sm:text-sm font-medium text-gray-700">Cancel anytime</span>
@@ -152,23 +152,23 @@ function Employees() {
                   </div>
 
                   {/* CTA Section */}
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4">
                     <button 
                       onClick={scrollToPricing}
-                      className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                      className="bg-main-pink text-white px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                     >
                       Get Your Free Quote
-                      <i className="bi bi-arrow-right text-lg sm:text-xl"></i>
+                      <i className="bi bi-arrow-right text-sm sm:text-lg md:text-xl"></i>
                     </button>
                     
-                    <button className="border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:border-main-pink hover:text-main-pink transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3">
-                      <i className="bi bi-envelope text-lg sm:text-xl"></i>
+                    <button className="border-2 border-gray-300 text-gray-700 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:border-main-pink hover:text-main-pink transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3">
+                      <i className="bi bi-envelope text-sm sm:text-lg md:text-xl"></i>
                       Contact Us
                     </button>
                   </div>
 
                   {/* Social Proof */}
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 pt-4 border-t border-gray-200">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 md:gap-6 pt-3 sm:pt-4 border-t border-gray-200">
                     <div className="flex items-center gap-2">
                       <span className="text-xs sm:text-sm text-gray-600">Join 2,500+ businesses</span>
                     </div>
@@ -191,10 +191,10 @@ function Employees() {
         </div>
 
         {/* Business Benefits Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        <section className="py-8 sm:py-12 md:py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            <div className="text-center mb-8 sm:mb-10 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Why Businesses Choose Reef Health
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -202,42 +202,42 @@ function Employees() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-main-pink/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="bi bi-graph-up text-2xl text-main-pink"></i>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Save 40% on Costs</h3>
-                <p className="text-gray-600">Reduce your health benefit expenses while providing better coverage for your employees</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-main-pink/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="bi bi-people text-2xl text-main-pink"></i>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Attract Top Talent</h3>
-                <p className="text-gray-600">Competitive benefits help you stand out and hire the best employees</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-main-pink/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="bi bi-shield-check text-2xl text-main-pink"></i>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Compliance Ready</h3>
-                <p className="text-gray-600">Meet all regulatory requirements with our comprehensive compliance support</p>
-              </div>
-            </div>
+                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+               <div className="text-center">
+                 <div className="w-12 h-12 sm:w-14 md:w-16 sm:h-12 md:h-14 lg:h-16 bg-main-pink/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                   <i className="bi bi-graph-up text-lg sm:text-xl md:text-2xl text-main-pink"></i>
+                 </div>
+                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Save 40% on Costs</h3>
+                 <p className="text-sm sm:text-base text-gray-600">Reduce your health benefit expenses while providing better coverage for your employees</p>
+               </div>
+               
+               <div className="text-center">
+                 <div className="w-12 h-12 sm:w-14 md:w-16 sm:h-12 md:h-14 lg:h-16 bg-main-pink/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                   <i className="bi bi-people text-lg sm:text-xl md:text-2xl text-main-pink"></i>
+                 </div>
+                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Attract Top Talent</h3>
+                 <p className="text-sm sm:text-base text-gray-600">Competitive benefits help you stand out and hire the best employees</p>
+               </div>
+               
+               <div className="text-center">
+                 <div className="w-12 h-12 sm:w-14 md:w-16 sm:h-12 md:h-14 lg:h-16 bg-main-pink/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                   <i className="bi bi-shield-check text-lg sm:text-xl md:text-2xl text-main-pink"></i>
+                 </div>
+                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Compliance Ready</h3>
+                 <p className="text-sm sm:text-base text-gray-600">Meet all regulatory requirements with our comprehensive compliance support</p>
+               </div>
+             </div>
           </div>
         </section>
 
-        {/* Additional sections can be added here */}
-        <div id="pricing" className="py-16">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Business Health Plans</h2>
-            <p className="text-lg text-gray-600 mb-8">Choose the plan that works best for your business</p>
-            {/* Add pricing component here */}
-          </div>
-        </div>
+                 {/* Additional sections can be added here */}
+         <div id="pricing" className="py-8 sm:py-12 md:py-16">
+           <div className="text-center">
+             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Business Health Plans</h2>
+             <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">Choose the plan that works best for your business</p>
+             {/* Add pricing component here */}
+           </div>
+         </div>
       </main>
     </>
   )
