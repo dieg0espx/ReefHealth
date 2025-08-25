@@ -5,6 +5,8 @@ import About from '@/components/About'
 import Services from '@/components/Services'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import OurTeam from '@/components/OurTeam'
+import HealthInsuranceCosts from '@/components/HealthInsuranceCosts'
+import TrustedBrands from '@/components/TrustedBrands'
 import Testimonials from '@/components/Testimonials'
 import Pricing from '@/components/Pricing'
 import Faq from '@/components/FAQ'
@@ -70,6 +72,8 @@ function Home() {
       
       <main className='max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5 space-y-8 sm:space-y-10'>
         <Hero />
+        <TrustedBrands />
+        <HealthInsuranceCosts />
         <Testimonials />
         <About />
         <Services />

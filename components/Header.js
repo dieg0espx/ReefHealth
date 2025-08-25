@@ -25,21 +25,80 @@ export default function Header() {
       <nav className="hidden md:flex flex-1 justify-center">
         <ul className="flex gap-4 lg:gap-6 xl:gap-10">
           <li>
-              <a href={"/"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Businesses</a>
+              <a 
+                href={"/"} 
+                className={`font-medium text-xs lg:text-sm cursor-pointer transition-all duration-200 relative ${
+                  router.pathname === "/" 
+                    ? "text-white font-semibold" 
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                Businesses
+                {router.pathname === "/" && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white rounded-full"></div>
+                )}
+              </a>
           </li>
           <li>
-              <a href={"/individuals"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Individuals</a>
+              <a 
+                href={"/individuals"} 
+                className={`font-medium text-xs lg:text-sm cursor-pointer transition-all duration-200 relative ${
+                  router.pathname === "/individuals" 
+                    ? "text-white font-semibold" 
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                Individuals
+                {router.pathname === "/individuals" && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white rounded-full"></div>
+                )}
+              </a>
           </li>
           <li>
-              <a href={"/about"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">About Us</a>
+              <a 
+                href={"/about"} 
+                className={`font-medium text-xs lg:text-sm cursor-pointer transition-all duration-200 relative ${
+                  router.pathname === "/about" 
+                    ? "text-white font-semibold" 
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                About Us
+                {router.pathname === "/about" && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white rounded-full"></div>
+                )}
+              </a>
           </li>
           <li>
-              <a href={"/blog"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Our Blog</a>
+              <a 
+                href={"/blog"} 
+                className={`font-medium text-xs lg:text-sm cursor-pointer transition-all duration-200 relative ${
+                  router.pathname === "/blog" 
+                    ? "text-white font-semibold" 
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                Our Blog
+                {router.pathname === "/blog" && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white rounded-full"></div>
+                )}
+              </a>
           </li>
           <li>
-              <a href={"/contact"} className="text-white font-medium text-xs lg:text-sm hover:underline cursor-pointer">Contact Us</a>
+              <a 
+                href={"/contact"} 
+                className={`font-medium text-xs lg:text-sm cursor-pointer transition-all duration-200 relative ${
+                  router.pathname === "/contact" 
+                    ? "text-white font-semibold" 
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                Contact Us
+                {router.pathname === "/contact" && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white rounded-full"></div>
+                )}
+              </a>
           </li>
- 
         </ul>
       </nav>
 
@@ -71,9 +130,14 @@ export default function Header() {
                <li>
                  <a 
                    href={"/"} 
-                   className="text-gray-800 font-medium text-base px-6 py-3 hover:bg-gray-50 transition-colors cursor-pointer flex items-center"
+                   className={`font-medium text-base px-6 py-3 transition-all duration-200 cursor-pointer flex items-center relative ${
+                     router.pathname === "/" 
+                       ? "text-main-pink bg-gradient-to-r from-pink-50 to-pink-100/50 font-semibold border-l-4 border-main-pink" 
+                       : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                   }`}
                    onClick={() => setIsMenuOpen(false)}
                  >
+                   <i className={`mr-3 ${router.pathname === "/" ? "text-main-pink" : "text-gray-400"}`}></i>
                    <i className="bi bi-house mr-3 text-main-pink"></i>
                    Businesses
                  </a>
@@ -81,9 +145,14 @@ export default function Header() {
                <li>
                  <a 
                    href={"/individuals"} 
-                   className="text-gray-800 font-medium text-base px-6 py-3 hover:bg-gray-50 transition-colors cursor-pointer flex items-center"
+                   className={`font-medium text-base px-6 py-3 transition-all duration-200 cursor-pointer flex items-center relative ${
+                     router.pathname === "/individuals" 
+                       ? "text-main-pink bg-gradient-to-r from-pink-50 to-pink-100/50 font-semibold border-l-4 border-main-pink" 
+                       : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                   }`}
                    onClick={() => setIsMenuOpen(false)}
                  >
+                   <i className={`mr-3 ${router.pathname === "/individuals" ? "text-main-pink" : "text-gray-400"}`}></i>
                    <i className="bi bi-person mr-3 text-main-pink"></i>
                    Individuals
                  </a>
@@ -91,9 +160,14 @@ export default function Header() {
                <li>
                  <a 
                    href={"/about"} 
-                   className="text-gray-800 font-medium text-base px-6 py-3 hover:bg-gray-50 transition-colors cursor-pointer flex items-center"
+                   className={`font-medium text-base px-6 py-3 transition-all duration-200 cursor-pointer flex items-center relative ${
+                     router.pathname === "/about" 
+                       ? "text-main-pink bg-gradient-to-r from-pink-50 to-pink-100/50 font-semibold border-l-4 border-main-pink" 
+                       : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                   }`}
                    onClick={() => setIsMenuOpen(false)}
                  >
+                   <i className={`mr-3 ${router.pathname === "/about" ? "text-main-pink" : "text-gray-400"}`}></i>
                    <i className="bi bi-info-circle mr-3 text-main-pink"></i>
                    About Us
                  </a>
@@ -101,9 +175,14 @@ export default function Header() {
                <li>
                  <a 
                    href={"/blog"} 
-                   className="text-gray-800 font-medium text-base px-6 py-3 hover:bg-gray-50 transition-colors cursor-pointer flex items-center"
+                   className={`font-medium text-base px-6 py-3 transition-all duration-200 cursor-pointer flex items-center relative ${
+                     router.pathname === "/blog" 
+                       ? "text-main-pink bg-gradient-to-r from-pink-50 to-pink-100/50 font-semibold border-l-4 border-main-pink" 
+                       : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                   }`}
                    onClick={() => setIsMenuOpen(false)}
                  >
+                   <i className={`mr-3 ${router.pathname === "/blog" ? "text-main-pink" : "text-gray-400"}`}></i>
                    <i className="bi bi-journal-text mr-3 text-main-pink"></i>
                    Our Blog
                  </a>
@@ -111,9 +190,14 @@ export default function Header() {
                <li>
                  <a 
                    href={"/contact"} 
-                   className="text-gray-800 font-medium text-base px-6 py-3 hover:bg-gray-50 transition-colors cursor-pointer flex items-center"
+                   className={`font-medium text-base px-6 py-3 transition-all duration-200 cursor-pointer flex items-center relative ${
+                     router.pathname === "/contact" 
+                       ? "text-main-pink bg-gradient-to-r from-pink-50 to-pink-100/50 font-semibold border-l-4 border-main-pink" 
+                       : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                   }`}
                    onClick={() => setIsMenuOpen(false)}
                  >
+                   <i className={`mr-3 ${router.pathname === "/contact" ? "text-main-pink" : "text-gray-400"}`}></i>
                    <i className="bi bi-envelope mr-3 text-main-pink"></i>
                    Contact Us
                  </a>
