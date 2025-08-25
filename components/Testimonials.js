@@ -101,7 +101,7 @@ export default function Testimonials() {
                 <div>
                   <Stars count={t.rating} />
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{t.title}</h3>
-                  <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">{t.text}</p>
+                  <p className="text-gray-600 mb-2 sm:mb-3 text-sm sm:text-base">{t.text}</p>
                 </div>
                 <div className="flex items-center gap-3 mt-auto">
                   <Image src={t.img} alt={t.name} width={40} height={40} className="rounded-full object-cover" />

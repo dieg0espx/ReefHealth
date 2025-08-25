@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import TraditionalInsuranceProblem from '@/components/TraditionalInsuranceProblem'
+import Testimonials from '@/components/Testimonials'
 
 function Individuals() {
   const scrollToPricing = () => {
@@ -193,6 +194,9 @@ function Individuals() {
 
         {/* The Real Problem Section */}
         <TraditionalInsuranceProblem />
+
+        {/* What Our Members Say Section */}
+        <Testimonials />
 
         {/* Additional sections can be added here */}
       </main>
