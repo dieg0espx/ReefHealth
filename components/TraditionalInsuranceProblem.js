@@ -35,7 +35,7 @@ export default function TraditionalInsuranceProblem() {
             <span className="block text-[#e03a6a]">Is Broken</span>
           </h2>
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            For decades, health insurance has been sold as &quot;protection&quot; — but for employers and employees, 
+            For decades, health insurance has been sold as &quot;protection&quot; — but for individuals and families, 
             it&apos;s become an expensive trap that delivers less value every year.
           </p>
         </div>
@@ -156,7 +156,7 @@ export default function TraditionalInsuranceProblem() {
                   </svg>
                 </div>
                 <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Broken System</h4>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">The result? Employers pay more, employees get less, and the healthcare system stays broken.</p>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">The result? Individuals and families pay more, get less, and the healthcare system stays broken.</p>
               </div>
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function TraditionalInsuranceProblem() {
                 </svg>
               </div>
               <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Whole-Family Coverage</h4>
-              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">Affordable plans that protect your entire household—not just the employee.</p>
+              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">Affordable plans that protect your entire household—not just one person.</p>
             </div>
           </div>
           </div>

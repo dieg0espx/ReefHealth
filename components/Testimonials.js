@@ -15,8 +15,8 @@ const testimonials = [
   },
   {
     rating: 5,
-    title: 'Reduced Employee Turnover',
-    text: 'Reef helped reduce employee turnover significantly. Our team loves the benefits and it shows in their retention.',
+    title: 'Better Health Coverage',
+    text: 'Reef helped provide better health coverage significantly. Our team loves the benefits and it shows in their satisfaction.',
     name: 'Paul J.',
     role: 'HR Director',
     img: '/stock/iStock-2148812508.jpg',
@@ -93,7 +93,7 @@ export default function Testimonials() {
     <section className="bg-gray-50 rounded-3xl px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 mt-10">What Our Members Say</h2>
-        <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-4xl mx-auto">Real feedback from business owners and employees who&apos;ve experienced the Reef difference in their health coverage.</p>
+        <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-4xl mx-auto">Real feedback from individuals and families who&apos;ve experienced the Reef difference in their health coverage.</p>
         <Slider {...sliderSettings} className="pb-6 sm:pb-8">
           {testimonials.map((t, idx) => (
             <div key={idx} className="px-2 sm:px-3 py-5">

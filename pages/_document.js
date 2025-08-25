@@ -30,7 +30,7 @@ export default function Document() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://reefhealth.com/" />
         <meta property="og:title" content="Reef Health Benefits - Affordable Small Business Health Insurance | Save Up to 40%" />
-        <meta property="og:description" content="Hate health insurance? Then you'll love Reef Health. Affordable small business health insurance starting at $29/mo. Save up to 40% with transparent pricing and 24/7 telehealth access." />
+        <meta property="og:description" content="Hate health insurance? Then you'll love Reef Health. Affordable small business health insurance for just a few dollars a day. Save up to 40% with transparent pricing and 24/7 telehealth access." />
         <meta property="og:image" content="https://reefhealth.com/miniature.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -39,7 +39,7 @@ export default function Document() {
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Reef Health Benefits - Affordable Small Business Health Insurance | Save Up to 40%" />
-        <meta name="twitter:description" content="Hate health insurance? Then you'll love Reef Health. Affordable small business health insurance starting at $29/mo. Save up to 40% with transparent pricing and 24/7 telehealth access." />
+        <meta name="twitter:description" content="Hate health insurance? Then you'll love Reef Health. Affordable small business health insurance for just a few dollars a day. Save up to 40% with transparent pricing and 24/7 telehealth access." />
         <meta name="twitter:image" content="https://reefhealth.com/miniature.png" />
         
         {/* Structured Data - Organization */}
