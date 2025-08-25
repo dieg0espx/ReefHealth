@@ -44,7 +44,7 @@ export default function HealthInsuranceCosts() {
             </div>
 
             {/* Circular Image - Predominantly on white, extending into pink */}
-            <div className="absolute right-20 top-1/2 -translate-y-1/2 z-20">
+            <div className="absolute left-[58%] top-1/2 -translate-y-1/2 z-20">
               <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-2xl">
                 <Image 
                   src="/stock/iStock-2166712407 (1).jpg" 
