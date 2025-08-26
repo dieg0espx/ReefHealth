@@ -5,6 +5,8 @@ import About from '@/components/About'
 import Services from '@/components/Services'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import OurTeam from '@/components/OurTeam'
+import HealthInsuranceCosts from '@/components/HealthInsuranceCosts'
+import TrustedBrands from '@/components/TrustedBrands'
 import Testimonials from '@/components/Testimonials'
 import Pricing from '@/components/Pricing'
 import Faq from '@/components/FAQ'
@@ -15,7 +17,7 @@ function Home() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Reef Health Benefits - Affordable Small Business Health Insurance",
-    "description": "Hate health insurance? Then you'll love Reef Health. Affordable small business health insurance starting at $29/mo. Save up to 40% with transparent pricing and 24/7 telehealth access.",
+    "description": "Hate health insurance? Then you'll love Reef Health. Affordable small business health insurance for just a few dollars a day. Save up to 40% with transparent pricing and 24/7 telehealth access.",
     "url": "https://reefhealth.com/",
     "mainEntity": {
       "@type": "Organization",
@@ -53,8 +55,8 @@ function Home() {
     <>
       <Head>
         <title>Reef Health Benefits - Affordable Small Business Health Insurance | Save Up to 40%</title>
-        <meta name="description" content="Hate health insurance? Then you'll love Reef Health. Affordable small business health insurance starting at $29/mo. Save up to 40% with transparent pricing, 24/7 telehealth access, and comprehensive wellness benefits. Trusted by 100,000+ members." />
-        <meta name="keywords" content="small business health insurance, affordable health insurance, business health plans, telehealth, health benefits, transparent pricing, employee benefits, health coverage" />
+        <meta name="description" content="Hate health insurance? Then you'll love Reef Health. Affordable small business health insurance for just a few dollars a day. Save up to 40% with transparent pricing, 24/7 telehealth access, and comprehensive wellness benefits. Trusted by 100,000+ members." />
+        <meta name="keywords" content="health insurance, affordable health insurance, health plans, telehealth, health benefits, transparent pricing, individual health coverage, family health coverage" />
         
         {/* Additional SEO tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,6 +72,8 @@ function Home() {
       
       <main className='max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5 space-y-8 sm:space-y-10'>
         <Hero />
+        <TrustedBrands />
+        <HealthInsuranceCosts />
         <Testimonials />
         <About />
         <Services />

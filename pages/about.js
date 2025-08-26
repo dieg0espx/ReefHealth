@@ -38,7 +38,7 @@ function About() {
         />
       </Head>
 
-      <main className='max-w-[1500px] mx-auto md:px-5'>
+      <main className='max-w-[1500px] mx-auto px-3 sm:px-4 md:px-5'>
         <Hero2 />
         <WhyWeTheBest isAboutPage={true} />
         <OurHistory />

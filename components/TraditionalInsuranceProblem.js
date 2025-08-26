@@ -17,7 +17,7 @@ export default function TraditionalInsuranceProblem() {
   };
 
   return (
-    <section className="relative py-10 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-6 sm:py-8 md:py-10 px-3 sm:px-4 md:px-6 lg:px-8 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#e03a6a] rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
@@ -25,50 +25,50 @@ export default function TraditionalInsuranceProblem() {
 
       <div className="relative max-w-7xl mx-auto">
         {/* Hero Section */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-pink-50 border border-pink-200 rounded-full text-pink-700 text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-pink-50 border border-pink-200 rounded-full text-pink-700 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+            <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-pink-500 rounded-full mr-1.5 sm:mr-2"></span>
             The Real Problem
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight">
             Traditional Health Insurance
             <span className="block text-[#e03a6a]">Is Broken</span>
           </h2>
-          <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            For decades, health insurance has been sold as &quot;protection&quot; — but for employers and employees, 
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
+            For decades, health insurance has been sold as &quot;protection&quot; — but for individuals and families, 
             it&apos;s become an expensive trap that delivers less value every year.
           </p>
         </div>
 
-        {/* Problems Section */}
-        <div className="mb-24">
-          <div className="text-center mb-16">
-            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              The 6 Major Problems
-            </h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              These issues cost you money, time, and peace of mind
-            </p>
-          </div>
+                 {/* Problems Section */}
+         <div className="mb-16 sm:mb-20 md:mb-24">
+           <div className="text-center mb-12 sm:mb-14 md:mb-16">
+             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+               The 6 Major Problems
+             </h3>
+             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
+               These issues cost you money, time, and peace of mind
+             </p>
+           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
-            {/* Problem 1 */}
-            <div className="group relative bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-main-pink rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-lg sm:text-xl">1</span>
-                </div>
-              </div>
-              <div className="pt-6 sm:pt-8">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-pink-100 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-pink-200 transition-colors">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                  </svg>
-                </div>
-                <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Skyrocketing Premiums</h4>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">Every year costs go up by 10-18%, yet coverage rarely improves. It&apos;s like paying more for less.</p>
-              </div>
-            </div>
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+                         {/* Problem 1 */}
+             <div className="group relative bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                 <div className="w-10 h-10 sm:w-12 md:w-16 sm:h-10 md:h-12 lg:h-16 bg-main-pink rounded-full flex items-center justify-center shadow-lg">
+                   <span className="text-white font-bold text-sm sm:text-lg md:text-xl">1</span>
+                 </div>
+               </div>
+               <div className="pt-5 sm:pt-6 md:pt-8">
+                 <div className="w-8 h-8 sm:w-10 md:w-12 sm:h-8 md:h-10 lg:h-12 bg-pink-100 rounded-lg sm:rounded-xl md:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:bg-pink-200 transition-colors">
+                   <svg className="w-4 h-4 sm:w-5 md:w-6 sm:h-4 md:h-5 lg:h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                   </svg>
+                 </div>
+                 <h4 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">Skyrocketing Premiums</h4>
+                 <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">Every year costs go up by 10-18%, yet coverage rarely improves. It&apos;s like paying more for less.</p>
+               </div>
+             </div>
 
             {/* Problem 2 */}
             <div className="group relative bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
@@ -156,45 +156,45 @@ export default function TraditionalInsuranceProblem() {
                   </svg>
                 </div>
                 <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Broken System</h4>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">The result? Employers pay more, employees get less, and the healthcare system stays broken.</p>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">The result? Individuals and families pay more, get less, and the healthcare system stays broken.</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Reef Solution Section */}
-        <div className="mb-24">
-          <div className="bg-gradient-to-br from-[#e03a6a] to-[#d12e5c] rounded-2xl sm:rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-10 right-10 w-32 h-32 bg-white rounded-full"></div>
-              <div className="absolute bottom-10 left-10 w-24 h-24 bg-white rounded-full"></div>
-            </div>
-            
-            <div className="relative text-center mb-12 sm:mb-16">
-              <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-                <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-                The Reef Solution
-              </div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                We Flip the Model
-              </h3>
-              <p className="text-sm sm:text-base md:text-xl lg:text-2xl max-w-3xl mx-auto opacity-90 leading-relaxed px-4 sm:px-0">
-                Reef removes the bloat, confusion, and inflated pricing of traditional insurance to deliver 
-                healthcare that actually works.
-              </p>
-            </div>
+                 {/* Reef Solution Section */}
+         <div className="mb-16 sm:mb-20 md:mb-24">
+           <div className="bg-gradient-to-br from-[#e03a6a] to-[#d12e5c] rounded-xl sm:rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 text-white relative overflow-hidden">
+             {/* Background Pattern */}
+             <div className="absolute inset-0 opacity-10">
+               <div className="absolute top-6 sm:top-10 right-6 sm:right-10 w-20 h-20 sm:w-32 sm:h-32 bg-white rounded-full"></div>
+               <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 w-16 h-16 sm:w-24 sm:h-24 bg-white rounded-full"></div>
+             </div>
+             
+             <div className="relative text-center mb-8 sm:mb-12 md:mb-16">
+               <div className="inline-flex items-center px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white text-xs sm:text-sm font-medium mb-3 sm:mb-4 md:mb-6">
+                 <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white rounded-full mr-1.5 sm:mr-2"></span>
+                 The Reef Solution
+               </div>
+               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight">
+                 We Flip the Model
+               </h3>
+               <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl max-w-2xl sm:max-w-3xl mx-auto opacity-90 leading-relaxed px-2 sm:px-4 md:px-0">
+                 Reef removes the bloat, confusion, and inflated pricing of traditional insurance to deliver 
+                 healthcare that actually works.
+               </p>
+             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Transparent, Predictable Pricing</h4>
-              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">Flat monthly rates—no guessing, no surprise bills, no hidden fees.</p>
-            </div>
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+                         <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+               <div className="w-10 h-10 sm:w-12 md:w-16 sm:h-10 md:h-12 lg:h-16 bg-white rounded-lg sm:rounded-xl md:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 md:mb-6 mx-auto">
+                 <svg className="w-5 h-5 sm:w-6 md:w-8 sm:h-5 md:h-6 lg:h-8 text-[#e03a6a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                 </svg>
+               </div>
+               <h4 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 md:mb-4 text-center">Transparent, Predictable Pricing</h4>
+               <p className="text-center opacity-90 leading-relaxed text-xs sm:text-sm md:text-base">Flat monthly rates—no guessing, no surprise bills, no hidden fees.</p>
+             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mx-auto">
@@ -243,35 +243,35 @@ export default function TraditionalInsuranceProblem() {
                 </svg>
               </div>
               <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-center">Whole-Family Coverage</h4>
-              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">Affordable plans that protect your entire household—not just the employee.</p>
+              <p className="text-center opacity-90 leading-relaxed text-sm sm:text-base">Affordable plans that protect your entire household—not just one person.</p>
             </div>
           </div>
           </div>
         </div>
 
-        {/* Value Promise Section */}
-        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12 lg:p-16 mb-12 sm:mb-16 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-gradient-to-br from-[#e03a6a]/10 to-transparent rounded-full blur-2xl sm:blur-3xl"></div>
-          
-          <div className="relative text-center">
-            <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-[#e03a6a]/10 border border-[#e03a6a]/20 rounded-full text-[#e03a6a] text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#e03a6a] rounded-full mr-1.5 sm:mr-2"></span>
-              Our Promise to You
-            </div>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight">
-              Lower costs. Better care.
-              <span className="block text-[#e03a6a] mt-1 sm:mt-2">Zero confusion.</span>
-            </h3>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-6 sm:mb-8 md:mb-12 leading-relaxed px-2 sm:px-0">
-              With Reef, you&apos;re not buying &quot;insurance&quot;—you&apos;re getting healthcare that actually works. 
-              We protect your people, reduce your costs, and eliminate the hidden traps that make 
-              traditional insurance so expensive and frustrating.
-            </p>
-            <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
-              That&apos;s the Reef difference.
-            </div>
-          </div>
-        </div>
+                 {/* Value Promise Section */}
+         <div className="bg-white rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 mb-8 sm:mb-12 md:mb-16 relative overflow-hidden">
+           <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 md:w-48 lg:w-64 sm:h-32 md:h-48 lg:h-64 bg-gradient-to-br from-[#e03a6a]/10 to-transparent rounded-full blur-xl sm:blur-2xl md:blur-3xl"></div>
+           
+           <div className="relative text-center">
+             <div className="inline-flex items-center px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-[#e03a6a]/10 border border-[#e03a6a]/20 rounded-full text-[#e03a6a] text-xs sm:text-sm font-medium mb-3 sm:mb-4 md:mb-6">
+               <span className="w-1 h-1 sm:w-1.5 md:w-2 sm:h-1 md:h-1.5 lg:h-2 bg-[#e03a6a] rounded-full mr-1 sm:mr-1.5 md:mr-2"></span>
+               Our Promise to You
+             </div>
+             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight">
+               Lower costs. Better care.
+               <span className="block text-[#e03a6a] mt-1 sm:mt-2">Zero confusion.</span>
+             </h3>
+             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-3xl sm:max-w-4xl mx-auto mb-4 sm:mb-6 md:mb-8 lg:mb-12 leading-relaxed px-2 sm:px-4 md:px-0">
+               With Reef, you&apos;re not buying &quot;insurance&quot;—you&apos;re getting healthcare that actually works. 
+               We protect your people, reduce your costs, and eliminate the hidden traps that make 
+               traditional insurance so expensive and frustrating.
+             </p>
+             <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900">
+               That&apos;s the Reef difference.
+             </div>
+           </div>
+         </div>
 
       </div>
     </section>
