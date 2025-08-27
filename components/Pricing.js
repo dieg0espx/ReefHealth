@@ -214,7 +214,7 @@ Would you like to contact us now to get started?`);
               <select
                 value={selectedAgeRange}
                 onChange={(e) => setSelectedAgeRange(e.target.value)}
-                className="w-full sm:w-auto px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-3 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-[#e03a6a] focus:border-[#e03a6a] text-xs sm:text-sm md:text-base"
+                className="w-full sm:w-auto px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-3 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-[#e03a6a] focus:border-[#e03a6a] text-xs sm:text-sm md:text-base text-black"
               >
                 <option value="18-44">18 to 44</option>
                 <option value="45-59">45 to 59</option>
@@ -229,7 +229,7 @@ Would you like to contact us now to get started?`);
               <select
                 value={selectedCoverage}
                 onChange={(e) => setSelectedCoverage(e.target.value)}
-                className="w-full sm:w-auto px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-3 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-[#e03a6a] focus:border-[#e03a6a] text-xs sm:text-sm md:text-base"
+                className="w-full sm:w-auto px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-3 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-[#e03a6a] focus:border-[#e03a6a] text-xs sm:text-sm md:text-base text-black"
               >
                 {availableCoverageOptions.map(option => (
                   <option key={option} value={option}>{option}</option>

@@ -26,8 +26,8 @@ export default function HealthInsuranceCosts() {
 
                 {/* First Body Paragraph */}
                 <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-                  It's a dinosaur model that profited{' '}
-                  <span className="font-bold">billions last year alone</span>. You're left with the bill, and that's IF you're even covered. Healthcare shouldn't feel like financial roulette every time you go see the doctor.
+                  It&apos;s a dinosaur model that profited{' '}
+                  <span className="font-bold">billions last year alone</span>. You&apos;re left with the bill, and that&apos;s IF you&apos;re even covered. Healthcare shouldn&apos;t feel like financial roulette every time you go see the doctor.
                 </p>
 
                 {/* Second Body Paragraph */}
@@ -98,7 +98,7 @@ export default function HealthInsuranceCosts() {
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 sm:mb-8">
                   <span className="text-white">We changed the game so you get assurance, </span>
                   <span className="text-main-pink">not more </span>
-                  <span className="text-main-pink">"insurance."</span>
+                  <span className="text-main-pink">&quot;insurance.&quot;</span>
                 </h2>
 
                 {/* First Body Paragraph */}
@@ -108,7 +108,7 @@ export default function HealthInsuranceCosts() {
 
                 {/* Second Body Paragraph */}
                 <p className="text-lg sm:text-xl text-white mb-8 sm:mb-10 leading-relaxed">
-                  <span className="font-bold">That's health assurance</span> - Preventative care, real coverage, and benefits you can trust—all at a fraction of the cost.
+                  <span className="font-bold">That&apos;s health assurance</span> - Preventative care, real coverage, and benefits you can trust—all at a fraction of the cost.
                 </p>
 
                 {/* Call to Action Button */}
