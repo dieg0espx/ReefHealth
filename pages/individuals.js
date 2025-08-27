@@ -78,7 +78,7 @@ function Individuals() {
                     />
                     
                     {/* Benefit Callouts Overlay */}
-                    <div className="absolute -left-1 sm:-left-2 md:-left-3 lg:-left-10 top-[15%] sm:top-[20%] md:top-[30%] space-y-1.5 sm:space-y-2 md:space-y-3">
+                    <div className="absolute -left-1 sm:-left-2 md:-left-3 lg:-left-10 top-[60%] sm:top-[20%] md:top-[30%] space-y-1.5 sm:space-y-2 md:space-y-3">
                       <div className="bg-blue-500 text-white pl-2 sm:pl-3 md:pl-5 pr-4 sm:pr-6 md:pr-10 py-1.5 sm:py-2 md:py-4 rounded-full flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium shadow-lg">
                         <i className="bi bi-plus-circle text-xs sm:text-sm"></i>
                         <span className="hidden sm:inline">24/7 Healthcare</span>
