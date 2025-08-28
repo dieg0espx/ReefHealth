@@ -257,8 +257,13 @@ Would you like to contact us now to get started?`);
               </div>
 
               {/* Price Section - Responsive Height */}
-              <div className="h-12 sm:h-16 md:h-20 lg:h-24 flex items-center justify-center mb-2 sm:mb-3 md:mb-4 lg:mb-6">
-                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">${price}/month</div>
+              <div className="h-12 sm:h-16 md:h-20 lg:h-24 flex flex-col items-center justify-center mb-2 sm:mb-3 md:mb-4 lg:mb-6">
+                {planName === "Dental" && (
+                  <div className="text-xs sm:text-sm md:text-base text-gray-600 mb-1">from</div>
+                )}
+                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+                  {planName === "Dental" ? "$15/month" : `$${price}/month`}
+                </div>
               </div>
               
               {/* Features Section - Flexible Height */}
