@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import TraditionalInsuranceProblem from '@/components/TraditionalInsuranceProblem'
 import Testimonials from '@/components/Testimonials'
+import Pricing from '@/components/Pricing'
 
 function Individuals() {
   const scrollToPricing = () => {
@@ -108,15 +109,13 @@ function Individuals() {
                    {/* Main Headline */}
                    <div className="space-y-2 sm:space-y-3 md:space-y-4">
                      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                       <span className="text-main-pink">Individual</span>{' '}
-                       <span className="text-main-pink">health insurance</span>{' '}
-                       <span className="text-black">that fits</span>{' '}
-                       <span className="text-main-pink font-black">your life.</span>
+                       <span className="text-black">Hate Health insurance?</span>{' '}
+                       <span className="text-main-pink">Then you'll love this.</span>
                      </h1>
                      
                      {/* Subheadline */}
                      <p className="text-base sm:text-lg md:text-xl text-gray-600 font-medium">
-                       Starting at <span className="text-main-pink font-bold">just a few dollars a day</span>
+                       Affordable health benefits, built for individuals and families <span className="text-main-pink font-bold">$0 deductibles.</span> One easy platform
                      </p>
                    </div>
 
@@ -192,8 +191,82 @@ function Individuals() {
           </section>
         </div>
 
+        {/* Pricing Section */}
+        <Pricing />
+
         {/* The Real Problem Section */}
         <TraditionalInsuranceProblem />
+
+                 {/* Health Assurance Section with Stats */}
+         <section className="py-12 sm:py-16 md:py-20 w-full" style={{ backgroundColor: '#262325' }}>
+           <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5">
+             <div className="flex flex-col lg:flex-row items-center min-h-[600px] gap-8 lg:gap-12 mb-12 sm:mb-16 md:mb-20">
+               {/* Left Column - Image */}
+               <div className="flex-1 flex justify-center">
+                 <div className="w-full max-w-sm lg:max-w-md xl:max-w-lg">
+                   <div className="bg-white rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
+                     <Image 
+                       src="/stock/iStock-2151967049.jpg" 
+                       alt="Mother and daughter with doctor" 
+                       width={400} 
+                       height={600} 
+                       className="w-full h-full object-cover"
+                     />
+                   </div>
+                 </div>
+               </div>
+
+               {/* Right Column - Text Content */}
+               <div className="flex-1 flex flex-col justify-center">
+                 <div className="max-w-2xl sm:mr-16 md:mr-20 lg:mr-24 text-center sm:text-left">
+                   {/* Main Headline */}
+                   <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 sm:mb-8">
+                     <span className="text-white">We changed the game so you get assurance, </span>
+                     <span className="text-main-pink">not more </span>
+                     <span className="text-main-pink">&quot;insurance.&quot;</span>
+                   </h2>
+
+                   {/* First Body Paragraph */}
+                   <p className="text-lg sm:text-xl text-white mb-6 sm:mb-8 leading-relaxed">
+                     <span className="font-bold">What if going to the doctor was as easy as flipping on a light switch?</span> No guessing, no surprises—just care when you need it, without the financial headache.
+                   </p>
+
+                   {/* Second Body Paragraph */}
+                   <p className="text-lg sm:text-xl text-white mb-8 sm:mb-10 leading-relaxed">
+                     <span className="font-bold">That&apos;s health assurance</span> - Preventative care, real coverage, and benefits you can trust—all at a fraction of the cost.
+                   </p>
+
+                   {/* Call to Action Button */}
+                   <button 
+                     onClick={scrollToPricing}
+                     className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-fit mx-auto sm:mx-0"
+                   >
+                     Get Healthcare you can Trust
+                     <i className="bi bi-arrow-right text-lg sm:text-xl"></i>
+                   </button>
+                 </div>
+               </div>
+             </div>
+
+             {/* Stats Bar Section */}
+             <div className="text-center max-w-7xl mx-auto">
+               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+                 <div className="bg-[#fbe6ed] rounded-2xl sm:rounded-3xl py-6 sm:py-8 md:py-10 lg:py-12 px-3 sm:px-4 md:px-6 flex flex-col items-center">
+                   <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#e03a6a] mb-1 sm:mb-2">100,000+</span>
+                   <span className="text-xs sm:text-sm md:text-base lg:text-lg text-[#e03a6a] font-medium text-center">Trusted Members</span>
+                 </div>
+                 <div className="bg-[#fbe6ed] rounded-2xl sm:rounded-3xl py-6 sm:py-8 md:py-10 lg:py-12 px-3 sm:px-4 md:px-6 flex flex-col items-center">
+                   <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#e03a6a] mb-1 sm:mb-2">Available in</span>
+                   <span className="text-xs sm:text-sm md:text-base lg:text-lg text-[#e03a6a] font-medium text-center">All 50 States</span>
+                 </div>
+                 <div className="bg-[#fbe6ed] rounded-2xl sm:rounded-3xl py-6 sm:py-8 md:py-10 lg:py-12 px-3 sm:px-4 md:px-6 flex flex-col items-center">
+                   <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#e03a6a] mb-1 sm:mb-2">40%</span>
+                   <span className="text-xs sm:text-sm md:text-base lg:text-lg text-[#e03a6a] font-medium text-center">Saving on Plans</span>
+                 </div>
+               </div>
+                           </div>
+            </div>
+          </section>
 
         {/* What Our Members Say Section */}
         <Testimonials />

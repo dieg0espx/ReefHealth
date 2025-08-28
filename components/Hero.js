@@ -63,11 +63,15 @@ export default function Hero() {
 
               {/* Main Headline */}
               <div className="space-y-3 sm:space-y-4">
+                {/* Subtitle */}
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  The health insurance industry is broken. Making health care unaffordable and unattainable.
+                </p>
+                
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-main-pink">Small business</span>{' '}
-                  <span className="text-main-pink">health benefits</span>{' '}
-                  <span className="text-black">that actually</span>{' '}
-                  <span className="text-main-pink font-black">work.</span>
+                  <span className="text-black">We rebuilt the model -</span>{' '}
+                  <span className="text-main-pink">making the top health benefits</span>{' '}
+                  <span className="text-main-pink">affordable for small businesses.</span>
                 </h1>
                 
               </div>
