@@ -27,9 +27,11 @@ export default function RightStatPanel({
       </span>
 
       {/* Circular image */}
-      <img
+      <Image
         src={imgSrc}
         alt={imgAlt}
+        width={260}
+        height={260}
         className="absolute right-6 md:right-8 top-1/2 -translate-y-1/2 w-[160px] h-[160px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] rounded-full object-cover ring-4 ring-white z-10"
       />
 

@@ -110,7 +110,7 @@ function Individuals() {
                    <div className="space-y-2 sm:space-y-3 md:space-y-4">
                      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                        <span className="text-black">Hate Health insurance?</span>{' '}
-                       <span className="text-main-pink">Then you'll love this.</span>
+                       <span className="text-main-pink">Then you&apos;ll love this.</span>
                      </h1>
                      
                      {/* Subheadline */}
