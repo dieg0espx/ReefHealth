@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import TrustedBrands from '@/components/TrustedBrands'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -181,9 +182,9 @@ function Franchise() {
                     
                  {/* Secondary CTA Link */}
                  <div className="mt-4">
-                   <a href="/" className="text-main-pink hover:text-white underline text-base sm:text-lg transition-colors duration-300">
+                   <Link href="/" className="text-main-pink hover:text-white underline text-base sm:text-lg transition-colors duration-300">
                      Join as a business
-                   </a>
+                   </Link>
                   </div>
                 </div>
               </div>
@@ -443,14 +444,14 @@ function Franchise() {
               {/* Left Side - Headline */}
               <div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
-                  Sound too good to be true? <span className="text-main-pink">We've heard that one before.</span>
+                  Sound too good to be true? <span className="text-main-pink">We&apos;ve heard that one before.</span>
                 </h2>
               </div>
               
               {/* Right Side - Supporting Text */}
               <div>
                 <p className="text-base sm:text-lg text-white leading-relaxed">
-                  You're probably wondering what businesses have to give up to get lower rates? The answer... nothing. We are able to beat the costs of big healthcare benefit providers like BlueCross BlueShield by 40% on average with the same coverage if not better.
+                  You&apos;re probably wondering what businesses have to give up to get lower rates? The answer... nothing. We are able to beat the costs of big healthcare benefit providers like BlueCross BlueShield by 40% on average with the same coverage if not better.
                 </p>
               </div>
             </div>
@@ -461,7 +462,7 @@ function Franchise() {
             {/* Middle Section */}
             <div className="text-left mb-12">
               <h3 className="text-2xl sm:text-3xl font-bold text-white">
-                Here's how we do it
+                Here&apos;s how we do it
               </h3>
             </div>
 
@@ -484,7 +485,7 @@ function Franchise() {
                   </h3>
                 </div>
                 <p className="text-sm sm:text-base text-white leading-relaxed">
-                  Very few of the healthcare benefit companies out there are simply middle men that resell other people's benefits / policies / networks. To run their business, they have to drastically mark up the costs they receive from their partners. But we don't. We are the actual end-provider of these services so we don't have to mark up our plans...which means we can pass the savings back to you.
+                  Very few of the healthcare benefit companies out there are simply middle men that resell other people&apos;s benefits / policies / networks. To run their business, they have to drastically mark up the costs they receive from their partners. But we don&apos;t. We are the actual end-provider of these services so we don&apos;t have to mark up our plans...which means we can pass the savings back to you.
                 </p>
               </div>
 
@@ -505,7 +506,7 @@ function Franchise() {
                   </h3>
                 </div>
                 <p className="text-sm sm:text-base text-white leading-relaxed">
-                  You've dealt with insurance providers...efficiency is one of the last words you'd use to describe them. But we're different. We use real-time technology to help us help our members get the healthcare they need from people in their network as quickly as possible to reduce time and money expense.
+                  You&apos;ve dealt with insurance providers...efficiency is one of the last words you&apos;d use to describe them. But we&apos;re different. We use real-time technology to help us help our members get the healthcare they need from people in their network as quickly as possible to reduce time and money expense.
                 </p>
               </div>
             </div>
@@ -517,7 +518,7 @@ function Franchise() {
           <div className="bg-main-pink py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto text-center">
               <p className="text-white text-lg sm:text-xl font-medium">
-                Prefer to just give us a call? Drop us a line and we're happy to chat{' '}
+                Prefer to just give us a call? Drop us a line and we&apos;re happy to chat{' '}
                 <a href="tel:833-353-7333" className="font-bold hover:underline">
                   (833)-353-7333
                 </a>
