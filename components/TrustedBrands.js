@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function TrustedBrands() {
   return (
-    <section className="hidden sm:block py-12 sm:py-16 md:py-20 bg-gray-100 w-full rounded-3xl">
+         <section className="hidden sm:block py-12 sm:py-16 md:py-20 bg-white w-full rounded-3xl">
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 px-2 sm:px-4 md:px-6 lg:px-8">
           {/* Left Side - Text */}
