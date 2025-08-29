@@ -56,6 +56,21 @@ export default function Header() {
           </li>
           <li>
               <a 
+                href={"/franchise"} 
+                className={`font-medium text-xs lg:text-sm cursor-pointer transition-all duration-200 relative ${
+                  router.pathname === "/franchise" 
+                    ? "text-white font-semibold" 
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                Franchise
+                {router.pathname === "/franchise" && (
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white rounded-full"></div>
+                )}
+              </a>
+          </li>
+          <li>
+              <a 
                 href={"/about"} 
                 className={`font-medium text-xs lg:text-sm cursor-pointer transition-all duration-200 relative ${
                   router.pathname === "/about" 
@@ -155,6 +170,21 @@ export default function Header() {
                    <i className={`mr-3 ${router.pathname === "/individuals" ? "text-main-pink" : "text-gray-400"}`}></i>
                    <i className="bi bi-person mr-3 text-main-pink"></i>
                    Individuals
+                 </a>
+               </li>
+               <li>
+                 <a 
+                   href={"/franchise"} 
+                   className={`font-medium text-base px-6 py-3 transition-all duration-200 cursor-pointer flex items-center relative ${
+                     router.pathname === "/franchise" 
+                       ? "text-main-pink bg-gradient-to-r from-pink-50 to-pink-100/50 font-semibold border-l-4 border-main-pink" 
+                       : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                   }`}
+                   onClick={() => setIsMenuOpen(false)}
+                 >
+                   <i className={`mr-3 ${router.pathname === "/franchise" ? "text-main-pink" : "text-gray-400"}`}></i>
+                   <i className="bi bi-building mr-3 text-main-pink"></i>
+                   Franchise
                  </a>
                </li>
                <li>
