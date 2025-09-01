@@ -421,16 +421,25 @@ function Franchise() {
                 <button className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-pink-700 transition-colors mb-4 sm:mb-6">
                   Get Started Today
                 </button>
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 sm:gap-4">
-                  <span className="text-xs sm:text-sm text-gray-600">Built by the same team that launched</span>
-                  <Image
-                    src="/logo2.png"
-                    alt="Company Logo"
-                    width={120}
-                    height={40}
-                    className="h-5 sm:h-6 w-auto"
-                  />
-                </div>
+                                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 sm:gap-4">
+                   <span className="text-xs sm:text-sm text-gray-600">Built by the same team that launched</span>
+                   <div className="flex items-center gap-2 sm:gap-3">
+                     <Image
+                       src="/logo2.png"
+                       alt="Company Logo"
+                       width={210}
+                       height={70}
+                       className="h-11 sm:h-14 w-auto"
+                     />
+                     <Image
+                       src="/eat-the-frog-logo.png"
+                       alt="Eat The Frog Logo"
+                       width={210}
+                       height={70}
+                       className="h-11 sm:h-14 w-auto"
+                     />
+                   </div>
+                 </div>
               </div>
             </div>
           </div>
@@ -530,7 +539,7 @@ function Franchise() {
         {/* Testimonials Section with Custom Title */}
         <section className="bg-gray-50 rounded-3xl px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-main-pink mb-4 sm:mb-6 mt-10">Proven + loved by over 30,000 covered members.</h2>
+                         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-main-pink mb-4 sm:mb-6 mt-10">Proven + loved by over 100,000 covered members.</h2>
             <Slider 
               dots={true}
               arrows={false}

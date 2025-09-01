@@ -5,75 +5,103 @@ const icon = (
   <i className="bi bi-clipboard-check text-3xl mb-4 text-[#e03a6a]"></i>
 );
 
-// Plan features based on the uniform comparison
+// Plan features based on the actual pricing structure
 const planFeatures = {
-  "Dental": [
-    "Nationwide discount program",
-    "No waiting periods",
-    "Pre-existing conditions OK",
-    "Pay discounted rates at participating providers",
-    "Dental: 40–60% off services",
-    "Vision: 20–40% off exams, eyewear, LASIK"
-  ],
   "Foundation": [
-    "24/7 virtual primary care",
-    "$0 generics & immunizations",
-    "20k+ gyms & 4k+ virtual classes",
-    "Wellness perks & up to 40% retailer discounts",
-    "1:1 care navigation (scheduling, referrals)",
-    "Best for basic care & prescriptions"
+    "Access to 20,000+ gyms & 4,000+ virtual fitness classes",
+    "Up to 40% off at 400+ wellness retailers",
+    "Exclusive wellness perks and discounts",
+    "24/7 Virtual Primary Care",
+    "$0 generic medications & immunizations",
+    "Everyday 1to1® Care Navigation:",
+    "White-glove appointment scheduling, referrals, and cost negotiation"
   ],
-  "iPremium": [
-    "Everything in Foundation",
-    "In-office primary & urgent care",
-    "Pediatric care included",
+  "Premium": [
+    "Access to 20,000+ gyms & 4,000+ virtual fitness classes",
+    "Up to 40% off at 400+ wellness retailers",
+    "Exclusive wellness perks and discounts",
+    "24/7 Virtual Primary Care",
+    "$0 generic medications & immunizations",
+    "Everyday 1to1® Care Navigation:",
+    "In-office Primary & Urgent Care",
+    "Pediatric Care",
     "Annual physicals & well-child visits",
-    "12 chiropractic visits/year",
-    "$0 labs, mental-health tele-counseling & Rx"
+    "12 Chiropractic visits/year",
+    "$0 Labs, Mental Health Tele-Counseling, and Rx",
+    "Virtual Specialist Curbside Consult"
   ],
-  "iPremium PLUS": [
-    "Everything in Premium",
-    "Hospital coverage included",
-    "Lower out-of-pocket risk",
-    "Virtual & in-office care",
-    "1:1 care navigation",
-    "Best for full, comprehensive coverage"
+  "Premium Plus": [
+    "Access to 20,000+ gyms & 4,000+ virtual fitness classes",
+    "Up to 40% off at 400+ wellness retailers",
+    "Exclusive wellness perks and discounts",
+    "24/7 Virtual Primary Care",
+    "$0 generic medications & immunizations",
+    "Everyday 1to1® Care Navigation:",
+    "In-office Primary & Urgent Care",
+    "Pediatric Care",
+    "Annual physicals & well-child visits",
+    "12 Chiropractic visits/year",
+    "$0 Labs, Mental Health Tele-Counseling, and Rx",
+    "Virtual Specialist Curbside Consult",
+    "Hospital coverage for serious medical events",
+    "Lower financial risk and out-of-pocket costs"
+  ],
+  "Dental": [
+    "No waiting periods--use immediately, even for pre-existing conditions",
+    "Pay the discounted price directly at participating dentists",
+    "Dental 40-60% discounts off all dental service",
+    "Vision 20-40% off all vision and eyewear or Lasik surgery"
   ]
 };
 
 // Feature emphasis mapping (which features are included for each plan)
 const featureEmphasis = {
-  "Dental": {
-    "Nationwide discount program": true,
-    "No waiting periods": true,
-    "Pre-existing conditions OK": true,
-    "Pay discounted rates at participating providers": true,
-    "Dental: 40–60% off services": true,
-    "Vision: 20–40% off exams, eyewear, LASIK": true
-  },
   "Foundation": {
-    "24/7 virtual primary care": true,
-    "$0 generics & immunizations": true,
-    "20k+ gyms & 4k+ virtual classes": true,
-    "Wellness perks & up to 40% retailer discounts": true,
-    "1:1 care navigation (scheduling, referrals)": true,
-    "Best for basic care & prescriptions": true
+    "Access to 20,000+ gyms & 4,000+ virtual fitness classes": true,
+    "Up to 40% off at 400+ wellness retailers": true,
+    "Exclusive wellness perks and discounts": true,
+    "24/7 Virtual Primary Care": true,
+    "$0 generic medications & immunizations": true,
+    "Everyday 1to1® Care Navigation:": true,
+    "White-glove appointment scheduling, referrals, and cost negotiation": true
   },
-  "iPremium": {
-    "Everything in Foundation": true,
-    "In-office primary & urgent care": true,
-    "Pediatric care included": true,
+  "Premium": {
+    "Access to 20,000+ gyms & 4,000+ virtual fitness classes": true,
+    "Up to 40% off at 400+ wellness retailers": true,
+    "Exclusive wellness perks and discounts": true,
+    "24/7 Virtual Primary Care": true,
+    "$0 generic medications & immunizations": true,
+    "Everyday 1to1® Care Navigation:": true,
+    "White-glove appointment scheduling, referrals, and cost negotiation": true,
+    "In-office Primary & Urgent Care": true,
+    "Pediatric Care": true,
     "Annual physicals & well-child visits": true,
-    "12 chiropractic visits/year": true,
-    "$0 labs, mental-health tele-counseling & Rx": true
+    "12 Chiropractic visits/year": true,
+    "$0 Labs, Mental Health Tele-Counseling, and Rx": true,
+    "Virtual Specialist Curbside Consult": true
   },
-  "iPremium PLUS": {
-    "Everything in Premium": true,
-    "Hospital coverage included": true,
-    "Lower out-of-pocket risk": true,
-    "Virtual & in-office care": true,
-    "1:1 care navigation": true,
-    "Best for full, comprehensive coverage": true
+  "Premium Plus": {
+    "Access to 20,000+ gyms & 4,000+ virtual fitness classes": true,
+    "Up to 40% off at 400+ wellness retailers": true,
+    "Exclusive wellness perks and discounts": true,
+    "24/7 Virtual Primary Care": true,
+    "$0 generic medications & immunizations": true,
+    "Everyday 1to1® Care Navigation:": true,
+    "White-glove appointment scheduling, referrals, and cost negotiation": true,
+    "In-office Primary & Urgent Care": true,
+    "Pediatric Care": true,
+    "Annual physicals & well-child visits": true,
+    "12 Chiropractic visits/year": true,
+    "$0 Labs, Mental Health Tele-Counseling, and Rx": true,
+    "Virtual Specialist Curbside Consult": true,
+    "Hospital coverage for serious medical events": true,
+    "Lower financial risk and out-of-pocket costs": true
+  },
+  "Dental": {
+    "No waiting periods--use immediately, even for pre-existing conditions": true,
+    "Pay the discounted price directly at participating dentists": true,
+    "Dental 40-60% discounts off all dental service": true,
+    "Vision 20-40% off all vision and eyewear or Lasik surgery": true
   }
 };
 
@@ -82,84 +110,84 @@ export default function Pricing() {
   const [selectedAgeRange, setSelectedAgeRange] = useState('18-44');
   const [selectedCoverage, setSelectedCoverage] = useState('Primary Member Only');
 
-  // Static pricing data to ensure it works
+  // Actual monthly pricing data
   const pricingData = {
     "18-44": {
       "Primary Member Only": {
         "Dental": 15,
         "Foundation": 99,
-        "iPremium": 199,
-        "iPremium PLUS": 479
+        "Premium": 199,
+        "Premium Plus": 479
       },
       "Primary Member + Spouse": {
         "Dental": 15,
         "Foundation": 189,
-        "iPremium": 349,
-        "iPremium PLUS": 919
+        "Premium": 349,
+        "Premium Plus": 919
       },
       "Primary Member + Child(ren)": {
         "Dental": 15,
         "Foundation": 189,
-        "iPremium": 349,
-        "iPremium PLUS": 919
+        "Premium": 349,
+        "Premium Plus": 919
       },
       "Primary Member + Family": {
         "Dental": 15,
         "Foundation": 269,
-        "iPremium": 499,
-        "iPremium PLUS": 1299
+        "Premium": 499,
+        "Premium Plus": 1299
       }
     },
     "45-59": {
       "Primary Member Only": {
         "Dental": 15,
         "Foundation": 99,
-        "iPremium": 199,
-        "iPremium PLUS": 479
+        "Premium": 199,
+        "Premium Plus": 479
       },
       "Primary Member + Spouse": {
         "Dental": 15,
         "Foundation": 189,
-        "iPremium": 349,
-        "iPremium PLUS": 919
+        "Premium": 349,
+        "Premium Plus": 919
       },
       "Primary Member + Child(ren)": {
         "Dental": 15,
         "Foundation": 189,
-        "iPremium": 349,
-        "iPremium PLUS": 919
+        "Premium": 349,
+        "Premium Plus": 919
       },
       "Primary Member + Family": {
         "Dental": 15,
         "Foundation": 269,
-        "iPremium": 499,
-        "iPremium PLUS": 1299
+        "Premium": 499,
+        "Premium Plus": 1299
       }
     },
     "60-64": {
       "Primary Member Only": {
         "Dental": 15,
         "Foundation": 99,
-        "iPremium": 199,
-        "iPremium PLUS": 579
+        "Premium": 199,
+        "Premium Plus": 579
       },
       "Primary Member + Spouse": {
         "Dental": 15,
         "Foundation": 189,
-        "iPremium": 349,
-        "iPremium PLUS": 1029
+        "Premium": 349,
+        "Premium Plus": 1029
       },
       "Primary Member + Child(ren)": {
         "Dental": 15,
         "Foundation": 189,
-        "iPremium": 349,
-        "iPremium PLUS": 1029
+        "Premium": 349,
+        "Premium Plus": 1029
       },
       "Primary Member + Family": {
         "Dental": 15,
         "Foundation": 269,
-        "iPremium": 499,
-        "iPremium PLUS": 1399
+        "Premium": 499,
+        "Premium Plus": 1399
       }
     }
   };
@@ -196,7 +224,7 @@ Would you like to contact us now to get started?`);
   const availableCoverageOptions = getAvailableCoverageOptions();
 
     return (
-    <section id="pricing" className="py-6 sm:py-8 md:py-12 lg:py-16 px-3 sm:px-4 md:px-6 bg-white">
+    <section id="pricing" className="pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-6 sm:pb-8 md:pb-12 lg:pb-16 px-3 sm:px-4 md:px-6 bg-white">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12">
@@ -249,10 +277,10 @@ Would you like to contact us now to get started?`);
               {/* Header Section - Responsive Height */}
               <div className="h-12 sm:h-16 md:h-20 lg:h-24 flex items-center justify-center text-center mb-1 sm:mb-2">
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#e03a6a] leading-tight">
-                  {planName === "Dental" ? "Dental and Vision Plan" : 
-                   planName === "Foundation" ? "Foundation Plan" :
-                   planName === "iPremium" ? "Premium Plan" :
-                   planName === "iPremium PLUS" ? "Premium Plus Plan" : planName}
+                  {planName === "Foundation" ? "Foundation Plan" :
+                   planName === "Premium" ? "Premium Plan" :
+                   planName === "Premium Plus" ? "Premium Plus Plan" :
+                   planName === "Dental" ? "Dental and Vision Plan" : planName}
                 </h3>
               </div>
 
@@ -268,6 +296,11 @@ Would you like to contact us now to get started?`);
               
               {/* Features Section - Flexible Height */}
               <div className="flex-grow mb-3 sm:mb-4 md:mb-6 lg:mb-8">
+                <div className="text-center mb-3 sm:mb-4">
+                  <h4 className="text-sm sm:text-base md:text-lg font-semibold text-gray-700 border-2 border-[#e03a6a] rounded-full px-3 py-1 inline-block">
+                    Benefits Include
+                  </h4>
+                </div>
                 <ul className="space-y-1.5 sm:space-y-2 md:space-y-3">
                   {planFeatures[planName]?.map((feature, i) => {
                     const isIncluded = featureEmphasis[planName]?.[feature];
