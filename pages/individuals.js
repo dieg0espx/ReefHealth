@@ -109,8 +109,8 @@ function Individuals() {
                    {/* Main Headline */}
                    <div className="space-y-2 sm:space-y-3 md:space-y-4">
                      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                       <span className="text-black">Hate Health insurance?</span>{' '}
-                       <span className="text-main-pink">Then you&apos;ll love this.</span>
+                       <span className="text-main-pink">Hate Health insurance?</span>{' '}
+                       <span className="text-black">Then you&apos;ll love this.</span>
                      </h1>
                      
                      {/* Subheadline */}
@@ -197,56 +197,56 @@ function Individuals() {
         {/* The Real Problem Section */}
         <TraditionalInsuranceProblem />
 
-                 {/* Health Assurance Section with Stats */}
-         <section className="py-12 sm:py-16 md:py-20 w-full" style={{ backgroundColor: '#262325' }}>
-           <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5">
-             <div className="flex flex-col lg:flex-row items-center min-h-[600px] gap-8 lg:gap-12 mb-12 sm:mb-16 md:mb-20">
-               {/* Left Column - Image */}
-               <div className="flex-1 flex justify-center">
-                 <div className="w-full max-w-sm lg:max-w-md xl:max-w-lg">
-                   <div className="bg-white rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
-                     <Image 
-                       src="/stock/iStock-2151967049.jpg" 
-                       alt="Mother and daughter with doctor" 
-                       width={400} 
-                       height={600} 
-                       className="w-full h-full object-cover"
-                     />
-                   </div>
-                 </div>
-               </div>
+                                  {/* Health Assurance Section with Stats */}
+          <section className="py-12 sm:py-16 md:py-20 w-full bg-gray-100">
+            <div className="max-w-[1500px] mx-auto px-4 sm:px-6 md:px-5">
+              <div className="flex flex-col lg:flex-row items-center min-h-[600px] gap-8 lg:gap-12 mb-12 sm:mb-16 md:mb-20">
+                {/* Left Column - Text Content */}
+                <div className="flex-1 flex flex-col justify-center">
+                  <div className="max-w-2xl sm:ml-16 md:ml-20 lg:ml-24 text-center sm:text-left">
+                    {/* Main Headline */}
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 sm:mb-8">
+                      <span className="text-gray-800">We changed the game so you get assurance, </span>
+                      <span className="text-main-pink">not more </span>
+                      <span className="text-main-pink">&quot;insurance.&quot;</span>
+                    </h2>
 
-               {/* Right Column - Text Content */}
-               <div className="flex-1 flex flex-col justify-center">
-                 <div className="max-w-2xl sm:mr-16 md:mr-20 lg:mr-24 text-center sm:text-left">
-                   {/* Main Headline */}
-                   <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 sm:mb-8">
-                     <span className="text-white">We changed the game so you get assurance, </span>
-                     <span className="text-main-pink">not more </span>
-                     <span className="text-main-pink">&quot;insurance.&quot;</span>
-                   </h2>
+                    {/* First Body Paragraph */}
+                    <p className="text-lg sm:text-xl text-gray-700 mb-6 sm:mb-8 leading-relaxed">
+                      <span className="font-bold">What if going to the doctor was as easy as flipping on a light switch?</span> No guessing, no surprises—just care when you need it, without the financial headache.
+                    </p>
 
-                   {/* First Body Paragraph */}
-                   <p className="text-lg sm:text-xl text-white mb-6 sm:mb-8 leading-relaxed">
-                     <span className="font-bold">What if going to the doctor was as easy as flipping on a light switch?</span> No guessing, no surprises—just care when you need it, without the financial headache.
-                   </p>
+                    {/* Second Body Paragraph */}
+                    <p className="text-lg sm:text-xl text-gray-700 mb-8 sm:mb-10 leading-relaxed">
+                      <span className="font-bold">That&apos;s health assurance</span> - Preventative care, real coverage, and benefits you can trust—all at a fraction of the cost.
+                    </p>
 
-                   {/* Second Body Paragraph */}
-                   <p className="text-lg sm:text-xl text-white mb-8 sm:mb-10 leading-relaxed">
-                     <span className="font-bold">That&apos;s health assurance</span> - Preventative care, real coverage, and benefits you can trust—all at a fraction of the cost.
-                   </p>
+                    {/* Call to Action Button */}
+                    <button 
+                      onClick={scrollToPricing}
+                      className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-fit mx-auto sm:mx-0"
+                    >
+                      Get Healthcare you can Trust
+                      <i className="bi bi-arrow-right text-lg sm:text-xl"></i>
+                    </button>
+                  </div>
+                </div>
 
-                   {/* Call to Action Button */}
-                   <button 
-                     onClick={scrollToPricing}
-                     className="bg-main-pink text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-main-pink/90 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 w-fit mx-auto sm:mx-0"
-                   >
-                     Get Healthcare you can Trust
-                     <i className="bi bi-arrow-right text-lg sm:text-xl"></i>
-                   </button>
-                 </div>
-               </div>
-             </div>
+                {/* Right Column - Image */}
+                <div className="flex-1 flex justify-center">
+                  <div className="w-full max-w-sm lg:max-w-md xl:max-w-lg">
+                    <div className="bg-white rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
+                                             <Image 
+                         src="/stock/iStock-1036131880.jpg" 
+                         alt="Healthcare professional with patient" 
+                         width={400} 
+                         height={600} 
+                         className="w-full h-full object-cover"
+                       />
+                    </div>
+                  </div>
+                </div>
+              </div>
 
              {/* Stats Bar Section */}
              <div className="text-center max-w-7xl mx-auto">
