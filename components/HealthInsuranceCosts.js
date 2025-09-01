@@ -11,7 +11,7 @@ export default function HealthInsuranceCosts() {
             {/* Left Column - White Background */}
             <div className="flex-1 bg-white p-8 sm:p-12 md:p-16 lg:p-20 flex flex-col justify-center relative">
               {/* Large Vertical $603B Text on Right Side - Hidden on Mobile */}
-              <div className="hidden md:block absolute right-0 translate-x-16 md:translate-x-20 lg:translate-x-24 top-1/2 -translate-y-1/2 text-[6rem] lg:text-[8rem] font-black leading-none tracking-tight text-black/90 transform rotate-90 z-0 pointer-events-none">
+              <div className="hidden md:block absolute right-0 translate-x-20 md:translate-x-24 lg:translate-x-28 top-1/2 -translate-y-1/2 text-[6rem] lg:text-[8rem] font-black leading-none tracking-tight text-black/90 transform rotate-90 z-0 pointer-events-none">
                 $603B
               </div>
               
@@ -44,7 +44,7 @@ export default function HealthInsuranceCosts() {
             </div>
 
             {/* Circular Image - Predominantly on white, extending into pink - Hidden on Mobile */}
-            <div className="hidden md:block absolute left-[58%] top-1/2 -translate-y-1/2 z-20">
+            <div className="hidden md:block absolute left-[70%] top-1/2 -translate-y-1/2 z-20">
               <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-white rounded-full flex items-center justify-center overflow-hidden shadow-2xl">
                 <Image 
                   src="/stock/iStock-2166712407 (1).jpg" 

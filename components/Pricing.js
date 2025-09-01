@@ -196,7 +196,7 @@ Would you like to contact us now to get started?`);
   const availableCoverageOptions = getAvailableCoverageOptions();
 
     return (
-    <section id="pricing" className="py-6 sm:py-8 md:py-12 lg:py-16 px-3 sm:px-4 md:px-6 bg-white">
+    <section id="pricing" className="pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-6 sm:pb-8 md:pb-12 lg:pb-16 px-3 sm:px-4 md:px-6 bg-white">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12">

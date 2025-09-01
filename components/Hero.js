@@ -61,20 +61,19 @@ export default function Hero() {
               {/* Trust Badge */}
              
 
-              {/* Main Headline */}
-              <div className="space-y-3 sm:space-y-4">
-                {/* Subtitle */}
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  The health insurance industry is broken. Making health care unaffordable and unattainable.
-                </p>
-                
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-black">We rebuilt the model -</span>{' '}
-                  <span className="text-main-pink">making the top health benefits</span>{' '}
-                  <span className="text-main-pink">affordable for small businesses.</span>
-                </h1>
-                
-              </div>
+                             {/* Main Headline */}
+               <div className="space-y-3 sm:space-y-4">
+                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                   <span className="text-black">We rebuilt the model -</span>{' '}
+                   <span className="text-main-pink">making the top health benefits</span>{' '}
+                   <span className="text-main-pink">affordable for small businesses.</span>
+                 </h1>
+                 
+                 {/* Subtitle */}
+                 <p className="text-base sm:text-lg md:text-xl text-gray-600 font-medium">
+                   The health insurance industry is broken. Making health care unaffordable and unattainable.
+                 </p>
+               </div>
 
               {/* Description */}
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-lg">
